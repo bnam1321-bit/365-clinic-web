@@ -1,0 +1,169 @@
+.container {
+    background-color: var(--color-background);
+    padding-bottom: var(--spacing-section);
+}
+
+.header {
+    background-color: #1E293B;
+    color: white;
+    padding: 6rem 0 4rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.header::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(37, 99, 235, 0.1), transparent 60%);
+    pointer-events: none;
+}
+
+.badge {
+    display: inline-block;
+    font-family: var(--font-serif);
+    font-style: normal;
+    color: #93C5FD;
+    font-weight: 500;
+    font-size: 0.95rem;
+    letter-spacing: 0.05em;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(147, 197, 253, 0.4);
+}
+
+.title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.02em;
+}
+
+.subtitle {
+    font-size: 1.25rem;
+    color: #E5E7EB;
+    line-height: 1.8;
+    font-weight: 300;
+}
+
+.content {
+    padding: 5rem 0;
+}
+
+.introSection {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 5rem;
+    background-color: #F8FAFC;
+    padding: 3rem;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-border);
+}
+
+.introTitle {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+}
+
+.introDesc {
+    font-size: 1.1rem;
+    color: var(--color-text-secondary);
+    line-height: 1.7;
+    margin-top: 1.5rem;
+}
+
+/* Detailed List Styles */
+.detailList {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.detailItem {
+    background: white;
+    padding: 3rem;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--color-border);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.itemHeader {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border-bottom: 2px solid var(--color-border);
+    padding-bottom: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.itemNumber {
+    font-family: var(--font-serif);
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-secondary);
+    opacity: 0.5;
+}
+
+.itemTitle {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--color-primary);
+}
+
+.itemContent p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--color-text-secondary);
+    margin-bottom: 1.5rem;
+}
+
+.checkList {
+    background-color: #F8FAFC;
+    padding: 1.5rem 2rem;
+    border-radius: var(--radius-md);
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.checkList li {
+    position: relative;
+    padding-left: 1.25rem;
+    color: #475569;
+    font-size: 0.95rem;
+}
+
+.checkList li::before {
+    content: "•";
+    color: var(--color-secondary);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+/* IV Therapy Section (Secondary) */
+.ivSection {
+    margin-top: 6rem;
+    padding-top: 4rem;
+    border-top: 1px solid #E2E8F0;
+}
+
+.ivHeader {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+@media (min-width: 768px) {
+    .detailItem {
+        padding: 4rem;
+    }
+}

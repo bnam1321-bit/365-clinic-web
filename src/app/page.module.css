@@ -1,0 +1,378 @@
+.home {
+  font-family: var(--font-pretendard), sans-serif;
+}
+
+/* Wide Hero Section - Visibility Optimized */
+.hero {
+  position: relative;
+  height: 85vh;
+  max-height: 900px;
+  background: url('https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80&w=2000') no-repeat center center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: white;
+  overflow: hidden;
+  padding-left: 5%;
+}
+
+/* Premium Gradient Overlay - Seamless Visibility */
+/* Darker on the left to ensure text pops, lighter on right to show image */
+.heroOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg,
+      rgba(3, 7, 18, 0.95) 0%,
+      /* Almost black-navy on left */
+      rgba(17, 24, 39, 0.8) 45%,
+      /* Mid-point transparency */
+      rgba(17, 24, 39, 0.1) 100%
+      /* Transparent on right */
+    );
+  z-index: 1;
+}
+
+/* Hero Content - No Box, Pure Text */
+.heroContent {
+  width: 100%;
+  max-width: 700px;
+  /* Slightly wider for ease */
+  animation: fadeInMove var(--transition-normal);
+  position: relative;
+  z-index: 10;
+
+  /* Removed Glass Box properties for clarity */
+  background: transparent;
+  backdrop-filter: none;
+  padding: 0;
+  /* Remove internal padding */
+  border: none;
+  box-shadow: none;
+}
+
+@keyframes fadeInMove {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.heroBadge {
+  font-family: var(--font-serif);
+  font-style: normal;
+  font-size: 1.1rem;
+  /* Slightly larger */
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  color: #60A5FA;
+  /* Brighter Blue for contrast against dark gradient */
+  margin-bottom: 1.5rem;
+  display: inline-block;
+  border-bottom: 2px solid rgba(96, 165, 250, 0.5);
+  /* Thicker line */
+  padding-bottom: 0.25rem;
+}
+
+.heroTitle {
+  font-size: 4rem;
+  /* Big */
+  font-weight: 800;
+  line-height: 1.15;
+  margin-bottom: 2rem;
+  letter-spacing: -0.01em;
+  color: white;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  /* Slight text shadow for safety */
+}
+
+.highlight {
+  display: block;
+  font-size: 1.1em;
+  color: #FFFFFF;
+  margin-top: 0.5rem;
+  font-family: var(--font-serif);
+  font-weight: 600;
+  /* Bolder */
+  font-style: normal;
+}
+
+.heroSubtitle {
+  font-size: 1.25rem;
+  line-height: 1.7;
+  color: #E5E7EB;
+  /* Light Gray */
+  margin-bottom: 3rem;
+  font-weight: 400;
+  max-width: 100%;
+}
+
+/* 2x2 Huge Grid - High Contrast */
+.services {
+  padding: 0;
+  margin-top: -80px;
+  /* Overlap */
+  position: relative;
+  z-index: 20;
+  max-width: 1100px;
+  /* Wider for better breathing room */
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 6rem;
+}
+
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding: 0 1rem;
+}
+
+.serviceCard {
+  background-color: var(--color-surface);
+  padding: 4rem 3rem;
+  border-radius: var(--radius-md);
+  box-shadow: 0 20px 40px -5px rgba(0, 0, 0, 0.1);
+  /* Cleaner shadow */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  gap: 1.5rem;
+  transition: all var(--transition-normal);
+  cursor: pointer;
+  position: relative;
+  border: 1px solid #E5E7EB;
+  /* Distinct light border */
+  min-height: 340px;
+  justify-content: space-between;
+}
+
+.serviceCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 50px -12px rgba(37, 99, 235, 0.15);
+  /* Blue tinted shadow on hover */
+  border-color: var(--color-secondary);
+  /* Blue border on hover */
+}
+
+.cardIcon {
+  color: var(--color-primary);
+  background-color: transparent;
+  width: auto;
+  height: auto;
+  padding: 0;
+  margin-bottom: 1rem;
+}
+
+.serviceCard h3 {
+  font-size: 1.9rem;
+  /* Larger Title */
+  font-weight: 800;
+  /* Extra Bold */
+  color: var(--color-text-primary);
+  letter-spacing: -0.02em;
+  margin-bottom: 0.5rem;
+}
+
+.serviceCard p {
+  color: var(--color-text-secondary);
+  font-size: 1.1rem;
+  /* Readable body */
+  line-height: 1.6;
+  font-weight: 500;
+  /* Slightly heavier than normal */
+}
+
+.cardPlus {
+  width: 48px;
+  height: 48px;
+  background-color: #F3F4F6;
+  color: var(--color-text-primary);
+  border: none;
+  /* Removed border */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-serif);
+  font-style: normal;
+  font-size: 1.5rem;
+  transition: all var(--transition-normal);
+  align-self: flex-end;
+}
+
+.serviceCard:hover .cardPlus {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+/* Common Section Styles */
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.sectionTitle {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+}
+
+/* Equipment Section */
+.equipment {
+  padding: var(--spacing-section) 0;
+  background-color: var(--color-background);
+}
+
+.equipmentGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* Default 2 cols */
+  gap: 2rem;
+}
+
+.equipmentCard {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  text-align: center;
+}
+
+.equipmentImg {
+  height: 200px;
+  background-color: #eee;
+  border-radius: var(--radius-sm);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: #999;
+}
+
+.equipmentCard h5 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Media Queries - Stacking Order: Desktop First Base -> Mobile Overrides */
+
+/* Tablet & Mobile (Max 1024px) */
+@media (max-width: 1024px) {
+  .heroTitle {
+    font-size: 3rem;
+  }
+}
+
+/* Mobile (Max 768px) */
+@media (max-width: 768px) {
+
+  /* Hero */
+  .hero {
+    height: 100vh;
+    /* Full height on mobile */
+    align-items: center;
+    justify-content: center;
+    /* Center content on mobile */
+    padding-left: 0;
+    /* Removing left indent */
+    text-align: center;
+  }
+
+  .heroOverlay {
+    /* Full gradient on mobile for readability */
+    background: linear-gradient(180deg,
+        rgba(3, 7, 18, 0.4) 0%,
+        rgba(3, 7, 18, 0.8) 100%);
+  }
+
+  .heroContent {
+    max-width: 90%;
+    padding: 2rem 1rem;
+    align-items: center;
+    /* Center align flex items if any */
+    display: flex;
+    flex-direction: column;
+  }
+
+  .heroBadge {
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    align-self: center;
+  }
+
+  .heroTitle {
+    font-size: 2.25rem;
+    /* Smaller for mobile */
+    line-height: 1.3;
+    margin-bottom: 1.5rem;
+  }
+
+  .heroSubtitle {
+    display: none;
+    /* Hide subtitle on mobile for cleaner look */
+  }
+
+  /* Services Grid - Stacked */
+  .services {
+    margin-top: 0;
+    /* Remove negative margin on mobile */
+    padding-bottom: 3rem;
+  }
+
+  .servicesGrid {
+    grid-template-columns: 1fr;
+    /* Stack vertically 1 column */
+    padding: 0 1.5rem;
+    gap: 1.5rem;
+  }
+
+  .serviceCard {
+    min-height: auto;
+    /* Let content dictate height */
+    padding: 2.5rem 2rem;
+  }
+
+  .serviceCard h3 {
+    font-size: 1.5rem;
+  }
+
+  /* Equipment Stacking */
+  .equipmentGrid {
+    grid-template-columns: 1fr;
+    /* Stack to 1 column */
+  }
+
+  .container {
+    padding: 0 1.5rem;
+  }
+
+  .sectionTitle {
+    font-size: 2rem;
+  }
+}

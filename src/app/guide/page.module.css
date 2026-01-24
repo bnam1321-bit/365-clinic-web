@@ -1,0 +1,189 @@
+.guide {
+    background-color: var(--color-background);
+    min-height: 100vh;
+}
+
+.pageHeader {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+    color: white;
+    padding: 5rem 0;
+    text-align: center;
+}
+
+.pageTitle {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
+
+.pageSubtitle {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.content {
+    padding: 4rem 0;
+}
+
+.gridRefined {
+    display: flex;
+    justify-content: center;
+}
+
+.infoColumnFull {
+    width: 100%;
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.section {
+    background: white;
+    padding: 2.5rem;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--color-border);
+}
+
+.sectionTitle {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--color-primary);
+    margin-bottom: 0.5rem;
+    border-bottom: 2px solid var(--color-background);
+    padding-bottom: 1rem;
+}
+
+.sectionDesc {
+    color: var(--color-text-secondary);
+    margin-bottom: 2rem;
+    font-size: 1.05rem;
+}
+
+/* Hours Table */
+.hoursTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.hoursTable th,
+.hoursTable td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.hoursTable th {
+    font-weight: 700;
+    color: var(--color-text-primary);
+    width: 40%;
+    background-color: var(--color-background);
+}
+
+.hoursTable td {
+    color: var(--color-text-secondary);
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+.highlight {
+    color: var(--color-secondary);
+    /* Purple/Accent for highlight */
+    font-weight: 700 !important;
+}
+
+/* Location Styles */
+.locationDetails {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.addressDisplay {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.stationDisplay {
+    font-size: 1.2rem;
+    color: var(--color-primary);
+}
+
+.mapPlaceholder {
+    width: 100%;
+    aspect-ratio: 16/9;
+    background-color: #E2E8F0;
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+    overflow: hidden;
+}
+
+.mapInner {
+    text-align: center;
+}
+
+.mapText {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--color-text-muted);
+}
+
+.mapSubText {
+    margin-top: 0.5rem;
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+}
+
+.transport {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.transportItem {
+    background-color: var(--color-background);
+    padding: 1.5rem;
+    border-radius: var(--radius-md);
+}
+
+.transportItem strong {
+    display: block;
+    color: var(--color-primary);
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.transportItem p {
+    color: var(--color-text-secondary);
+    line-height: 1.5;
+}
+
+/* Contact Styles */
+.phoneDisplay {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--color-primary);
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.contactDesc {
+    text-align: center;
+    color: var(--color-text-muted);
+}
+
+@media (min-width: 768px) {
+    .transport {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
