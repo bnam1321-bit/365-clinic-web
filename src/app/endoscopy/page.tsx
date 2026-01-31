@@ -1,5 +1,5 @@
 import styles from "./page.module.css";
-import { Microscope, AlertCircle, Scissors } from "lucide-react";
+import { Microscope, AlertCircle, Scissors, Activity, ShieldCheck } from "lucide-react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -7,9 +7,17 @@ export const metadata: Metadata = {
     description: "위내시경, 대장내시경, 용종절제술 및 주의사항 안내.",
 };
 
-export default function Endoscopy() {
+import FadeIn from "@/components/ui/FadeIn";
+
+export default function EndoscopyPage() {
     return (
-        <div className={styles.container}>
+        <main className={styles.container}>
+            <FadeIn>
+                <section className={styles.sectionHeader}>
+                    <h2>내시경 클리닉</h2>
+                    <p>대학병원급 고화질 장비로 미세 병변까지 정확하게</p>
+                </section>
+            </FadeIn>
             {/* Page Header */}
             <section className={styles.header}>
                 <div className="container">
@@ -33,6 +41,30 @@ export default function Endoscopy() {
                             <h2>소화기 내시경 센터</h2>
                             <p>위암, 대장암 예방의 시작은 정기적인 내시경 검사입니다.</p>
                         </div>
+
+                        <section className={styles.content}>
+                            <FadeIn delay={0.1}>
+                                <div className={styles.card}>
+                                    <div className={styles.cardIcon}><Microscope size={36} /></div>
+                                    <h3>위 내시경</h3>
+                                    <p>식도, 위, 십이지장의 염증, 궤양, 암 등을 조기 진단합니다. 수면 내시경으로 편안하게 검사받으실 수 있습니다.</p>
+                                </div>
+                            </FadeIn>
+                            <FadeIn delay={0.2}>
+                                <div className={styles.card}>
+                                    <div className={styles.cardIcon}><Activity size={36} /></div>
+                                    <h3>대장 내시경</h3>
+                                    <p>대장암의 씨앗인 대장 용종을 발견하고 즉시 절제합니다. 최신 세척 소독기로 감염 걱정 없이 안전합니다.</p>
+                                </div>
+                            </FadeIn>
+                            <FadeIn delay={0.3}>
+                                <div className={styles.card}>
+                                    <div className={styles.cardIcon}><ShieldCheck size={36} /></div>
+                                    <h3>용종 절제술</h3>
+                                    <p>발견된 용종은 현장에서 즉시 제거(Polypectomy)하여 대장암을 효과적으로 예방합니다. 대학병원 수준의 시술이 가능합니다.</p>
+                                </div>
+                            </FadeIn>
+                        </section>
 
                         <div className={styles.grid2}>
                             <div className={styles.card}>
@@ -63,6 +95,27 @@ export default function Endoscopy() {
                             <h2>용종절제술</h2>
                             <p>대장암은 95% 이상이 용종이 자라면서 발병합니다.</p>
                         </div>
+
+                        {/* 용종 절제술 설명 추가 영역 */}
+                        <FadeIn delay={0.4}>
+                            <section className={styles.polypSection}>
+                                <h3>당일 용종 절제술 (One-Stop)</h3>
+                                <p>
+                                    본원에서는 대장내시경 중 발견된 용종을 <strong>당일 즉시 절제</strong>합니다.<br />
+                                    대학병원 출신 전문의가 직접 시술하여 더욱 안전하고 정확합니다.
+                                </p>
+                                <div className={styles.polypTypes}>
+                                    <div className={styles.typeCard}>
+                                        <h4>선종성 용종</h4>
+                                        <p>대장암으로 진행될 가능성이 높아 반드시 제거해야 합니다.</p>
+                                    </div>
+                                    <div className={styles.typeCard}>
+                                        <h4>과형성 용종</h4>
+                                        <p>일반적으로 암으로 발전하지 않으나 추적 관찰이 필요합니다.</p>
+                                    </div>
+                                </div>
+                            </section>
+                        </FadeIn>
 
                         <div className={styles.infoBox}>
                             <h3>대장 용종이란?</h3>
@@ -142,6 +195,6 @@ export default function Endoscopy() {
 
                 </div>
             </section>
-        </div>
+        </main>
     );
 }

@@ -1,26 +1,22 @@
 import styles from "./page.module.css";
-import { Activity, ClipboardCheck, ShieldAlert, HeartPulse } from "lucide-react";
+import { Activity, ClipboardCheck, ShieldCheck, HeartPulse, Microscope } from "lucide-react";
 import type { Metadata } from "next";
+import FadeIn from "@/components/ui/FadeIn";
 
 export const metadata: Metadata = {
     title: "종합건강검진 | 365내과연합의원",
     description: "5대암 검진, 공단검진, 정밀 초음파, 개인 맞춤형 종합검진 프로그램 안내.",
 };
 
-export default function Checkup() {
+export default function CheckupPage() {
     return (
-        <div className={styles.container}>
-            {/* Page Header */}
-            <section className={styles.header}>
-                <div className="container">
-                    <span className={styles.badge}>HEALTH CHECKUP CENTER</span>
-                    <h1 className={styles.title}>종합건강검진 센터</h1>
-                    <p className={styles.subtitle}>
-                        대학병원급 정밀 검진 장비와 전문의의 세심한 판독으로<br />
-                        질병의 조기 발견과 예방에 앞장섭니다.
-                    </p>
-                </div>
-            </section>
+        <main className={styles.container}>
+            <FadeIn>
+                <section className={styles.sectionHeader}>
+                    <h2>종합건강검진</h2>
+                    <p>정확한 진단, 건강한 미래를 위한 첫걸음</p>
+                </section>
+            </FadeIn>
 
             {/* Main Content */}
             <section className={styles.content}>
@@ -28,21 +24,34 @@ export default function Checkup() {
 
                     {/* Intro Grid */}
                     <div className={styles.introGrid}>
-                        <div className={styles.introCard}>
-                            <Activity size={40} className={styles.icon} />
-                            <h3>공단 건강검진</h3>
-                            <p>국민건강보험공단 지정 검진기관으로 일반검진 및 생애전환기 검진을 실시합니다.</p>
-                        </div>
-                        <div className={styles.introCard}>
-                            <ShieldAlert size={40} className={styles.icon} />
-                            <h3>5대암 검진</h3>
-                            <p>위암, 대장암, 간암, 유방암, 자궁경부암 등 주요 암을 조기에 발견합니다.</p>
-                        </div>
-                        <div className={styles.introCard}>
-                            <HeartPulse size={40} className={styles.icon} />
-                            <h3>정밀 종합검진</h3>
-                            <p>개인의 연령, 성별, 가족력 등을 고려한 1:1 맞춤형 정밀 검진 프로그램입니다.</p>
-                        </div>
+                        <FadeIn delay={0.1}>
+                            <div className={styles.card}>
+                                <div className={styles.cardIcon}><ShieldCheck size={32} /></div>
+                                <h3>5대암 검진</h3>
+                                <p>위암, 대장암, 간암, 유방암, 자궁경부암 등 한국인의 주요 암을 정밀하게 검진합니다.</p>
+                            </div>
+                        </FadeIn>
+                        <FadeIn delay={0.2}>
+                            <div className={styles.card}>
+                                <div className={styles.cardIcon}><HeartPulse size={32} /></div>
+                                <h3>일반 검진</h3>
+                                <p>혈압, 당뇨, 고지혈증 등 만성질환의 조기 발견을 위한 기본수 검사를 진행합니다.</p>
+                            </div>
+                        </FadeIn>
+                        <FadeIn delay={0.3}>
+                            <div className={styles.card}>
+                                <div className={styles.cardIcon}><Microscope size={32} /></div>
+                                <h3>초음파 정밀 검진</h3>
+                                <p>복부, 갑상선, 경동맥 등 초음파를 통한 정밀 장기 상태를 확인합니다.</p>
+                            </div>
+                        </FadeIn>
+                        <FadeIn delay={0.4}>
+                            <div className={styles.card}>
+                                <div className={styles.cardIcon}><Activity size={32} /></div>
+                                <h3>혈액 종합 검진</h3>
+                                <p>간기능, 신장기능, 빈혈, 갑상선 기능 등 70여 종의 혈액학적 분석을 제공합니다.</p>
+                            </div>
+                        </FadeIn>
                     </div>
 
                     {/* Detailed Sections - 5 Major Cancers */}
@@ -122,6 +131,6 @@ export default function Checkup() {
 
                 </div>
             </section>
-        </div>
+        </main>
     );
 }
