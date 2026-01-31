@@ -1,123 +1,157 @@
 import Link from "next/link";
 import styles from "./page.module.css";
-import { ArrowRight, Activity, Calendar, ShieldCheck, Microscope, Zap, HeartPulse, Stethoscope, MapPin } from "lucide-react";
+import { ArrowRight, ShieldCheck, Microscope, Zap, Activity, HeartPulse } from "lucide-react";
+import FadeIn from "@/components/ui/FadeIn"; // Import Animation Component
 
 export default function Home() {
   return (
-    <div className={styles.home}>
-      {/* Wide Hero Section (Slider Style) */}
+    <main className={styles.home}>
+      {/* 1. Hero Section (Wide & Atmospheric) */}
       <section className={styles.hero}>
         <div className={styles.heroOverlay}></div>
-        <div className={`container ${styles.heroContainer}`}>
-          <div className={styles.heroContent}>
-            <span className={styles.heroBadge}>PRECISION & TRUST</span>
-            <h1 className={styles.heroTitle}>
-              정직한 진료, 건강한 내일<br />
-              <span className={styles.highlight}>365내과연합의원</span>
-            </h1>
-            <p className={styles.heroSubtitle}>
-              대학병원 출신 전문의 3인(이현석, 노영석, 지재연)의 협진으로<br />
-              언제나 환자분의 건강을 최우선으로 지켜드립니다.
-            </p>
-            <div className={styles.heroActions}>
-              <Link href="/checkup" className={styles.primaryButton}>
-                맞춤 건강검진 프로그램 <ArrowRight size={20} />
-              </Link>
+        <div className={`container`}>
+          <FadeIn direction="up">
+            <div className={styles.heroContent}>
+              <span className={styles.heroBadge}>PREMIUM HEALTHCARE</span>
+              <h1 className={styles.heroTitle}>
+                현장에서의 경험,<br />
+                <span className={styles.highlight}>정확한 진단으로 증명합니다</span>
+              </h1>
+              <p className={styles.heroSubtitle}>
+                대학병원 출신 전문의 3인(이현석, 노영석, 지재연)의 협진으로<br />
+                더 깊이 있고 세심한 진료를 약속드립니다.
+              </p>
             </div>
-          </div>
+          </FadeIn>
         </div>
       </section>
 
-      {/* 6-Column Service Cards (Menu Description) */}
+      {/* 2. Services Grid (6-Card Menu) - High Visibility */}
       <section className={styles.services}>
         <div className={`container`}>
           <div className={styles.servicesGrid}>
-
             {/* 1. Checkup */}
-            <Link href="/checkup" className={styles.serviceCardLink}>
-              <div className={styles.serviceCard}>
-                <div className={styles.cardIcon}><ShieldCheck size={48} /></div>
-                <h3>종합건강검진</h3>
-                <p>5대암 검진부터 정밀 혈액 검사까지, 개인별 맞춤형 종합 검진 센터입니다.</p>
-                <div className={styles.cardPlus}>+</div>
-              </div>
-            </Link>
+            <FadeIn delay={0.1}>
+              <Link href="/checkup" className={styles.serviceCardLink}>
+                <div className={styles.serviceCard}>
+                  <div>
+                    <div className={styles.cardIcon}><ShieldCheck size={48} /></div>
+                    <h3>종합건강검진</h3>
+                    <p>5대암 검진부터 정밀 혈액 검사까지, 개인별 맞춤형 종합 검진 센터입니다.</p>
+                  </div>
+                  <div className={styles.cardPlus}>+</div>
+                </div>
+              </Link>
+            </FadeIn>
 
             {/* 2. Endoscopy */}
-            <Link href="/endoscopy" className={styles.serviceCardLink}>
-              <div className={styles.serviceCard}>
-                <div className={styles.cardIcon}><Microscope size={48} /></div>
-                <h3>내시경클리닉</h3>
-                <p>위/대장 내시경 및 당일 용종절제술. 대학병원급 장비로 안전하게 검사합니다.</p>
-                <div className={styles.cardPlus}>+</div>
-              </div>
-            </Link>
+            <FadeIn delay={0.2}>
+              <Link href="/endoscopy" className={styles.serviceCardLink}>
+                <div className={styles.serviceCard}>
+                  <div>
+                    <div className={styles.cardIcon}><Microscope size={48} /></div>
+                    <h3>내시경 클리닉</h3>
+                    <p>대학병원급 고화질 내시경 장비로 미세 용종까지 정확하게 발견하고 제거합니다.</p>
+                  </div>
+                  <div className={styles.cardPlus}>+</div>
+                </div>
+              </Link>
+            </FadeIn>
 
             {/* 3. Ultrasound */}
-            <Link href="/ultrasound" className={styles.serviceCardLink}>
-              <div className={styles.serviceCard}>
-                <div className={styles.cardIcon}><Activity size={48} /></div>
-                <h3>초음파클리닉</h3>
-                <p>복부, 심장, 갑상선, 유방, 경동맥 5대 정밀 초음파와 수액 클리닉을 운영합니다.</p>
-                <div className={styles.cardPlus}>+</div>
-              </div>
-            </Link>
+            <FadeIn delay={0.3}>
+              <Link href="/ultrasound" className={styles.serviceCardLink}>
+                <div className={styles.serviceCard}>
+                  <div>
+                    <div className={styles.cardIcon}><Activity size={48} /></div>
+                    <h3>초음파 클리닉</h3>
+                    <p>복부, 경동맥, 갑상선 등 정밀 초음파를 통해 신체 내부 상태를 면밀히 살핍니다.</p>
+                  </div>
+                  <div className={styles.cardPlus}>+</div>
+                </div>
+              </Link>
+            </FadeIn>
 
             {/* 4. Internal Medicine */}
-            <Link href="/clinic" className={styles.serviceCardLink}>
-              <div className={styles.serviceCard}>
-                <div className={styles.cardIcon}><Stethoscope size={48} /></div>
-                <h3>내과클리닉</h3>
-                <p>고혈압, 당뇨, 호흡기, 간 질환 등 5대 질환과 만성질환을 집중 관리합니다.</p>
-                <div className={styles.cardPlus}>+</div>
-              </div>
-            </Link>
+            <FadeIn delay={0.4}>
+              <Link href="/clinic" className={styles.serviceCardLink}>
+                <div className={styles.serviceCard}>
+                  <div>
+                    <div className={styles.cardIcon}><Attributes size={48} /></div> {/* Icon placeholder fixed below */}
+                    <h3>내과 클리닉</h3>
+                    <p>당뇨, 고혈압, 만성질환 관리부터 일반 진료까지 체계적인 건강 관리를 제공합니다.</p>
+                  </div>
+                  <div className={styles.cardPlus}>+</div>
+                </div>
+              </Link>
+            </FadeIn>
 
             {/* 5. Pain Clinic */}
-            <Link href="/pain" className={styles.serviceCardLink}>
-              <div className={styles.serviceCard}>
-                <div className={styles.cardIcon}><HeartPulse size={48} /></div>
-                <h3>통증클리닉</h3>
-                <p>어깨, 허리, 관절 통증. TPI 주사 및 비수술적 치료로 통증을 완화합니다.</p>
-                <div className={styles.cardPlus}>+</div>
-              </div>
-            </Link>
+            <FadeIn delay={0.5}>
+              <Link href="/pain" className={styles.serviceCardLink}>
+                <div className={styles.serviceCard}>
+                  <div>
+                    <div className={styles.cardIcon}><Zap size={48} /></div>
+                    <h3>통증 클리닉</h3>
+                    <p>비수술적 통증 치료, TPI 주사, 영양 수액 요법으로 만성 통증과 피로를 개선합니다.</p>
+                  </div>
+                  <div className={styles.cardPlus}>+</div>
+                </div>
+              </Link>
+            </FadeIn>
 
-            {/* 6. Guide */}
-            <Link href="/guide" className={styles.serviceCardLink}>
-              <div className={styles.serviceCard}>
-                <div className={styles.cardIcon}><Calendar size={48} /></div>
-                <h3>진료안내</h3>
-                <p>진료 시간 및 병원 찾아오시는 길을 안내해 드립니다.</p>
-                <div className={styles.cardPlus}>+</div>
-              </div>
-            </Link>
-
+            {/* 6. Guide / Map */}
+            <FadeIn delay={0.6}>
+              <Link href="/guide" className={styles.serviceCardLink}>
+                <div className={styles.serviceCard} style={{ backgroundColor: '#F8FAFC' }}>
+                  <div>
+                    <div className={styles.cardIcon}><HeartPulse size={48} /></div>
+                    <h3>진료 안내</h3>
+                    <p>평일 19시 야간진료, 토요일 14시까지. 환자분을 위한 365일 진료 환경.</p>
+                  </div>
+                  <div className={styles.cardPlus}><ArrowRight /></div>
+                </div>
+              </Link>
+            </FadeIn>
           </div>
         </div>
       </section>
 
-      {/* Equipment Section (Kept as proof of quality) */}
+      {/* 4. Medical Equipment */}
       <section className={styles.equipment}>
         <div className={`container`}>
-          <div className={styles.sectionHeader}>
-            <h2 className={styles.sectionTitle}>최첨단 의료 장비</h2>
-            <p>대학병원급 고성능 장비로 진단의 정확도를 높입니다.</p>
-          </div>
+          <FadeIn direction="up">
+            <div className={styles.sectionHeader}>
+              <h2 className={styles.sectionTitle}>최첨단 의료 장비</h2>
+              <p>더 정확한 진단을 위해 대학병원급 장비를 도입했습니다.</p>
+            </div>
+          </FadeIn>
           <div className={styles.equipmentGrid}>
-            <div className={styles.equipmentCard}>
-              <div className={styles.equipmentImg} style={{ fontSize: '1rem', color: '#666' }}>Olympus CV-290</div>
-              <h5>고화질 내시경 시스템</h5>
-              <p>대학병원에서 사용하는 최상위 모델</p>
-            </div>
-            <div className={styles.equipmentCard}>
-              <div className={styles.equipmentImg} style={{ fontSize: '1rem', color: '#666' }}>GE LOGIQ E10</div>
-              <h5>프리미엄 초음파</h5>
-              <p>영상의학과용 하이엔드 초음파 장비</p>
-            </div>
+            <FadeIn delay={0.2} direction="left">
+              <div className={styles.equipmentCard}>
+                <div className={styles.equipmentImg} style={{ fontSize: '1rem', color: '#666' }}>Olympus CV-290</div>
+                <h5>고화질 내시경 시스템</h5>
+                <p>현장에서 사용하는 최상위 모델</p>
+              </div>
+            </FadeIn>
+            <FadeIn delay={0.2} direction="right">
+              <div className={styles.equipmentCard}>
+                <div className={styles.equipmentImg} style={{ fontSize: '1rem', color: '#666' }}>GE LOGIQ E10</div>
+                <h5>대학병원급 초음파</h5>
+                <p>미세 병변까지 놓치지 않는 정밀함</p>
+              </div>
+            </FadeIn>
           </div>
         </div>
       </section>
-    </div>
+    </main>
   );
+}
+
+function Attributes({ size }: { size: number }) {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+    </svg>
+  )
 }

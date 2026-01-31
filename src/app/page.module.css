@@ -3,18 +3,42 @@
 }
 
 /* Wide Hero Section - Visibility Optimized */
+/* Wide Hero Section - Visibility Optimized */
 .hero {
   position: relative;
   height: 85vh;
   max-height: 900px;
-  background: url('https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80&w=2000') no-repeat center center;
-  background-size: cover;
+  /* Background moved to ::before for animation */
   display: flex;
   align-items: center;
   justify-content: flex-start;
   color: white;
   overflow: hidden;
   padding-left: 5%;
+}
+
+/* Background Image with Zoom Animation */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80&w=2000') no-repeat center center;
+  background-size: cover;
+  z-index: 0;
+  animation: slowZoom 30s ease-in-out infinite alternate;
+}
+
+@keyframes slowZoom {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.15);
+  }
 }
 
 /* Premium Gradient Overlay - Seamless Visibility */
@@ -147,7 +171,8 @@
   align-items: flex-start;
   text-align: left;
   gap: 1.5rem;
-  transition: all var(--transition-normal);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  /* Bouncy transition */
   cursor: pointer;
   position: relative;
   border: 1px solid #E5E7EB;
@@ -157,11 +182,13 @@
 }
 
 .serviceCard:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 25px 50px -12px rgba(37, 99, 235, 0.15);
+  transform: translateY(-12px) scale(1.02);
+  /* More lift and scale */
+  box-shadow: 0 30px 60px -12px rgba(37, 99, 235, 0.25);
   /* Blue tinted shadow on hover */
   border-color: var(--color-secondary);
   /* Blue border on hover */
+  z-index: 10;
 }
 
 .cardIcon {
