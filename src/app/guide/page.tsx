@@ -108,15 +108,21 @@ export default function Guide() {
                         <div className={styles.transportGrid}>
                             <div className={styles.transportItem}>
                                 <h3><span className={styles.subwayIcon}>지하철</span></h3>
-                                <p>인천 1호선 <strong>임학역 2번 출구</strong> 도보 3분</p>
+                                <p>
+                                    인천 1호선<br />
+                                    <strong>임학역 3번 출구</strong> (도보 3분)
+                                </p>
                             </div>
                             <div className={styles.transportItem}>
                                 <h3><span className={styles.busIcon}>버스</span></h3>
-                                <p>임학역 또는 롯데마트 계양점 정류장 하차</p>
+                                <p>
+                                    임학역 또는<br />
+                                    임학사거리 정거장 하차
+                                </p>
                             </div>
                             <div className={styles.transportItem}>
                                 <h3><span className={styles.parkingIcon}>주차</span></h3>
-                                <p>건물 내 지하 주차장 이용 가능 (진료 시 무료 주차)</p>
+                                <p>건물 내 주차장 이용 가능</p>
                             </div>
                         </div>
                     </FadeIn>
