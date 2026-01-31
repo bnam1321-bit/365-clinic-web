@@ -28,7 +28,6 @@ export default function Footer() {
                     <div className={styles.contactInfo}>
                         <p>인천 계양구 장제로 867 상우메디칼빌딩 3층</p>
                         <p>TEL: 032-542-3659 | FAX: 032-542-3660</p>
-                        <p>대표자: 김기원 | 사업자등록번호: 123-45-67890</p>
                     </div>
                     <p className={styles.copyright}>&copy; {new Date().getFullYear()} 365 Internal Medicine Clinic. All rights reserved.</p>
                 </div>

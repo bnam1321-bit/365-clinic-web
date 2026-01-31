@@ -3,7 +3,7 @@ import { Activity, ShieldCheck, Zap, Syringe } from "lucide-react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "진료 안내 | 대한내과",
+    title: "진료 안내 | 365내과연합의원",
     description: "건강검진, 만성질환 관리, 수액 클리닉, 예방접종 안내.",
 };
 
