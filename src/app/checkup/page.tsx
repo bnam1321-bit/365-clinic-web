@@ -11,12 +11,16 @@ export const metadata: Metadata = {
 export default function CheckupPage() {
     return (
         <main className={styles.container}>
-            <FadeIn>
-                <section className={styles.sectionHeader}>
-                    <h2>종합건강검진</h2>
-                    <p>정확한 진단, 건강한 미래를 위한 첫걸음</p>
-                </section>
-            </FadeIn>
+            <section className={styles.header}>
+                <FadeIn>
+                    <span className={styles.badge}>COMPREHENSIVE CHECKUP</span>
+                    <h1 className={styles.title}>종합건강검진</h1>
+                    <p className={styles.subtitle}>
+                        5대암 검진부터 초음파 정밀 검진까지,<br />
+                        정확한 진단으로 건강한 미래를 지킵니다.
+                    </p>
+                </FadeIn>
+            </section>
 
             {/* Main Content */}
             <section className={styles.content}>

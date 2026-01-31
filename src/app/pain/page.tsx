@@ -11,12 +11,17 @@ export const metadata: Metadata = {
 export default function PainPage() {
     return (
         <main className={styles.container}>
-            <FadeIn>
-                <section className={styles.sectionHeader}>
-                    <h2>통증 클리닉</h2>
-                    <p>만성 통증, 참지 말고 치료하세요</p>
-                </section>
-            </FadeIn>
+            {/* Restore Original Hero Section */}
+            <section className={styles.header}>
+                <FadeIn>
+                    <span className={styles.badge}>PAIN CLINIC</span>
+                    <h1 className={styles.title}>통증 클리닉</h1>
+                    <p className={styles.subtitle}>
+                        만성 통증, 참지 말고 치료하세요.<br />
+                        정확한 원인 분석을 통해 안전하고 효과적인 맞춤 치료를 제공합니다.
+                    </p>
+                </FadeIn>
+            </section>
 
             {/* Main Content */}
             <section className={styles.content}>
@@ -24,10 +29,10 @@ export default function PainPage() {
 
                     {/* Intro */}
                     <FadeIn delay={0.1}>
-                        <div className={styles.introBox}>
+                        <div className={styles.sectionHeader}>
                             <Activity size={48} className={styles.sectionIcon} />
                             <h2>통증 없는 편안한 일상</h2>
-                            <p>정확한 원인 분석을 통해 안전하고 효과적인 맞춤 치료를 제공합니다.</p>
+                            <p>365내과연합의원이 여러분의 건강한 삶을 응원합니다.</p>
                         </div>
                     </FadeIn>
 

@@ -11,11 +11,16 @@ export const metadata: Metadata = {
 export default function Guide() {
     return (
         <div className={styles.guide}>
-            <main className={styles.guideContainer}>
+            {/* Restore Page Header with Background */}
+            <section className={styles.pageHeader}>
+                <FadeIn>
+                    <h1 className={styles.pageTitle}>진료 안내</h1>
+                    <p className={styles.pageSubtitle}>365내과연합의원 오시는 길 및 진료 시간 안내입니다.</p>
+                </FadeIn>
+            </section>
+
+            <main className={styles.content}>
                 <div className={`container`}>
-                    <FadeIn>
-                        <h1 className={styles.pageTitle}>진료 안내</h1>
-                    </FadeIn>
 
                     <div className={styles.grid}>
                         {/* Left Column: Hours */}

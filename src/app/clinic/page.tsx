@@ -11,12 +11,17 @@ export const metadata: Metadata = {
 export default function ClinicPage() {
     return (
         <main className={styles.container}>
-            <FadeIn>
-                <section className={styles.sectionHeader}>
-                    <h2>내과 클리닉</h2>
-                    <p>만성질환부터 급성질환까지, 대학병원 출신 의료진의 전문적인 진료</p>
-                </section>
-            </FadeIn>
+            {/* Restore Original Hero Section */}
+            <section className={styles.header}>
+                <FadeIn>
+                    <span className={styles.badge}>INTERNAL MEDICINE</span>
+                    <h1 className={styles.title}>내과 클리닉</h1>
+                    <p className={styles.subtitle}>
+                        만성질환부터 급성질환까지, 대학병원 출신<br />
+                        의료진의 전문적인 진료와 케어
+                    </p>
+                </FadeIn>
+            </section>
 
             {/* Main Content */}
             <section className={styles.content}>
@@ -74,14 +79,14 @@ export default function ClinicPage() {
 
                     <div style={{ height: '4rem' }}></div>
 
-                    {/* Liver Disease (Hepatitis/Fatty Liver) */}
+                    {/* Liver Disease (Hepatitis/Fatty Liver) - Using correct styles */}
                     <FadeIn delay={0.5}>
-                        <div className={styles.specialSection}>
+                        <div className={styles.diseaseSection}>
                             <div className={styles.sectionTitle}>
                                 <span className={styles.number}>Special</span>
                                 <h2 className={styles.name}>간 클리닉</h2>
                             </div>
-                            <div className={styles.subGrid}>
+                            <div className={styles.subItemGroup}>
                                 <div className={styles.subItem}>
                                     <h4>A형 / B형 / C형 간염</h4>
                                     <p>바이러스 감염에 의한 간의 염증 질환을 진단하고 항바이러스제 치료 및 예방접종을 시행합니다.</p>
@@ -103,15 +108,13 @@ export default function ClinicPage() {
                                 <span className={styles.number}>Focus</span>
                                 <h2 className={styles.name}>대상포진</h2>
                             </div>
-                            <div className={styles.diseaseContent}>
-                                <p className={styles.introText}>
-                                    신경이 있는 부위면 어디든 발생할 수 있으나, 주로 몸통이나 엉덩이 부위에 잘 발생합니다.
-                                    심한 통증과 감각 이상이 1~3일간 나타나고, 그 후 붉은 발진과 물집이 나타납니다.
-                                    <br /><br />
-                                    <strong>치료 골든타임:</strong> 피부 발진 발생 후 72시간 내에 항바이러스제를 투여해야 효과가 좋습니다.
-                                    통증이 심할 경우 신경차단술 등의 적극적인 통증 치료가 필요합니다.
-                                </p>
-                            </div>
+                            <p className={styles.introText}>
+                                신경이 있는 부위면 어디든 발생할 수 있으나, 주로 몸통이나 엉덩이 부위에 잘 발생합니다.
+                                심한 통증과 감각 이상이 1~3일간 나타나고, 그 후 붉은 발진과 물집이 나타납니다.
+                                <br /><br />
+                                <strong>치료 골든타임:</strong> 피부 발진 발생 후 72시간 내에 항바이러스제를 투여해야 효과가 좋습니다.
+                                통증이 심할 경우 신경차단술 등의 적극적인 통증 치료가 필요합니다.
+                            </p>
                         </div>
                     </FadeIn>
 
