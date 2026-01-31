@@ -122,8 +122,7 @@ export default function Guide() {
                         <p>궁금하신 점이 있으시면 언제든지 문의해 주세요. 친절하게 안내해 드리겠습니다.</p>
                     </FadeIn>
                 </div>
-        </div>
-            </main >
+            </main>
         </div >
     );
 }
