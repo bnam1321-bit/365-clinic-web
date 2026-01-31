@@ -56,6 +56,60 @@
     gap: 6rem;
 }
 
+/* Grid Layouts */
+.grid2 {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .grid2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Card Styles */
+.card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-border);
+    box-shadow: var(--shadow-sm);
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--color-secondary);
+}
+
+.cardIcon {
+    width: 60px;
+    height: 60px;
+    background-color: #EFF6FF;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-secondary);
+    margin-bottom: 1.5rem;
+}
+
+.card h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--color-primary);
+}
+
+.card p {
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+}
+
 /* Disease Section Shared Styles */
 .diseaseSection {
     background: white;
