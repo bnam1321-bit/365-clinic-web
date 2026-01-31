@@ -27,33 +27,44 @@ export default function CheckupPage() {
                 <div className="container">
 
                     {/* Intro Grid */}
+                    <div className={styles.introSection}>
+                        <h2 className={styles.introTitle}>종합건강검진이란?</h2>
+                        <h3 className={styles.introSubtitle}>
+                            질병의 조기 발견과 예방을 위한<br />가장 확실한 선택입니다.
+                        </h3>
+                        <p className={styles.introDesc}>
+                            365내과연합의원 종합건강검진센터는 최첨단 장비와 전문 의료진을 통해<br />
+                            암 조기 진단부터 만성질환 관리까지 원스톱 검진 서비스를 제공합니다.
+                        </p>
+                    </div>
+
                     <div className={styles.introGrid}>
                         <FadeIn delay={0.1}>
                             <div className={styles.introCard}>
                                 <div className={styles.icon}><ShieldCheck size={32} /></div>
                                 <h3>5대암 검진</h3>
-                                <p>위암, 대장암, 간암, 유방암, 자궁경부암 등 한국인의 주요 암을 정밀하게 검진합니다.</p>
+                                <p>한국인의 주요 사망 원인인<br />위/대장/간/유방/자궁경부암 정밀 검진</p>
                             </div>
                         </FadeIn>
                         <FadeIn delay={0.2}>
                             <div className={styles.introCard}>
                                 <div className={styles.icon}><HeartPulse size={32} /></div>
-                                <h3>일반 검진</h3>
-                                <p>혈압, 당뇨, 고지혈증 등 만성질환의 조기 발견을 위한 기본수 검사를 진행합니다.</p>
+                                <h3>혈액 종합 검진</h3>
+                                <p>70여 종의 정밀 혈액 검사로<br />신체 기능 및 질환 위험도 파악</p>
                             </div>
                         </FadeIn>
                         <FadeIn delay={0.3}>
                             <div className={styles.introCard}>
                                 <div className={styles.icon}><Microscope size={32} /></div>
                                 <h3>초음파 정밀 검진</h3>
-                                <p>복부, 갑상선, 경동맥 등 초음파를 통한 정밀 장기 상태를 확인합니다.</p>
+                                <p>대학병원급 고해상도 초음파로<br />복부/심장/갑상선 미세 병변 진단</p>
                             </div>
                         </FadeIn>
                         <FadeIn delay={0.4}>
                             <div className={styles.introCard}>
                                 <div className={styles.icon}><Activity size={32} /></div>
-                                <h3>혈액 종합 검진</h3>
-                                <p>간기능, 신장기능, 빈혈, 갑상선 기능 등 70여 종의 혈액학적 분석을 제공합니다.</p>
+                                <h3>만성질환 관리</h3>
+                                <p>고혈압, 당뇨 등 만성질환의<br />체계적인 추적 관찰 및 관리</p>
                             </div>
                         </FadeIn>
                     </div>
