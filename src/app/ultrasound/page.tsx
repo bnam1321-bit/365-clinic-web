@@ -11,12 +11,17 @@ export const metadata: Metadata = {
 export default function UltrasoundPage() {
     return (
         <main className={styles.container}>
-            <FadeIn>
-                <section className={styles.sectionHeader}>
-                    <h2>초음파 클리닉</h2>
-                    <p>대학병원급 하이엔드 장비로 정밀하게 진단합니다</p>
-                </section>
-            </FadeIn>
+            {/* Restore Premium Hero Section */}
+            <section className={styles.header}>
+                <FadeIn>
+                    <span className={styles.badge}>ULTRASOUND CLINIC</span>
+                    <h1 className={styles.title}>초음파 클리닉</h1>
+                    <p className={styles.subtitle}>
+                        대학병원급 하이엔드 장비로 정밀하게 진단합니다.<br />
+                        방사선 피폭 걱정 없이 안전한 정밀 검사
+                    </p>
+                </FadeIn>
+            </section>
 
             {/* Main Content */}
             <section className={styles.content}>

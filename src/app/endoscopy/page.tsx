@@ -12,12 +12,7 @@ import FadeIn from "@/components/ui/FadeIn";
 export default function EndoscopyPage() {
     return (
         <main className={styles.container}>
-            <FadeIn>
-                <section className={styles.sectionHeader}>
-                    <h2>내시경 클리닉</h2>
-                    <p>대학병원급 고화질 장비로 미세 병변까지 정확하게</p>
-                </section>
-            </FadeIn>
+
             {/* Page Header */}
             <section className={styles.header}>
                 <div className="container">

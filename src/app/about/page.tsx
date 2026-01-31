@@ -35,7 +35,7 @@ export default function About() {
                     <FadeIn delay={0.2}>
                         <h2 className={styles.title}>의료진 소개</h2>
                     </FadeIn>
-                    <div className={styles.doctorGrid}>
+                    <div className={styles.doctorsGrid}>
                         {/* Doctor 1 */}
                         <FadeIn delay={0.3}>
                             <div className={styles.doctorCard}>
