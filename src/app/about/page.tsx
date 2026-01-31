@@ -38,14 +38,12 @@ export default function About() {
                     <div className={styles.doctorsGrid}>
                         {/* Doctor 1 */}
                         <FadeIn delay={0.3}>
-                            <div className={styles.doctorCard}>
-                                <div className={styles.imageWrapper}>
-                                    <div className={styles.doctorImagePlaceholder}>이현석</div>
-                                </div>
-                                <div className={styles.info}>
+                            <div className={styles.doctorItem}>
+                                <div className={styles.doctorImagePlaceholder}>이현석</div>
+                                <div className={styles.doctorInfo}>
                                     <h3>이현석 대표원장</h3>
                                     <p className={styles.role}>내과 전문의 / 소화기내시경 세부전문의</p>
-                                    <ul className={styles.profileList}>
+                                    <ul className={styles.doctorBio}>
                                         <li>순천향대학교 의과대학 졸업</li>
                                         <li>순천향대학교 부속 부천병원 내과 전공의</li>
                                         <li>순천향대학교 부속 부천병원 소화기내과 임상강사</li>
@@ -59,14 +57,12 @@ export default function About() {
 
                         {/* Doctor 2 */}
                         <FadeIn delay={0.4}>
-                            <div className={styles.doctorCard}>
-                                <div className={styles.imageWrapper}>
-                                    <div className={styles.doctorImagePlaceholder}>노영석</div>
-                                </div>
-                                <div className={styles.info}>
+                            <div className={styles.doctorItem}>
+                                <div className={styles.doctorImagePlaceholder}>노영석</div>
+                                <div className={styles.doctorInfo}>
                                     <h3>노영석 대표원장</h3>
                                     <p className={styles.role}>내과 전문의</p>
-                                    <ul className={styles.profileList}>
+                                    <ul className={styles.doctorBio}>
                                         <li>중앙대학교 의과대학 졸업</li>
                                         <li>가천대 길병원 내과 전공의</li>
                                         <li>가천대 길병원 소화기내과 임상강사</li>
@@ -80,14 +76,12 @@ export default function About() {
 
                         {/* Doctor 3 */}
                         <FadeIn delay={0.5}>
-                            <div className={styles.doctorCard}>
-                                <div className={styles.imageWrapper}>
-                                    <div className={styles.doctorImagePlaceholder}>지재연</div>
-                                </div>
-                                <div className={styles.info}>
+                            <div className={styles.doctorItem}>
+                                <div className={styles.doctorImagePlaceholder}>지재연</div>
+                                <div className={styles.doctorInfo}>
                                     <h3>지재연 대표원장</h3>
                                     <p className={styles.role}>내과 전문의</p>
-                                    <ul className={styles.profileList}>
+                                    <ul className={styles.doctorBio}>
                                         <li>전북대학교 의과대학 졸업</li>
                                         <li>가톨릭대학교 서울성모병원 내과 전공의</li>
                                         <li>가톨릭대학교 서울성모병원 신장내과 임상강사</li>

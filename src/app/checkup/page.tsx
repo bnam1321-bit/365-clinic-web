@@ -29,29 +29,29 @@ export default function CheckupPage() {
                     {/* Intro Grid */}
                     <div className={styles.introGrid}>
                         <FadeIn delay={0.1}>
-                            <div className={styles.card}>
-                                <div className={styles.cardIcon}><ShieldCheck size={32} /></div>
+                            <div className={styles.introCard}>
+                                <div className={styles.icon}><ShieldCheck size={32} /></div>
                                 <h3>5대암 검진</h3>
                                 <p>위암, 대장암, 간암, 유방암, 자궁경부암 등 한국인의 주요 암을 정밀하게 검진합니다.</p>
                             </div>
                         </FadeIn>
                         <FadeIn delay={0.2}>
-                            <div className={styles.card}>
-                                <div className={styles.cardIcon}><HeartPulse size={32} /></div>
+                            <div className={styles.introCard}>
+                                <div className={styles.icon}><HeartPulse size={32} /></div>
                                 <h3>일반 검진</h3>
                                 <p>혈압, 당뇨, 고지혈증 등 만성질환의 조기 발견을 위한 기본수 검사를 진행합니다.</p>
                             </div>
                         </FadeIn>
                         <FadeIn delay={0.3}>
-                            <div className={styles.card}>
-                                <div className={styles.cardIcon}><Microscope size={32} /></div>
+                            <div className={styles.introCard}>
+                                <div className={styles.icon}><Microscope size={32} /></div>
                                 <h3>초음파 정밀 검진</h3>
                                 <p>복부, 갑상선, 경동맥 등 초음파를 통한 정밀 장기 상태를 확인합니다.</p>
                             </div>
                         </FadeIn>
                         <FadeIn delay={0.4}>
-                            <div className={styles.card}>
-                                <div className={styles.cardIcon}><Activity size={32} /></div>
+                            <div className={styles.introCard}>
+                                <div className={styles.icon}><Activity size={32} /></div>
                                 <h3>혈액 종합 검진</h3>
                                 <p>간기능, 신장기능, 빈혈, 갑상선 기능 등 70여 종의 혈액학적 분석을 제공합니다.</p>
                             </div>
