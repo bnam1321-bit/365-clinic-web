@@ -213,7 +213,8 @@
     list-style: none;
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 1.2rem;
+    /* Significantly increased gap between list items */
 }
 
 .doctorBio li {
@@ -221,6 +222,8 @@
     color: var(--color-text-secondary);
     position: relative;
     padding-left: 1rem;
+    line-height: 1.6;
+    /* Improved readability */
 }
 
 .doctorBio li::before {
