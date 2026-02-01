@@ -62,7 +62,7 @@
     color: var(--color-secondary);
     font-size: 1.1rem;
     font-weight: 700;
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
@@ -70,15 +70,17 @@
 .introSubtitle {
     font-size: 2.2rem;
     font-weight: 800;
-    line-height: 1.3;
+    line-height: 1.45;
     margin-bottom: 1.5rem;
     color: var(--color-text-primary);
+    word-break: keep-all;
 }
 
 .introDesc {
-    font-size: 1.1rem;
+    font-size: 1.15rem;
     color: var(--color-text-secondary);
-    line-height: 1.7;
+    line-height: 1.8;
+    word-break: keep-all;
 }
 
 .introGrid {
