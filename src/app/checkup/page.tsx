@@ -26,17 +26,7 @@ export default function CheckupPage() {
             <section className={styles.content}>
                 <div className="container">
 
-                    {/* Intro Grid */}
-                    <div className={styles.introSection}>
-                        <h2 className={styles.introTitle}>종합건강검진이란?</h2>
-                        <h3 className={styles.introSubtitle}>
-                            질병의 조기 발견과 예방을 위한<br />가장 확실한 선택입니다.
-                        </h3>
-                        <p className={styles.introDesc}>
-                            365내과연합의원 종합건강검진센터는 최첨단 장비와 전문 의료진을 통해<br />
-                            암 조기 진단부터 만성질환 관리까지 원스톱 검진 서비스를 제공합니다.
-                        </p>
-                    </div>
+
 
                     <div className={styles.introGrid}>
                         <FadeIn delay={0.1}>

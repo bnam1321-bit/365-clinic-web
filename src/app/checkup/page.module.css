@@ -52,42 +52,17 @@
 }
 
 /* Intro Grid */
-.introSection {
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto 4rem;
-}
 
-.introTitle {
-    color: var(--color-secondary);
-    font-size: 1.1rem;
-    font-weight: 700;
-    margin-bottom: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
 
-.introSubtitle {
-    font-size: 2.2rem;
-    font-weight: 800;
-    line-height: 1.45;
-    margin-bottom: 1.5rem;
-    color: var(--color-text-primary);
-    word-break: keep-all;
-}
-
-.introDesc {
-    font-size: 1.15rem;
-    color: var(--color-text-secondary);
-    line-height: 1.8;
-    word-break: keep-all;
-}
 
 .introGrid {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: 2rem;
-    margin-bottom: 6rem;
+    margin-top: -3rem;
+    position: relative;
+    z-index: 10;
+    margin-bottom: 5rem;
 }
 
 .introCard {
