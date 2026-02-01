@@ -81,12 +81,17 @@
     color: var(--color-primary);
 }
 
-.philosophyText p {
-    color: var(--color-text-secondary);
-    font-size: 1.1rem;
-    line-height: 1.85;
+.greetingContent p {
+    font-size: 1.25rem;
+    color: #334155;
+    line-height: 2.0;
     word-break: keep-all;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
+    /* Distinct spacing between paragraphs */
+}
+
+.greetingContent p:last-child {
+    margin-bottom: 0;
 }
 
 .valuesList {
@@ -185,7 +190,8 @@
 }
 
 .doctorInfo {
-    padding: 2rem;
+    padding: 2rem 2rem 4rem;
+    /* Increased bottom padding for "card bottom spacing" */
 }
 
 .doctorInfo h3 {
@@ -233,5 +239,7 @@
     .doctorsGrid {
         grid-template-columns: repeat(3, 1fr);
         /* 3 Columns for 3 doctors */
+        gap: 6rem;
+        /* Increased gap for better separation */
     }
 }
