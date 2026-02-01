@@ -135,7 +135,8 @@
 
 /* Profile Section - Migrated & Refined */
 .profile {
-    padding-bottom: var(--spacing-3xl);
+    padding-bottom: 10rem;
+    /* Huge padding at bottom boundary (footer transition) */
     background-color: #F8FAFC;
     /* Light background for contrast */
     padding-top: var(--spacing-xl);
