@@ -5,10 +5,12 @@
     text-align: center;
 }
 
-.pageTitle {
+.title {
     font-size: 2.5rem;
     font-weight: 700;
-    margin-bottom: var(--spacing-sm);
+    color: var(--color-primary);
+    margin-bottom: 2rem;
+    text-align: center;
 }
 
 .pageSubtitle {
@@ -19,6 +21,34 @@
 .philosophy {
     padding: var(--spacing-3xl) 0;
     background-color: white;
+}
+
+.messageCard {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 2rem;
+    background-color: #F8FAFC;
+    border-radius: var(--radius-lg);
+}
+
+.subtitle {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #1E3A8A;
+    margin-bottom: 3rem;
+    /* "Skip a few lines" */
+    line-height: 1.4;
+    word-break: keep-all;
+}
+
+.text {
+    font-size: 1.25rem;
+    /* Increased font size */
+    color: #334155;
+    line-height: 2.0;
+    /* Comfortable line spacing */
+    word-break: keep-all;
 }
 
 .philosophyContainer {
