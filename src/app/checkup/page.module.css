@@ -225,7 +225,8 @@
 @media (min-width: 768px) {
     .introGrid {
         grid-template-columns: repeat(2, 1fr);
-        /* 2x2 Grid for 4 items looks better than 3 */
+        gap: 8rem;
+        /* Very wide gap for tabs on desktop */
     }
 
     .cancerGrid {
