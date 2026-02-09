@@ -171,18 +171,33 @@
 }
 
 .doctorInfo h3 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-weight: 800;
     color: var(--color-primary);
-    margin-bottom: 0.25rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    /* Center name */
 }
 
-.specialty {
+.role {
     color: var(--color-secondary);
-    font-weight: 600;
-    font-size: 0.95rem;
-    margin-bottom: 1.5rem;
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
     display: block;
+    text-align: center;
+    /* Center role */
+    position: relative;
+}
+
+/* Add a small separator line under the role */
+.role::after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 3px;
+    background-color: #E2E8F0;
+    margin: 1.5rem auto 0;
 }
 
 .doctorBio {
