@@ -44,58 +44,70 @@ export default function About() {
                         <h2 className={styles.title}>의료진 소개</h2>
                     </FadeIn>
                     <div className={styles.doctorsGrid}>
-                        {/* Doctor 1 */}
+                        {/* Doctor 1: 이현석 */}
                         <FadeIn delay={0.3}>
                             <div className={styles.doctorItem}>
-                                <div className={styles.doctorImagePlaceholder}>이현석</div>
                                 <div className={styles.doctorInfo}>
-                                    <h3>이현석 대표원장</h3>
-                                    <p className={styles.role}>내과 전문의 / 소화기내시경 세부전문의</p>
+                                    <h3>이현석 원장</h3>
+                                    <p className={styles.role}>전문의</p>
                                     <ul className={styles.doctorBio}>
-                                        <li>순천향대학교 의과대학 졸업</li>
-                                        <li>순천향대학교 부속 부천병원 내과 전공의</li>
-                                        <li>순천향대학교 부속 부천병원 소화기내과 임상강사</li>
-                                        <li>대한내과학회 정회원</li>
-                                        <li>대한소화기학회 평생회원</li>
-                                        <li>대한소화기내시경학회 평생회원</li>
+                                        <li>차의과대학 외래교수</li>
+                                        <li>을지의과대학 외래교수</li>
+                                        <li>내과 전문의</li>
+                                        <li>소화기 내시경 전문의</li>
+                                        <li>대한 소화기학회 평생회원</li>
+                                        <li>대한 소화기 내시경학회 평생회원</li>
+                                        <li>대한 소화관 운동학회 정회원</li>
+                                        <li>대한 간학회 정회원</li>
+                                        <li>대한 당뇨병학회 정회원</li>
+                                        <li>대한 노인병학회 정회원</li>
+                                        <li>대한 내분비학회 정회원</li>
+                                        <li>대한 순환기학회 정회원</li>
+                                        <li>한국 심초음파학회 정회원</li>
                                     </ul>
                                 </div>
                             </div>
                         </FadeIn>
 
-                        {/* Doctor 2 */}
+                        {/* Doctor 2: 지재연 */}
                         <FadeIn delay={0.4}>
                             <div className={styles.doctorItem}>
-                                <div className={styles.doctorImagePlaceholder}>노영석</div>
                                 <div className={styles.doctorInfo}>
-                                    <h3>노영석 대표원장</h3>
-                                    <p className={styles.role}>내과 전문의</p>
+                                    <h3>지재연 원장</h3>
+                                    <p className={styles.role}>전문의</p>
                                     <ul className={styles.doctorBio}>
-                                        <li>중앙대학교 의과대학 졸업</li>
-                                        <li>가천대 길병원 내과 전공의</li>
-                                        <li>가천대 길병원 소화기내과 임상강사</li>
-                                        <li>대한내과학회 정회원</li>
-                                        <li>대한소화기내시경학회 평생회원</li>
-                                        <li>대한임상초음파학회 평생회원</li>
+                                        <li>가천의과대학교 외래교수</li>
+                                        <li>고려대학교 의과대학 외래교수</li>
+                                        <li>대한 위장내시경학회 정회원</li>
+                                        <li>대한 IMS학회 이사</li>
+                                        <li>신경근 치료 공인 국제강사</li>
+                                        <li>포천중문의대 대체의학 대학원 IMS 고위자 과정 수료</li>
+                                        <li>시리아스 정형의학회 정회원</li>
+                                        <li>대한 근골격 초음파 학회 정회원</li>
+                                        <li>대한 척추통증 중재 시술회 정회원</li>
+                                        <li>대한 골프의학회 정회원</li>
+                                        <li>대한 노인병학회 전문의 인정의</li>
                                     </ul>
                                 </div>
                             </div>
                         </FadeIn>
 
-                        {/* Doctor 3 */}
+                        {/* Doctor 3: 노영석 */}
                         <FadeIn delay={0.5}>
                             <div className={styles.doctorItem}>
-                                <div className={styles.doctorImagePlaceholder}>지재연</div>
                                 <div className={styles.doctorInfo}>
-                                    <h3>지재연 대표원장</h3>
-                                    <p className={styles.role}>내과 전문의</p>
+                                    <h3>노영석 원장</h3>
+                                    <p className={styles.role}>전문의</p>
                                     <ul className={styles.doctorBio}>
-                                        <li>전북대학교 의과대학 졸업</li>
-                                        <li>가톨릭대학교 서울성모병원 내과 전공의</li>
-                                        <li>가톨릭대학교 서울성모병원 신장내과 임상강사</li>
-                                        <li>대한내과학회 정회원</li>
-                                        <li>대한신장학회 정회원</li>
-                                        <li>대한투석협회 정회원</li>
+                                        <li>고려대학교 의과대학 외래교수</li>
+                                        <li>대한 위장내시경학회 내시경 전문의</li>
+                                        <li>대한 비만건강학회 비만전문가 과정 수료</li>
+                                        <li>포천중문의대 대체의학 대학원 IMS 고위자 과정 수료</li>
+                                        <li>신경근 치료 공인 국제강사</li>
+                                        <li>시리아스 정형의학회 정회원</li>
+                                        <li>대한 근골격 초음파 학회 정회원</li>
+                                        <li>대한 척추통증 중재시술회 정회원</li>
+                                        <li>대한 비만의사회 정회원</li>
                                     </ul>
                                 </div>
                             </div>

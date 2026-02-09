@@ -121,21 +121,11 @@
 }
 
 /* This was the problematic block previously */
-.doctorImagePlaceholder {
-    width: 100%;
-    max-width: 400px;
-    height: 500px;
-    background-color: #eee;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #aaa;
-    border-radius: var(--radius-lg);
-}
+/* Doctor Image Placeholder styles removed */
 
 /* Profile Section - Migrated & Refined */
 .profile {
-    padding-bottom: 10rem;
+    padding-bottom: 20rem;
     /* Huge padding at bottom boundary (footer transition) */
     background-color: #F8FAFC;
     /* Light background for contrast */
@@ -173,21 +163,6 @@
 .doctorItem:hover {
     transform: translateY(-5px);
     box-shadow: var(--shadow-lg);
-}
-
-/* This overrides the previous placeholder for the specific grid items */
-.doctorItem .doctorImagePlaceholder {
-    width: 100%;
-    height: 350px;
-    background-color: #E2E8F0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2rem;
-    font-weight: 700;
-    color: #94A3B8;
-    max-width: none;
-    /* Reset max-width from the philosophy image */
 }
 
 .doctorInfo {
