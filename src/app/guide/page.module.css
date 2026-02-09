@@ -28,7 +28,8 @@
 .grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 4rem;
+    /* Increased from 2rem */
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -45,7 +46,8 @@
 
 .section {
     background: white;
-    padding: 2.5rem;
+    padding: 3rem;
+    /* Increased padding */
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-sm);
     border: 1px solid var(--color-border);
@@ -53,14 +55,6 @@
     /* Ensure full height for alignment */
     display: flex;
     flex-direction: column;
-}
-
-.section {
-    background: white;
-    padding: 2.5rem;
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-sm);
-    border: 1px solid var(--color-border);
 }
 
 .sectionTitle {
@@ -141,6 +135,7 @@
     justify-content: center;
     margin-bottom: 2rem;
     overflow: hidden;
+    position: relative;
 }
 
 .mapInner {
@@ -163,7 +158,8 @@
 .transportGrid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 1.5rem;
+    gap: 3rem;
+    /* Increased to 3rem for airy feel */
 }
 
 .transportItem {
