@@ -103,69 +103,37 @@ export default function EndoscopyPage() {
                             </div>
                         </FadeIn>
 
-                        {/* 용종 절제술 설명 추가 영역 */}
-                        <FadeIn delay={0.2}>
-                            <section className={styles.polypSection}>
-                                <h3>당일 용종 절제술 (One-Stop)</h3>
-                                <p>
-                                    본원에서는 대장내시경 중 발견된 용종을 <strong>당일 즉시 절제</strong>합니다.<br />
-                                    대학병원 출신 전문의가 직접 시술하여 더욱 안전하고 정확합니다.
-                                </p>
-                                <div className={styles.polypTypes}>
-                                    <div className={styles.typeCard}>
-                                        <h4>선종성 용종</h4>
-                                        <p>대장암으로 진행될 가능성이 높아 반드시 제거해야 합니다.</p>
-                                    </div>
-                                    <div className={styles.typeCard}>
-                                        <h4>과형성 용종</h4>
-                                        <p>일반적으로 암으로 발전하지 않으나 추적 관찰이 필요합니다.</p>
-                                    </div>
+                        {/* Refactored Polypectomy Layout for Uniformity */}
+                        <div className={styles.grid2}>
+                            <FadeIn delay={0.2}>
+                                <div className={styles.card}>
+                                    <h3>당일 용종 절제술 (One-Stop)</h3>
+                                    <p className={styles.cardDesc}>
+                                        본원에서는 대장내시경 중 발견된 용종을 <strong>당일 즉시 절제</strong>합니다.<br />
+                                        대학병원 출신 전문의가 직접 시술하여 더욱 안전하고 정확합니다.
+                                    </p>
+                                    <ul className={styles.featureList}>
+                                        <li>선종성 용종: 암으로 진행될 가능성이 높아 반드시 제거</li>
+                                        <li>과형성 용종: 추적 관찰이 필요할 수 있음</li>
+                                    </ul>
                                 </div>
-                            </section>
-                        </FadeIn>
+                            </FadeIn>
 
-                        <FadeIn delay={0.3}>
-                            <div className={styles.infoBox}>
-                                <h3>대장 용종이란?</h3>
-                                <p className={styles.infoDesc}>
-                                    용종(폴립)은 장 점막이 비정상적으로 자라나 흑처럼 돌출된 상태를 말합니다.
-                                    대장내시경을 통해 용종을 미리 제거하면 대장암의 공포에서 벗어날 수 있습니다.
-                                    일반적으로 5mm 이상의 큰 용종은 출혈 위험이 있어 용종절제술이 필요합니다.
-                                </p>
-
-                                <h4 style={{ marginTop: '3rem', marginBottom: '1.5rem', fontSize: '1.4rem', color: '#111827', fontWeight: 700 }}>용종의 종류</h4>
-                                <div className={styles.polypGrid}>
-                                    <div className={styles.polypCard}>
-                                        <div><span className={styles.polypNumber}>01</span><span className={styles.polypTitle}>선종</span></div>
-                                        <p className={styles.polypDesc}>
-                                            시간이 지나면 암으로 발전할 가능성이 높아 발견 즉시 제거합니다.
-                                            크기가 1cm 이상이거나 융모 형태일 경우 진행성 선종이라 부릅니다.
-                                        </p>
-                                    </div>
-                                    <div className={styles.polypCard}>
-                                        <div><span className={styles.polypNumber}>02</span><span className={styles.polypTitle}>과형성 용종</span></div>
-                                        <p className={styles.polypDesc}>
-                                            과형성 용종과 선종이 혼합된 경우 크기가 커지고 세포 변이가 나타납니다.
-                                            톱니 형태의 선종으로 변하면서 암으로 진행될 수 있습니다.
-                                        </p>
-                                    </div>
-                                    <div className={styles.polypCard}>
-                                        <div><span className={styles.polypNumber}>03</span><span className={styles.polypTitle}>염증성 용종</span></div>
-                                        <p className={styles.polypDesc}>
-                                            장에 염증이 생기고 치유되는 과정에서 점막이 돌출된 것으로,
-                                            일반적으로 암으로 발전하지는 않습니다.
-                                        </p>
-                                    </div>
-                                    <div className={styles.polypCard}>
-                                        <div><span className={styles.polypNumber}>04</span><span className={styles.polypTitle}>유임종</span></div>
-                                        <p className={styles.polypDesc}>
-                                            주로 직장에서 발견되며 크기가 커지면서 다른 장기로 전이될 수 있습니다.
-                                            1cm 이하로 크기가 작은 경우 내시경으로 제거 가능합니다.
-                                        </p>
-                                    </div>
+                            <FadeIn delay={0.3}>
+                                <div className={styles.card}>
+                                    <h3>대장 용종이란?</h3>
+                                    <p className={styles.cardDesc}>
+                                        장 점막이 비정상적으로 자라나 혹처럼 돌출된 상태입니다.<br />
+                                        대장내시경을 통해 용종을 미리 제거하면 <strong>대장암 예방</strong>이 가능합니다.
+                                    </p>
+                                    <ul className={styles.featureList}>
+                                        <li>5mm 이상 큰 용종은 출혈 위험으로 절제 필요</li>
+                                        <li>선종: 발견 즉시 제거 필요 (암 발전 가능성 높음)</li>
+                                        <li>톱니 형태 선종: 암으로 진행될 수 있어 주의 필요</li>
+                                    </ul>
                                 </div>
-                            </div>
-                        </FadeIn>
+                            </FadeIn>
+                        </div>
                     </div>
 
                     {/* 03. Precautions */}

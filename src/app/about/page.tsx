@@ -49,7 +49,6 @@ export default function About() {
                             <div className={styles.doctorItem}>
                                 <div className={styles.doctorInfo}>
                                     <h3>이현석 원장</h3>
-                                    <p className={styles.role}>전문의</p>
                                     <ul className={styles.doctorBio}>
                                         <li>차의과대학 외래교수</li>
                                         <li>을지의과대학 외래교수</li>
@@ -74,7 +73,6 @@ export default function About() {
                             <div className={styles.doctorItem}>
                                 <div className={styles.doctorInfo}>
                                     <h3>지재연 원장</h3>
-                                    <p className={styles.role}>전문의</p>
                                     <ul className={styles.doctorBio}>
                                         <li>가천의과대학교 외래교수</li>
                                         <li>고려대학교 의과대학 외래교수</li>
@@ -97,7 +95,6 @@ export default function About() {
                             <div className={styles.doctorItem}>
                                 <div className={styles.doctorInfo}>
                                     <h3>노영석 원장</h3>
-                                    <p className={styles.role}>전문의</p>
                                     <ul className={styles.doctorBio}>
                                         <li>고려대학교 의과대학 외래교수</li>
                                         <li>대한 위장내시경학회 내시경 전문의</li>
