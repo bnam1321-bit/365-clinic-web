@@ -107,7 +107,7 @@ export default function Home() {
                   <div>
                     <div className={styles.cardIcon}><HeartPulse size={48} /></div>
                     <h3>진료 안내</h3>
-                    <p>평일 19시 야간진료, 토요일 14시까지. 환자분을 위한 365일 진료 환경.</p>
+                    <p>평일 19시, 토요일 14시까지 진료. 대학병원 출신 전문의 3인 협진.</p>
                   </div>
                   <div className={styles.cardPlus}><ArrowRight /></div>
                 </div>
