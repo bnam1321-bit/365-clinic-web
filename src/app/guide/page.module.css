@@ -155,11 +155,21 @@
     font-size: 0.9rem;
 }
 
+/* Transport Section */
+.transportTitle {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--color-primary);
+    margin-bottom: 3rem;
+    /* Added significant margin */
+}
+
 .transportGrid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 3rem;
-    /* Increased to 3rem for airy feel */
+    gap: 4rem;
+    /* Max spacing for airy feel */
 }
 
 .transportItem {

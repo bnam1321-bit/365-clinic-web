@@ -92,8 +92,8 @@
 .navList {
     display: none;
     /* Desktop only */
-    gap: 1.5rem;
-    /* Adjusted for 6 items */
+    gap: 2.5rem;
+    /* Increased for better spacing */
     list-style: none;
 }
 
