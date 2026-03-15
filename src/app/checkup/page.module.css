@@ -223,6 +223,45 @@
     top: -0.2rem;
 }
 
+/* Photo Gallery Styles */
+.photoGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 0 1rem;
+    margin-bottom: 4rem;
+}
+
+.photoCard {
+    background: white;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--color-border);
+    transition: transform var(--transition-normal);
+}
+
+.photoCard:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+.clinicImage {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    display: block;
+}
+
+.photoCaption {
+    padding: 1.5rem;
+    text-align: center;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    background-color: #F8FAFC;
+    border-top: 1px solid var(--color-border);
+}
+
 @media (min-width: 768px) {
     .introGrid {
         grid-template-columns: repeat(2, 1fr);
@@ -232,5 +271,9 @@
 
     .cancerGrid {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .photoGrid {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
