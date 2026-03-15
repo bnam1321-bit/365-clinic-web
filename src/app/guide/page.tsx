@@ -62,17 +62,12 @@ export default function Guide() {
                                 </div>
 
                                 <div className={styles.mapPlaceholder}>
-                                    {/* Map Embed - Google Map provides coordinate visualization */}
-                                    <iframe
-                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3161.8!2d126.738!3d37.545!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sIncheon+Gyeyang-gu+Jangje-ro+867!5e0!3m2!1sen!2skr!4v1620000000000!5m2!1sen!2skr"
-                                        width="100%"
-                                        height="100%"
-                                        style={{ border: 0 }}
-                                        allowFullScreen={true}
-                                        loading="lazy">
-                                    </iframe>
+                                    {/* Kakao Map Embed */}
+                                    <div style={{ font: 'normal normal 400 12px/normal dotum, sans-serif', width: '100%', height: '100%', position: 'relative' }}>
+                                        <iframe width="100%" height="100%" src="https://map.kakao.com/link/map/365내과연합의원,37.5458,126.7366" frameBorder="0" style={{ border: 0 }} allowFullScreen={true} loading="lazy"></iframe>
+                                    </div>
 
-                                    {/* Naver Map Direct Link Overlay */}
+                                    {/* Kakao Map Direct Link Overlay */}
                                     <div style={{
                                         position: 'absolute',
                                         bottom: '20px',
@@ -86,15 +81,15 @@ export default function Guide() {
                                         gap: '8px',
                                         zIndex: 10
                                     }}>
-                                        <img src="https://map.naver.com/v5/assets/icon/favicon-32x32.png" alt="Naver" width="20" height="20" />
-                                        <a href="https://map.naver.com/p/search/365내과연합의원" target="_blank" rel="noopener noreferrer" style={{
+                                        <div style={{ width: '20px', height: '20px', backgroundColor: '#FEE500', borderRadius: '4px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 'bold', color: '#000', fontSize: '12px' }}>K</div>
+                                        <a href="https://map.kakao.com/link/to/365내과연합의원,37.5458,126.7366" target="_blank" rel="noopener noreferrer" style={{
                                             fontSize: '1rem',
                                             fontWeight: '700',
-                                            color: '#03C75A',
+                                            color: '#3B1E1E',
                                             textDecoration: 'none',
                                             letterSpacing: '-0.5px'
                                         }}>
-                                            네이버 지도로 보기
+                                            카카오맵 길찾기
                                         </a>
                                     </div>
                                 </div>
