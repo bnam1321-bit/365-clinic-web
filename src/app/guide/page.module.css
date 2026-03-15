@@ -194,7 +194,7 @@
 
 .transportItem p {
     color: var(--color-text-secondary);
-    line-height: 1.6;
+    line-height: var(--leading-normal);
     font-size: 1.05rem;
 }
 

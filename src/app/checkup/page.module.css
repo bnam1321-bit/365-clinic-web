@@ -45,7 +45,7 @@
 .subtitle {
     font-size: 1.25rem;
     color: #E5E7EB;
-    line-height: 1.8;
+    line-height: var(--leading-relaxed);
     max-width: 600px;
     margin: 0 auto;
     font-weight: 300;
@@ -95,7 +95,7 @@
 
 .introCard p {
     color: var(--color-text-secondary);
-    line-height: 1.5;
+    line-height: var(--leading-normal);
 }
 
 /* Section Common */
@@ -175,7 +175,7 @@
     list-style: disc;
     padding-left: 1.25rem;
     color: var(--color-text-muted);
-    line-height: 1.6;
+    line-height: var(--leading-normal);
 }
 
 /* Process Box */

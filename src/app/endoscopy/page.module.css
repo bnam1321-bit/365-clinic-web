@@ -45,7 +45,7 @@
 .subtitle {
     font-size: 1.25rem;
     color: #E5E7EB;
-    line-height: 1.8;
+    line-height: var(--leading-relaxed);
     font-weight: 300;
 }
 
@@ -85,7 +85,7 @@
 .sectionHeader p {
     color: var(--color-text-secondary);
     font-size: 1.1rem;
-    line-height: 1.6;
+    line-height: var(--leading-normal);
 }
 
 /* Grids */
@@ -160,7 +160,7 @@
 .infoDesc {
     color: var(--color-text-secondary);
     font-size: 1.1rem;
-    line-height: 1.7;
+    line-height: var(--leading-relaxed);
     max-width: 800px;
     margin: 0 auto;
 }
@@ -198,7 +198,7 @@
 .polypDesc {
     font-size: 0.95rem;
     color: var(--color-text-secondary);
-    line-height: 1.6;
+    line-height: var(--leading-normal);
 }
 
 /* Precautions Section */

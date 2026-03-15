@@ -45,7 +45,7 @@
 .subtitle {
     font-size: 1.25rem;
     color: #E5E7EB;
-    line-height: 1.8;
+    line-height: var(--leading-relaxed);
     font-weight: 300;
 }
 
@@ -107,7 +107,7 @@
 
 .card p {
     color: var(--color-text-secondary);
-    line-height: 1.6;
+    line-height: var(--leading-normal);
 }
 
 /* Disease Section Shared Styles */
@@ -145,7 +145,7 @@
 .introText {
     font-size: 1.1rem;
     color: var(--color-text-secondary);
-    line-height: 1.7;
+    line-height: var(--leading-relaxed);
     margin-bottom: 3rem;
     background-color: #F8FAFC;
     padding: 1.5rem;
@@ -174,7 +174,7 @@
 
 .subItem p {
     color: #475569;
-    line-height: 1.6;
+    line-height: var(--leading-normal);
     font-size: 1rem;
 }
 
@@ -237,7 +237,7 @@
 .advDesc {
     font-size: 1rem;
     color: var(--color-text-secondary);
-    line-height: 1.6;
+    line-height: var(--leading-normal);
 }
 
 @media (min-width: 768px) {
