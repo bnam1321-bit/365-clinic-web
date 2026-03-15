@@ -182,7 +182,7 @@ export default function UltrasoundPage() {
                     {/* Clinic Photos */}
                     <FadeIn delay={0.6}>
                         <div className={styles.sectionHeader} style={{ marginTop: '5rem', marginBottom: '2rem', textAlign: 'center' }}>
-                            <h2 style={{ fontSize: '2rem', fontWeight: 800, color: 'var(--color-primary)' }}>쾌적하고 프라이빗한 검사 환경</h2>
+                            <h2 style={{ fontSize: '2rem', fontWeight: 800, color: 'var(--color-primary)' }}>정밀 초음파 영상센터 전경</h2>
                         </div>
                     </FadeIn>
                     <div className={styles.photoGrid}>
