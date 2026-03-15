@@ -156,20 +156,22 @@
 }
 
 /* Transport Section */
+.transportSection {
+    margin-top: 6rem;
+}
+
 .transportTitle {
     text-align: center;
     font-size: 1.8rem;
     font-weight: 800;
     color: var(--color-primary);
     margin-bottom: 3rem;
-    /* Added significant margin */
 }
 
 .transportGrid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 4rem;
-    /* Max spacing for airy feel */
 }
 
 .transportItem {
@@ -199,18 +201,25 @@
 }
 
 /* Contact Styles */
-.phoneDisplay {
+.contactBanner {
+    margin-top: 6rem;
+    text-align: center;
+    padding: 3rem;
+    background-color: #F8FAFC;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-border);
+}
+
+.contactBanner h2 {
     font-size: 2.5rem;
     font-weight: 800;
     color: var(--color-primary);
-    margin-top: 1rem;
-    margin-bottom: 0.5rem;
-    text-align: center;
+    margin-bottom: 1rem;
 }
 
-.contactDesc {
-    text-align: center;
-    color: var(--color-text-muted);
+.contactBanner p {
+    color: var(--color-text-secondary);
+    font-size: 1.1rem;
 }
 
 @media (min-width: 768px) {
