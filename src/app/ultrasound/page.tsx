@@ -200,17 +200,6 @@ export default function UltrasoundPage() {
                         </FadeIn>
                     </div>
 
-                    {/* IV Therapy Section (Kept as secondary service) */}
-                    <FadeIn delay={0.6}>
-                        <div className={styles.ivSection}>
-                            <div className={styles.ivHeader}>
-                                <Zap size={40} color="#2563EB" style={{ marginBottom: '1rem' }} />
-                                <h2 style={{ fontSize: '2rem', fontWeight: 800, color: '#111827' }}>개인 맞춤 수액 클리닉</h2>
-                                <p style={{ marginTop: '1rem', color: '#4B5563' }}>내과 전문의가 환자의 컨디션에 맞춰 1:1로 처방하는 프리미엄 수액 치료입니다.</p>
-                            </div>
-                        </div>
-                    </FadeIn>
-
                 </div>
             </section>
         </main>
