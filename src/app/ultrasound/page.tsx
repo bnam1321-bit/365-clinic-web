@@ -188,14 +188,14 @@ export default function UltrasoundPage() {
                     <div className={styles.photoGrid}>
                         <FadeIn delay={0.7} direction="up">
                             <div className={styles.photoCard}>
-                                <img src="/images/ultrasound_clinic_1.jpg" alt="초음파실 및 폐활량측정실 전경" className={styles.clinicImage} />
-                                <div className={styles.photoCaption}>정밀 진단을 위한 초음파/심전도실</div>
+                                <img src="/images/ultrasound_clinic_1.jpg" alt="초음파/심전도실" className={styles.clinicImage} />
+                                <div className={styles.photoCaption}>초음파/심전도실</div>
                             </div>
                         </FadeIn>
                         <FadeIn delay={0.8} direction="up">
                             <div className={styles.photoCard}>
-                                <img src="/images/ultrasound_clinic_2.jpg" alt="안전하고 프라이빗한 유방촬영실 전경" className={styles.clinicImage} />
-                                <div className={styles.photoCaption}>여성의 프라이버시를 존중하는 유방촬영실</div>
+                                <img src="/images/ultrasound_clinic_2.jpg" alt="유방촬영실" className={styles.clinicImage} />
+                                <div className={styles.photoCaption}>유방촬영실</div>
                             </div>
                         </FadeIn>
                     </div>
