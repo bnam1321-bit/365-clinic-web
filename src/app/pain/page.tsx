@@ -121,6 +121,28 @@ export default function PainPage() {
                         </div>
                     </div>
 
+                    {/* Clinic Photos */}
+                    <FadeIn delay={0.6}>
+                        <div className={styles.sectionHeader} style={{ marginTop: '5rem', marginBottom: '2rem' }}>
+                            <h2>편안한 진료 환경</h2>
+                            <p style={{ marginTop: '0.5rem' }}>프리미엄 장비와 쾌적한 진료 공간을 제공합니다.</p>
+                        </div>
+                    </FadeIn>
+                    <div className={styles.photoGrid}>
+                        <FadeIn delay={0.7} direction="up">
+                            <div className={styles.photoCard}>
+                                <img src="/images/pain_clinic_1.jpg" alt="통증클리닉 대기실 및 수액실 전경" className={styles.clinicImage} />
+                                <div className={styles.photoCaption}>쾌적하고 편안한 대기 및 진료 공간</div>
+                            </div>
+                        </FadeIn>
+                        <FadeIn delay={0.8} direction="up">
+                            <div className={styles.photoCard}>
+                                <img src="/images/pain_clinic_2.jpg" alt="통증클리닉 정밀 초음파 및 치료 장비" className={styles.clinicImage} />
+                                <div className={styles.photoCaption}>정확한 진단을 위한 정밀 초음파 장비</div>
+                            </div>
+                        </FadeIn>
+                    </div>
+
                 </div>
             </section>
         </main>
