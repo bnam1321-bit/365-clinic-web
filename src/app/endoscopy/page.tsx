@@ -174,6 +174,28 @@ export default function EndoscopyPage() {
                         </FadeIn>
                     </div>
 
+                    {/* Clinic Photos */}
+                    <FadeIn delay={0.6}>
+                        <div className={styles.sectionHeader} style={{ marginTop: '5rem', marginBottom: '2rem' }}>
+                            <h2>안전하고 쾌적한 내시경 센터</h2>
+                            <p style={{ marginTop: '0.5rem' }}>대학병원급 최신 장비와 편안한 회복 시설을 갖추고 있습니다.</p>
+                        </div>
+                    </FadeIn>
+                    <div className={styles.photoGrid}>
+                        <FadeIn delay={0.7} direction="up">
+                            <div className={styles.photoCard}>
+                                <img src="/images/endoscopy_clinic_1.jpg" alt="내시경실 최신 장비 및 검사실 전경" className={styles.clinicImage} />
+                                <div className={styles.photoCaption}>정밀 진단이 가능한 대학병원급 내시경 장비</div>
+                            </div>
+                        </FadeIn>
+                        <FadeIn delay={0.8} direction="up">
+                            <div className={styles.photoCard}>
+                                <img src="/images/endoscopy_clinic_2.jpg" alt="내시경 후 편안한 휴식을 위한 회복실 전경" className={styles.clinicImage} />
+                                <div className={styles.photoCaption}>검사 후 안전하고 편안한 1인 수액/회복실</div>
+                            </div>
+                        </FadeIn>
+                    </div>
+
                 </div>
             </section>
         </main>
