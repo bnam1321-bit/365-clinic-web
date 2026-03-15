@@ -179,6 +179,27 @@ export default function UltrasoundPage() {
 
                     </div>
 
+                    {/* Clinic Photos */}
+                    <FadeIn delay={0.6}>
+                        <div className={styles.sectionHeader} style={{ marginTop: '5rem', marginBottom: '2rem', textAlign: 'center' }}>
+                            <h2 style={{ fontSize: '2rem', fontWeight: 800, color: 'var(--color-primary)' }}>쾌적하고 프라이빗한 검사 환경</h2>
+                        </div>
+                    </FadeIn>
+                    <div className={styles.photoGrid}>
+                        <FadeIn delay={0.7} direction="up">
+                            <div className={styles.photoCard}>
+                                <img src="/images/ultrasound_clinic_1.jpg" alt="초음파실 및 폐활량측정실 전경" className={styles.clinicImage} />
+                                <div className={styles.photoCaption}>정밀 진단을 위한 초음파/심전도실</div>
+                            </div>
+                        </FadeIn>
+                        <FadeIn delay={0.8} direction="up">
+                            <div className={styles.photoCard}>
+                                <img src="/images/ultrasound_clinic_2.jpg" alt="안전하고 프라이빗한 유방촬영실 전경" className={styles.clinicImage} />
+                                <div className={styles.photoCaption}>여성의 프라이버시를 존중하는 유방촬영실</div>
+                            </div>
+                        </FadeIn>
+                    </div>
+
                     {/* IV Therapy Section (Kept as secondary service) */}
                     <FadeIn delay={0.6}>
                         <div className={styles.ivSection}>
