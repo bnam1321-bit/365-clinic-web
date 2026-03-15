@@ -62,9 +62,9 @@ export default function Guide() {
                                 </div>
 
                                 <div className={styles.mapPlaceholder}>
-                                    {/* Kakao Map Embed */}
-                                    <div style={{ font: 'normal normal 400 12px/normal dotum, sans-serif', width: '100%', height: '100%', position: 'relative' }}>
-                                        <iframe width="100%" height="100%" src="https://map.kakao.com/link/map/365내과연합의원,37.5458,126.7366" frameBorder="0" style={{ border: 0 }} allowFullScreen={true} loading="lazy"></iframe>
+                                    {/* Kakao Map Embed (Mobile View for proper pin) */}
+                                    <div style={{ width: '100%', height: '100%', position: 'relative', overflow: 'hidden' }}>
+                                        <iframe width="100%" height="100%" src="https://m.map.kakao.com/actions/detailMapView?id=1198642224&refService=place" frameBorder="0" style={{ border: 0 }} allowFullScreen={true} loading="lazy"></iframe>
                                     </div>
 
                                     {/* Kakao Map Direct Link Overlay */}
