@@ -117,33 +117,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 4. Medical Equipment */}
-      <section className={styles.equipment}>
-        <div className={`container`}>
-          <FadeIn direction="up">
-            <div className={styles.sectionHeader}>
-              <h2 className={styles.sectionTitle}>최첨단 의료 장비</h2>
-              <p>더 정확한 진단을 위해 대학병원급 장비를 도입했습니다.</p>
-            </div>
-          </FadeIn>
-          <div className={styles.equipmentGrid}>
-            <FadeIn delay={0.2} direction="left">
-              <div className={styles.equipmentCard}>
-                <div className={styles.equipmentImg} style={{ fontSize: '1rem', color: '#666' }}>Olympus CV-290</div>
-                <h5>고화질 내시경 시스템</h5>
-                <p>현장에서 사용하는 최상위 모델</p>
-              </div>
-            </FadeIn>
-            <FadeIn delay={0.2} direction="right">
-              <div className={styles.equipmentCard}>
-                <div className={styles.equipmentImg} style={{ fontSize: '1rem', color: '#666' }}>GE LOGIQ E10</div>
-                <h5>대학병원급 초음파</h5>
-                <p>미세 병변까지 놓치지 않는 정밀함</p>
-              </div>
-            </FadeIn>
-          </div>
-        </div>
-      </section>
+
     </main>
   );
 }
