@@ -1,144 +1,179 @@
 import styles from "./page.module.css";
-import { Activity, Zap, HeartPulse, ShieldCheck } from "lucide-react";
+import { Activity, Zap, ShieldCheck, Microscope, HeartPulse, Stethoscope, CheckCircle2 } from "lucide-react";
 import type { Metadata } from "next";
 import FadeIn from "@/components/ui/FadeIn";
 
 export const metadata: Metadata = {
     title: "통증클리닉 | 365내과연합의원",
-    description: "어깨, 허리, 관절 통증 비수술적 치료 및 통증유발점 주사(TPI).",
+    description: "근골격계 초음파 및 증식치료(프롤로테라피) 전문 클리닉입니다.",
 };
 
 export default function PainPage() {
     return (
         <main className={styles.container}>
-            {/* Restore Original Hero Section */}
             <section className={styles.header}>
                 <FadeIn>
                     <span className={styles.badge}>PAIN CLINIC</span>
                     <h1 className={styles.title}>통증 클리닉</h1>
                     <p className={styles.subtitle}>
-                        만성 통증, 참지 말고 치료하세요.<br />
-                        정확한 원인 분석을 통해 안전하고 효과적인 맞춤 치료를 제공합니다.
+                        근골격계 초음파와 증식치료(프롤로테라피)를 통해<br />
+                        통증의 근본적인 원인을 정확히 진단하고 안전하게 치료합니다.
                     </p>
                 </FadeIn>
             </section>
 
-            {/* Main Content */}
             <section className={styles.content}>
                 <div className="container">
 
-                    {/* Intro */}
+                    {/* Section 1: Musculoskeletal Ultrasound */}
                     <FadeIn delay={0.1}>
                         <div className={styles.sectionHeader}>
-                            <Activity size={48} className={styles.sectionIcon} />
-                            <h2>통증 없는 편안한 일상</h2>
-                            <p>365내과연합의원이 여러분의 건강한 삶을 응원합니다.</p>
+                            <Microscope size={48} className={styles.sectionIcon} />
+                            <h2>근골격계 초음파</h2>
+                            <p>MUSCULOSKELETAL ULTRASOUND</p>
                         </div>
                     </FadeIn>
 
-                    {/* Target Diseases */}
+                    <FadeIn delay={0.2}>
+                        <div className={styles.mainInfoCard}>
+                            <h3 className={styles.mainInfoTitle}>근골격계 초음파검사란?</h3>
+                            <p className={styles.mainInfoDesc}>
+                                관절, 연골, 인대, 건(힘줄), 점액낭, 근육, 신경, 혈관 등 우리 몸을 움직이는 근골격에 시행하는 초음파 검사입니다.
+                            </p>
+                        </div>
+                    </FadeIn>
+
                     <div className={styles.painGrid}>
-                        <FadeIn delay={0.2}>
-                            <div className={styles.painItem}>
-                                <HeartPulse size={40} color="#EF4444" />
-                                <h3 className={styles.painTitle}>어깨 / 목 통증</h3>
-                                <p className={styles.painDesc}>거북목, 일자목, 오십견, 회전근개질환 등 현대인의 고질적인 어깨와 목 통증을 완화합니다.</p>
-                            </div>
-                        </FadeIn>
                         <FadeIn delay={0.3}>
                             <div className={styles.painItem}>
-                                <Zap size={40} color="#F59E0B" />
-                                <h3 className={styles.painTitle}>허리 / 골반 통증</h3>
-                                <p className={styles.painDesc}>급성 요추염좌, 디스크 초기 증상, 골반 불균형으로 인한 허리 통증을 비수술적으로 치료합니다.</p>
+                                <Activity size={36} color="#3B82F6" />
+                                <h3 className={styles.painTitle}>연부초음파검사</h3>
+                                <p className={styles.painDesc}>근육, 피부, 피하연부조직에 생긴 종괴, 염증, 근육의 파열 및 손상등을 진단하는 검사입니다.</p>
                             </div>
                         </FadeIn>
                         <FadeIn delay={0.4}>
                             <div className={styles.painItem}>
-                                <ShieldCheck size={40} color="#10B981" />
-                                <h3 className={styles.painTitle}>관절 / 근육통</h3>
-                                <p className={styles.painDesc}>퇴행성 관절염, 테니스 엘보, 족저근막염 등 무릎, 팔꿈치, 발목의 염증과 통증을 관리합니다.</p>
+                                <HeartPulse size={36} color="#EF4444" />
+                                <h3 className={styles.painTitle}>관절초음파검사</h3>
+                                <p className={styles.painDesc}>어깨, 팔꿈치, 손목, 손, 고관절, 무릎, 발목, 발 등 인체의 다양한 관절의 염증과 관절 주위의 인대손상, 건(힘줄)의 염증 및 퇴행성 변화등을 정확히 진단하는 검사입니다.</p>
                             </div>
                         </FadeIn>
-                    </div>
-
-                    {/* Treatment Methods */}
-                    <div className={styles.treatmentSection}>
                         <FadeIn delay={0.5}>
-                            <div className={styles.sectionHeader} style={{ marginBottom: '3rem' }}>
-                                <h2>주요 치료 방법</h2>
-                                <p style={{ marginTop: '0.5rem' }}>환자의 상태에 따라 가장 적합한 치료법을 병행합니다.</p>
+                            <div className={styles.painItem}>
+                                <Zap size={36} color="#F59E0B" />
+                                <h3 className={styles.painTitle}>혈관초음파검사</h3>
+                                <p className={styles.painDesc}>팔다리 동정맥의 혈류량을 검사하고 이를 통해 폐색 또는 협착 정도를 파악하는 검사입니다.</p>
                             </div>
                         </FadeIn>
-
-                        <div className={styles.treatmentGrid}>
-                            <FadeIn delay={0.6}>
-                                <div className={styles.treatmentCard}>
-                                    <div className={styles.treatmentHeader}>
-                                        <span style={{ fontSize: '1.5rem', fontWeight: 800, color: '#2563EB' }}>01</span>
-                                        <h3 className={styles.treatmentTitle}>통증유발점 주사 (TPI)</h3>
-                                    </div>
-                                    <p className={styles.treatmentText}>
-                                        근육이 뭉쳐 통증을 유발하는 부위(Trigger Point)에 직접 약물을 주입하여
-                                        경직된 근육을 풀어주고 혈액 순환을 개선하는 치료법입니다.
-                                        목, 어깨, 허리 근육통에 탁월한 효과가 있습니다.
-                                    </p>
-                                </div>
-                            </FadeIn>
-                            <FadeIn delay={0.7}>
-                                <div className={styles.treatmentCard}>
-                                    <div className={styles.treatmentHeader}>
-                                        <span style={{ fontSize: '1.5rem', fontWeight: 800, color: '#2563EB' }}>02</span>
-                                        <h3 className={styles.treatmentTitle}>수액 / 영양 치료</h3>
-                                    </div>
-                                    <p className={styles.treatmentText}>
-                                        만성 통증은 단순한 근육 문제가 아닌 신경계 피로 및 영양 불균형이 원인일 수 있습니다.
-                                        항산화 수액, 신경 비타민 등을 통해 통증 완화와 컨디션 회복을 돕습니다.
-                                    </p>
-                                </div>
-                            </FadeIn>
-                            <FadeIn delay={0.8}>
-                                <div className={styles.treatmentCard}>
-                                    <div className={styles.treatmentHeader}>
-                                        <span style={{ fontSize: '1.5rem', fontWeight: 800, color: '#2563EB' }}>03</span>
-                                        <h3 className={styles.treatmentTitle}>약물 치료</h3>
-                                    </div>
-                                    <p className={styles.treatmentText}>
-                                        소염진통제, 근육이완제 등 증상에 맞는 약물을 처방하여 급성기 염증을 가라앉히고 통증을 조절합니다.
-                                    </p>
-                                </div>
-                            </FadeIn>
-                            <FadeIn delay={0.9}>
-                                <div className={styles.treatmentCard}>
-                                    <div className={styles.treatmentHeader}>
-                                        <span style={{ fontSize: '1.5rem', fontWeight: 800, color: '#2563EB' }}>04</span>
-                                        <h3 className={styles.treatmentTitle}>물리 치료</h3>
-                                    </div>
-                                    <p className={styles.treatmentText}>
-                                        온열 치료, 전기 자극 치료(ICT/TENS) 등을 통해 근육의 긴장을 이완시키고 통증 전달 경로를 차단합니다.
-                                    </p>
-                                </div>
-                            </FadeIn>
-                        </div>
                     </div>
 
-                    {/* Clinic Photos */}
                     <FadeIn delay={0.6}>
-                        <div className={styles.sectionHeader} style={{ marginTop: '5rem', marginBottom: '2rem' }}>
-                            <h2>편안한 진료 환경</h2>
-                            <p style={{ marginTop: '0.5rem' }}>프리미엄 장비와 쾌적한 진료 공간을 제공합니다.</p>
+                        <div className={styles.listSection}>
+                            <h3 className={styles.listTitle}>이럴 때 검사 받으세요!</h3>
+                            <ul className={styles.checkList}>
+                                <li><CheckCircle2 size={20} className={styles.checkIcon}/> 관절부위를 다친 경우</li>
+                                <li><CheckCircle2 size={20} className={styles.checkIcon}/> 이유없이 관절주위가 붓고 아픈 경우</li>
+                                <li><CheckCircle2 size={20} className={styles.checkIcon}/> 관절이 잘 움직이지 않고 기능이 저하된 경우</li>
+                                <li><CheckCircle2 size={20} className={styles.checkIcon}/> 종괴가 만져지는 경우</li>
+                                <li><CheckCircle2 size={20} className={styles.checkIcon}/> 근육파열과 같은 손상을 입은 경우</li>
+                                <li><CheckCircle2 size={20} className={styles.checkIcon}/> 봉와직염, 근육염등 염증이 생긴 경우</li>
+                                <li><CheckCircle2 size={20} className={styles.checkIcon}/> 혈관이 꾸불꾸불 튀어 나와 있는 경우</li>
+                                <li><CheckCircle2 size={20} className={styles.checkIcon}/> 다리가 자주 붓고 아픈경우</li>
+                                <li><CheckCircle2 size={20} className={styles.checkIcon}/> 팔다리의 혈액순환장애가 의심되는 경우</li>
+                            </ul>
                         </div>
                     </FadeIn>
-                    <div className={styles.photoGrid}>
-                        <FadeIn delay={0.7} direction="up">
-                            <div className={styles.photoCard}>
-                                <img src="/images/pain_clinic_1.jpg" alt="통증클리닉 대기실 및 수액실 전경" className={styles.clinicImage} />
-                                <div className={styles.photoCaption}>쾌적하고 편안한 대기 및 진료 공간</div>
+
+                    <div className={styles.divider}></div>
+
+                    {/* Section 2: Prolotherapy */}
+                    <FadeIn delay={0.1}>
+                        <div className={styles.sectionHeader}>
+                            <Stethoscope size={48} className={styles.sectionIcon} />
+                            <h2>증식치료</h2>
+                            <p>PROLOTHERAPY</p>
+                        </div>
+                    </FadeIn>
+
+                    <div className={styles.treatmentSection}>
+                        <div className={styles.treatmentGrid}>
+                            <FadeIn delay={0.2}>
+                                <div className={styles.treatmentCard}>
+                                    <div className={styles.treatmentHeader}>
+                                        <ShieldCheck size={28} className={styles.blueIcon} />
+                                        <h3 className={styles.treatmentTitle}>증식치료란?</h3>
+                                    </div>
+                                    <p className={styles.treatmentText}>
+                                        자극성이 있는 주사제를 인대나 힘줄이 뼈에 부착되는 부위에 주사하여 국소부위의 성장 인자의 생성을 촉진하고 염증이 일어나게 하여 혈액순환을 증가시키고 영양분 공급을 증가시켜 <strong>조직이 재생되도록 하는 치료</strong>입니다.
+                                    </p>
+                                </div>
+                            </FadeIn>
+                            <FadeIn delay={0.3}>
+                                <div className={styles.treatmentCard}>
+                                    <div className={styles.treatmentHeader}>
+                                        <Activity size={28} className={styles.blueIcon} />
+                                        <h3 className={styles.treatmentTitle}>치료방법은 어떻게 되나요?</h3>
+                                    </div>
+                                    <p className={styles.treatmentText}>
+                                        힘줄 또는 인대가 약화 된 부위를 초음파로 관찰하면서 증식제를 직접 주사합니다. 부위에 따라 1주 또는 4주 간격으로 3회 ~ 6회 시행합니다.
+                                    </p>
+                                </div>
+                            </FadeIn>
+                        </div>
+
+                        <FadeIn delay={0.4}>
+                            <div className={styles.advantagesWrapper}>
+                                <h3 className={styles.listTitle}>증식치료의 장점</h3>
+                                <div className={styles.advantageGrid}>
+                                    <div className={styles.advantageItem}>
+                                        <span className={styles.numberBadge}>1</span>
+                                        <p>원인에 대한 근본적인 치료 방법</p>
+                                    </div>
+                                    <div className={styles.advantageItem}>
+                                        <span className={styles.numberBadge}>2</span>
+                                        <p>비수술적 치료로 안전합니다</p>
+                                    </div>
+                                    <div className={styles.advantageItem}>
+                                        <span className={styles.numberBadge}>3</span>
+                                        <p>수술에 비하여 가격이 저렴합니다</p>
+                                    </div>
+                                    <div className={styles.advantageItem}>
+                                        <span className={styles.numberBadge}>4</span>
+                                        <p>입원이 필요하지 않습니다</p>
+                                    </div>
+                                    <div className={styles.advantageItem}>
+                                        <span className={styles.numberBadge}>5</span>
+                                        <p>합병증이나 부작용의 위험이 없다</p>
+                                    </div>
+                                    <div className={styles.advantageItem}>
+                                        <span className={styles.numberBadge}>6</span>
+                                        <p>치료하면서 평상시의 가벼운 운동이나 생활 유지 가능</p>
+                                    </div>
+                                </div>
                             </div>
                         </FadeIn>
-                        <FadeIn delay={0.8} direction="up">
-                            <div className={styles.photoCard}>
-                                <img src="/images/pain_clinic_2.jpg" alt="통증클리닉 정밀 초음파 및 치료 장비" className={styles.clinicImage} />
-                                <div className={styles.photoCaption}>정확한 진단을 위한 정밀 초음파 장비</div>
+
+                        <FadeIn delay={0.5}>
+                            <div className={styles.listSection} style={{ marginTop: '4rem', backgroundColor: 'white', border: '1px solid #E2E8F0' }}>
+                                <h3 className={styles.listTitle}>어떨 때 치료를 받아야 하나요?</h3>
+                                <ul className={styles.checkList}>
+                                    <li><CheckCircle2 size={20} className={styles.checkIcon}/> 허리디스크, 경추디스크</li>
+                                    <li><CheckCircle2 size={20} className={styles.checkIcon}/> 퇴행성관절염 및 만성 무릎 질환</li>
+                                    <li><CheckCircle2 size={20} className={styles.checkIcon}/> 만성 허리통증 및 좌골신경통</li>
+                                    <li><CheckCircle2 size={20} className={styles.checkIcon}/> 어깨통증 (오십견, 회전근개파열, 충돌증후군)</li>
+                                    <li><CheckCircle2 size={20} className={styles.checkIcon}/> 인대손상 (발목염좌, 팔꿈치 손상)</li>
+                                    <li><CheckCircle2 size={20} className={styles.checkIcon}/> 사고 후유증이나 스포츠 손상 후 발생한 합병증</li>
+                                    <li><CheckCircle2 size={20} className={styles.checkIcon}/> 만성두통, 목뻐근함, 턱관절</li>
+                                    <li><CheckCircle2 size={20} className={styles.checkIcon}/> 수술 후 통증 (통증의 조절 및 재발방지)</li>
+                                    <li><CheckCircle2 size={20} className={styles.checkIcon}/> 골반 불균형, 만성미골통, 부정렬증후군</li>
+                                </ul>
+                            </div>
+                        </FadeIn>
+                        
+                        <FadeIn delay={0.6}>
+                            <div className={styles.bottomBanner}>
+                                <h4>조직이 재생되도록 하는 치료</h4>
+                                <p>인대 또는 힘줄의 퇴행성 변화에 효과적</p>
                             </div>
                         </FadeIn>
                     </div>
