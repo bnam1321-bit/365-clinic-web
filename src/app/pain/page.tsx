@@ -35,11 +35,16 @@ export default function PainPage() {
                     </FadeIn>
 
                     <FadeIn delay={0.2}>
-                        <div className={styles.mainInfoCard}>
-                            <h3 className={styles.mainInfoTitle}>근골격계 초음파검사란?</h3>
-                            <p className={styles.mainInfoDesc}>
-                                관절, 연골, 인대, 건(힘줄), 점액낭, 근육, 신경, 혈관 등 우리 몸을 움직이는 근골격에 시행하는 초음파 검사입니다.
-                            </p>
+                        <div className={styles.ultrasoundIntro}>
+                            <div className={styles.ultrasoundImageWrapper}>
+                                <img src="/images/samsung-ultrasound.png" alt="삼성 초음파 기기" className={styles.ultrasoundImage} />
+                            </div>
+                            <div className={styles.mainInfoCard}>
+                                <h3 className={styles.mainInfoTitle}>근골격계 초음파검사란?</h3>
+                                <p className={styles.mainInfoDesc}>
+                                    관절, 연골, 인대, 건(힘줄), 점액낭, 근육, 신경, 혈관 등 우리 몸을 움직이는 근골격에 시행하는 초음파 검사입니다.
+                                </p>
+                            </div>
                         </div>
                     </FadeIn>
 
@@ -170,12 +175,7 @@ export default function PainPage() {
                             </div>
                         </FadeIn>
                         
-                        <FadeIn delay={0.6}>
-                            <div className={styles.bottomBanner}>
-                                <h4>조직이 재생되도록 하는 치료</h4>
-                                <p>인대 또는 힘줄의 퇴행성 변화에 효과적</p>
-                            </div>
-                        </FadeIn>
+
                     </div>
 
                 </div>
