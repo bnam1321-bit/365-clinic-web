@@ -21,7 +21,7 @@ export default function EndoscopyPage() {
                         <h1 className={styles.title}>내시경클리닉</h1>
                         <p className={styles.subtitle}>
                             소화기내과 전문의가 직접 시행하는 정밀하고 안전한 내시경.<br />
-                            대학병원급 Olympus CV-290 장비로 미세 병변까지 찾아냅니다.
+                            대학병원급 최고사양 장비로 미세 병변까지 찾아냅니다.
                         </p>
                     </FadeIn>
                 </div>
@@ -48,10 +48,10 @@ export default function EndoscopyPage() {
                                     <img src="/images/olympus-endoscopy.jpg" alt="Olympus CV-290" className={styles.equipmentImage} />
                                 </div>
                                 <div className={styles.equipmentText}>
-                                    <h3 className={styles.equipmentSubtitle}>대학병원급 고해상도 내시경 장비</h3>
-                                    <h2 className={styles.equipmentTitle}>OLYMPUS CV-290</h2>
+                                    <h3 className={styles.equipmentSubtitle}>365내과연합의원 내시경 센터</h3>
+                                    <h2 className={styles.equipmentTitle}>대학병원급 최고사양 내시경 기기</h2>
                                     <p className={styles.equipmentDesc}>
-                                        365내과연합의원은 대학병원에서 사용하는 것과 동일한 올림푸스 사의 최상위 기종 <strong>CV-290</strong> 내시경 장비를 도입하여 운영하고 있습니다. 초고화질 영상과 NBI(협대역 화상 관찰) 기술을 통해 눈에 잘 띄지 않는 아주 미세한 조기 암 병변까지도 놓치지 않고 정확하게 발견합니다.
+                                        365내과연합의원은 대학병원에서 사용하는 것과 동일한 <strong>최상위 등급의 고해상도 장비</strong>를 도입하여 운영하고 있습니다. 초고화질 영상과 특수 정밀 관찰 기술을 통해 눈에 잘 띄지 않는 아주 미세한 조기 암 병변까지도 놓치지 않고 정확하게 진단합니다.
                                     </p>
                                 </div>
                             </div>
