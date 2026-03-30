@@ -14,12 +14,12 @@ export default function Home() {
             <div className={styles.heroContent}>
               <span className={styles.heroBadge}>PREMIUM HEALTHCARE</span>
               <h1 className={styles.heroTitle}>
-                현장에서의 경험,<br />
-                <span className={styles.highlight}>정확한 진단으로 증명합니다</span>
+                로컬 현장의 풍부한 임상 경험으로<br />
+                <span className={styles.highlight}>정확하게 진단합니다</span>
               </h1>
               <p className={styles.heroSubtitle}>
-                대학병원 출신 전문의 3인(이현석, 노영석, 지재연)의 협진으로<br />
-                더 깊이 있고 세심한 진료를 약속드립니다.
+                수많은 진료 현장에서 쌓아온 노하우를 바탕으로 환자 개개인에게 꼭 필요한 진료를 제공합니다.<br />
+                전문의 3인의 유기적인 협진 시스템을 통해 진단의 정확도를 높였습니다.
               </p>
             </div>
           </FadeIn>
