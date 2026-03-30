@@ -41,6 +41,22 @@ export default function EndoscopyPage() {
                             </div>
                         </FadeIn>
 
+                        {/* Olympus Equipment Intro */}
+                        <FadeIn delay={0.1}>
+                            <div className={styles.equipmentIntro}>
+                                <div className={styles.equipmentImageWrapper}>
+                                    <img src="/images/olympus-endoscopy.png" alt="Olympus CV-290" className={styles.equipmentImage} />
+                                </div>
+                                <div className={styles.equipmentText}>
+                                    <h3 className={styles.equipmentSubtitle}>대학병원급 고해상도 내시경 장비</h3>
+                                    <h2 className={styles.equipmentTitle}>OLYMPUS CV-290</h2>
+                                    <p className={styles.equipmentDesc}>
+                                        365내과연합의원은 대학병원에서 사용하는 것과 동일한 올림푸스 사의 최상위 기종 <strong>CV-290</strong> 내시경 장비를 도입하여 운영하고 있습니다. 초고화질 영상과 NBI(협대역 화상 관찰) 기술을 통해 눈에 잘 띄지 않는 아주 미세한 조기 암 병변까지도 놓치지 않고 정확하게 발견합니다.
+                                    </p>
+                                </div>
+                            </div>
+                        </FadeIn>
+
                         <section className={styles.content}>
                             <div className={styles.grid2}>
                                 <FadeIn delay={0.1}>
