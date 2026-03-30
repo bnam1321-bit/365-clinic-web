@@ -155,73 +155,65 @@
     background: white;
     border-radius: var(--radius-lg);
     overflow: hidden;
-    box-shadow: var(--shadow-md);
-    border: 1px solid var(--color-border);
-    transition: transform var(--transition-fast);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    border: 1px solid #E2E8F0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .doctorItem:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-lg);
+    transform: translateY(-8px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.doctorHeader {
+    background: linear-gradient(135deg, #F8FAFC, #EFF6FF);
+    padding: 2.5rem 2rem;
+    text-align: center;
+    border-bottom: 1px solid #E2E8F0;
+}
+
+.doctorHeader h3 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #1E3A8A;
+    margin: 0;
+    letter-spacing: -0.02em;
 }
 
 .doctorInfo {
-    padding: 2rem 2rem 4rem;
-    /* Increased bottom padding for "card bottom spacing" */
-}
-
-.doctorInfo h3 {
-    font-size: 1.8rem;
-    font-weight: 800;
-    color: var(--color-primary);
-    margin-bottom: 0.5rem;
-    text-align: center;
-    /* Center name */
-}
-
-.role {
-    color: var(--color-secondary);
-    font-weight: 700;
-    font-size: 1.1rem;
-    margin-bottom: 2rem;
-    display: block;
-    text-align: center;
-    /* Center role */
-    position: relative;
-}
-
-/* Add a small separator line under the role */
-.role::after {
-    content: "";
-    display: block;
-    width: 40px;
-    height: 3px;
-    background-color: #E2E8F0;
-    margin: 1.5rem auto 0;
+    padding: 2.5rem 2rem;
+    flex-grow: 1;
 }
 
 .doctorBio {
     list-style: none;
     display: flex;
     flex-direction: column;
-    gap: 1.2rem;
-    /* Significantly increased gap between list items */
+    gap: 0.85rem;
+    padding: 0;
+    margin: 0;
 }
 
 .doctorBio li {
-    font-size: 1rem;
-    color: var(--color-text-secondary);
+    font-size: 1.05rem;
+    color: #475569;
     position: relative;
-    padding-left: 1rem;
-    line-height: var(--leading-normal);
-    /* Improved readability */
+    padding-left: 1.2rem;
+    line-height: 1.6;
+    word-break: keep-all;
 }
 
 .doctorBio li::before {
     content: "•";
-    color: var(--color-text-muted);
+    color: #3B82F6;
     position: absolute;
     left: 0;
+    font-weight: bold;
+    font-size: 1.2rem;
+    line-height: 1.4;
 }
 
 @media (min-width: 768px) {

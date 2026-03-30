@@ -47,8 +47,10 @@ export default function About() {
                         {/* Doctor 1: 이현석 */}
                         <FadeIn delay={0.3}>
                             <div className={styles.doctorItem}>
-                                <div className={styles.doctorInfo}>
+                                <div className={styles.doctorHeader}>
                                     <h3>이현석 원장</h3>
+                                </div>
+                                <div className={styles.doctorInfo}>
                                     <ul className={styles.doctorBio}>
                                         <li>차의과대학 외래교수</li>
                                         <li>을지의과대학 외래교수</li>
@@ -71,8 +73,10 @@ export default function About() {
                         {/* Doctor 2: 지재연 */}
                         <FadeIn delay={0.4}>
                             <div className={styles.doctorItem}>
-                                <div className={styles.doctorInfo}>
+                                <div className={styles.doctorHeader}>
                                     <h3>지재연 원장</h3>
+                                </div>
+                                <div className={styles.doctorInfo}>
                                     <ul className={styles.doctorBio}>
                                         <li>가천의과대학교 외래교수</li>
                                         <li>고려대학교 의과대학 외래교수</li>
@@ -93,8 +97,10 @@ export default function About() {
                         {/* Doctor 3: 노영석 */}
                         <FadeIn delay={0.5}>
                             <div className={styles.doctorItem}>
-                                <div className={styles.doctorInfo}>
+                                <div className={styles.doctorHeader}>
                                     <h3>노영석 원장</h3>
+                                </div>
+                                <div className={styles.doctorInfo}>
                                     <ul className={styles.doctorBio}>
                                         <li>고려대학교 의과대학 외래교수</li>
                                         <li>대한 위장내시경학회 내시경 전문의</li>
