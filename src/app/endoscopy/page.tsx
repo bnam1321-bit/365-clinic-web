@@ -45,7 +45,7 @@ export default function EndoscopyPage() {
                         <FadeIn delay={0.1}>
                             <div className={styles.equipmentIntro}>
                                 <div className={styles.equipmentImageWrapper}>
-                                    <img src="/images/olympus-endoscopy.png" alt="Olympus CV-290" className={styles.equipmentImage} />
+                                    <img src="/images/olympus-endoscopy.jpg" alt="Olympus CV-290" className={styles.equipmentImage} />
                                 </div>
                                 <div className={styles.equipmentText}>
                                     <h3 className={styles.equipmentSubtitle}>대학병원급 고해상도 내시경 장비</h3>
