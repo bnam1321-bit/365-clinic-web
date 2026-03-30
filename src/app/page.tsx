@@ -93,7 +93,7 @@ export default function Home() {
                   <div>
                     <div className={styles.cardIcon}><Zap size={48} /></div>
                     <h3>통증 클리닉</h3>
-                    <p>비수술적 통증 치료, TPI 주사, 영양 수액 요법으로 만성 통증과 피로를 개선합니다.</p>
+                    <p>근골격계 초음파 검사와 프롤로테라피(증식치료)를 통해 통증의 근본 원인을 정확하게 진단하고 치료합니다.</p>
                   </div>
                   <div className={styles.cardPlus}>+</div>
                 </div>
