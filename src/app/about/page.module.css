@@ -123,13 +123,10 @@
 /* This was the problematic block previously */
 /* Doctor Image Placeholder styles removed */
 
-/* Profile Section - Migrated & Refined */
-.profile {
-    padding-bottom: 20rem;
-    /* Huge padding at bottom boundary (footer transition) */
-    background-color: #F8FAFC;
-    /* Light background for contrast */
-    padding-top: var(--spacing-xl);
+/* Staff Section */
+.staff {
+    padding-bottom: 8rem;
+    padding-top: 4rem;
 }
 
 .sectionHeader {
