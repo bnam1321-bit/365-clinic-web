@@ -4,7 +4,7 @@
 }
 
 .header {
-    background-color: #1E293B;
+    background-color: var(--color-primary-dark);
     color: white;
     padding: 6rem 0 4rem;
     text-align: center;
@@ -138,12 +138,12 @@
 .checkList li {
     position: relative;
     padding-left: 1.25rem;
-    color: #475569;
+    color: var(--color-neutral);
     font-size: 0.95rem;
 }
 
 .checkList li::before {
-    content: "•";
+    content: "??;
     color: var(--color-secondary);
     position: absolute;
     left: 0;

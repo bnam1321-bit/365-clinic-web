@@ -35,7 +35,7 @@
 .subtitle {
     font-size: 1.8rem;
     font-weight: 800;
-    color: #1E3A8A;
+    color: var(--color-primary-dark);
     margin-bottom: 3rem;
     /* "Skip a few lines" */
     line-height: var(--leading-tight);
@@ -175,7 +175,7 @@
 .doctorHeader h3 {
     font-size: 1.8rem;
     font-weight: 800;
-    color: #1E3A8A;
+    color: var(--color-primary-dark);
     margin: 0;
     letter-spacing: -0.02em;
 }
@@ -196,7 +196,7 @@
 
 .doctorBio li {
     font-size: 1.05rem;
-    color: #475569;
+    color: var(--color-neutral);
     position: relative;
     padding-left: 1.2rem;
     line-height: 1.6;
@@ -204,8 +204,8 @@
 }
 
 .doctorBio li::before {
-    content: "•";
-    color: #3B82F6;
+    content: "??;
+    color: var(--color-secondary);
     position: absolute;
     left: 0;
     font-weight: bold;

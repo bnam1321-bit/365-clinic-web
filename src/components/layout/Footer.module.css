@@ -1,5 +1,5 @@
 .footer {
-    background-color: #2D2F36;
+    background-color: var(--color-primary-dark);
     color: #E2E8F0;
     padding: 5rem 0 2rem;
 }
@@ -61,7 +61,7 @@
 }
 
 .highlight {
-    color: #60A5FA; /* Bright Blue instead of primary dark */
+    color: var(--color-secondary); /* Bright Blue instead of primary dark */
     font-weight: 700;
 }
 

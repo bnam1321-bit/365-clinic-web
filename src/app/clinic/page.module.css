@@ -4,7 +4,7 @@
 }
 
 .header {
-    background-color: #1E293B;
+    background-color: var(--color-primary-dark);
     color: white;
     padding: 6rem 0 4rem;
     text-align: center;
@@ -168,12 +168,12 @@
 .subItem h4 {
     font-size: 1.25rem;
     font-weight: 700;
-    color: #1E3A8A;
+    color: var(--color-primary-dark);
     margin-bottom: 0.75rem;
 }
 
 .subItem p {
-    color: #475569;
+    color: var(--color-neutral);
     line-height: var(--leading-normal);
     font-size: 1rem;
 }

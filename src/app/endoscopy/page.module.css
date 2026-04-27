@@ -4,7 +4,7 @@
 }
 
 .header {
-    background-color: #1E293B;
+    background-color: var(--color-primary-dark);
     color: white;
     padding: 6rem 0 4rem;
     text-align: center;
@@ -125,7 +125,7 @@
 }
 
 .equipmentSubtitle {
-    color: #3B82F6;
+    color: var(--color-secondary);
     font-size: 1.1rem;
     font-weight: 800;
     margin-bottom: 0.5rem;
@@ -135,7 +135,7 @@
 .equipmentTitle {
     font-size: 2.2rem;
     font-weight: 900;
-    color: #1E3A8A;
+    color: var(--color-primary-dark);
     margin-bottom: 1.5rem;
 }
 
@@ -147,7 +147,7 @@
 }
 
 .equipmentDesc strong {
-    color: #1D4ED8;
+    color: var(--color-primary);
     font-weight: 800;
 }
 
@@ -197,7 +197,7 @@
 }
 
 .featureList li::before {
-    content: '✔';
+    content: '??;
     color: var(--color-secondary);
     position: absolute;
     left: 0;
@@ -303,7 +303,7 @@
 }
 
 .precautionList li::before {
-    content: "•";
+    content: "??;
     color: var(--color-secondary);
     position: absolute;
     left: 0;

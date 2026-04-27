@@ -68,7 +68,7 @@
 }
 
 .locationBtn:hover {
-    background-color: #4A2891;
+    background-color: var(--color-primary-dark);
 }
 
 /* Main Navigation Bar (Premium Navy) */
