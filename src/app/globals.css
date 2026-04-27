@@ -8,20 +8,20 @@
   /* Editorial Elegance */
 
   /* Brand Colors - Premium Trust (Deep Navy & Royal Blue) */
-  --color-primary: #111827;
-  /* Charcoal Navy (Trust/Authority) */
-  --color-secondary: #2563EB;
-  /* Royal Blue (Medical/Clean) */
-  --color-primary-dark: #030712;
-  --color-accent-soft: rgba(37, 99, 235, 0.04);
+  --color-primary: #1E40AF;
+  --color-secondary: #3B82F6;
+  --color-tertiary: #0D9488;
+  --color-neutral: #475569;
+  --color-primary-dark: #1e3a8a;
+  --color-accent-soft: rgba(59, 130, 246, 0.04);
 
   /* Neutral Colors - High End */
   --color-background: #FFFFFF;
   --color-surface: #FFFFFF;
   --color-surface-glass: rgba(255, 255, 255, 0.95);
   /* More opaque for solidity */
-  --color-text-primary: #111827;
-  --color-text-secondary: #4B5563;
+  --color-text-primary: #1E293B;
+  --color-text-secondary: var(--color-neutral);
   --color-text-muted: #9CA3AF;
   --color-border: #F3F4F6;
   /* Very subtle borders */

@@ -17,7 +17,7 @@
   padding-left: 5%;
 }
 
-/* Background Image with Zoom Animation */
+/* Background replacing Image */
 .hero::before {
   content: '';
   position: absolute;
@@ -25,38 +25,18 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: url('/images/clinic_main.jpg') no-repeat center center;
-  background-size: cover;
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
   z-index: 0;
-  animation: slowZoom 30s ease-in-out infinite alternate;
-}
-
-@keyframes slowZoom {
-  from {
-    transform: scale(1);
-  }
-
-  to {
-    transform: scale(1.15);
-  }
 }
 
 /* Premium Gradient Overlay - Seamless Visibility */
-/* Darker on the left to ensure text pops, lighter on right to show image */
 .heroOverlay {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(90deg,
-      rgba(3, 7, 18, 0.95) 0%,
-      /* Almost black-navy on left */
-      rgba(17, 24, 39, 0.8) 45%,
-      /* Mid-point transparency */
-      rgba(17, 24, 39, 0.1) 100%
-      /* Transparent on right */
-    );
+  background: radial-gradient(circle at top right, rgba(59, 130, 246, 0.2), transparent 70%);
   z-index: 1;
 }
 
@@ -333,9 +313,7 @@
 
   .heroOverlay {
     /* Full gradient on mobile for readability */
-    background: linear-gradient(180deg,
-        rgba(3, 7, 18, 0.4) 0%,
-        rgba(3, 7, 18, 0.8) 100%);
+    background: radial-gradient(circle at top center, rgba(59, 130, 246, 0.15), transparent 70%);
   }
 
   .heroContent {
