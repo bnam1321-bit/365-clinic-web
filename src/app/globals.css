@@ -11,8 +11,8 @@
   --color-primary: #1E40AF;
   --color-secondary: #3B82F6;
   --color-tertiary: #0D9488;
-  --color-neutral: var(--color-neutral);
-  --color-primary-dark: var(--color-primary-dark);
+  --color-neutral: #475569;
+  --color-primary-dark: #1e3a8a;
   --color-accent-soft: rgba(59, 130, 246, 0.04);
 
   /* Neutral Colors - High End */
@@ -20,7 +20,7 @@
   --color-surface: #FFFFFF;
   --color-surface-glass: rgba(255, 255, 255, 0.95);
   /* More opaque for solidity */
-  --color-text-primary: var(--color-primary-dark);
+  --color-text-primary: #1E293B;
   --color-text-secondary: var(--color-neutral);
   --color-text-muted: #9CA3AF;
   --color-border: #F3F4F6;

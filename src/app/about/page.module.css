@@ -204,7 +204,7 @@
 }
 
 .doctorBio li::before {
-    content: "??;
+    content: "•";
     color: var(--color-secondary);
     position: absolute;
     left: 0;
