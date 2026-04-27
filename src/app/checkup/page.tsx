@@ -134,44 +134,7 @@ export default function CheckupPage() {
                         </ul>
                     </div>
 
-                    {/* Clinic Photos */}
-                    <FadeIn delay={0.3}>
-                        <div className={styles.sectionTitle} style={{ marginTop: '5rem', marginBottom: '2rem' }}>
-                            건강검진센터 전경
-                        </div>
-                    </FadeIn>
-                    <div className={styles.photoGrid}>
-                        <FadeIn delay={0.4} direction="up">
-                            <div className={styles.photoCard}>
-                                <img src="/images/checkup_clinic_1.jpg" alt="검진센터 전용 입구" className={styles.clinicImage} />
-                                <div className={styles.photoCaption}>검진센터 전용 입구</div>
-                            </div>
-                        </FadeIn>
-                        <FadeIn delay={0.5} direction="up">
-                            <div className={styles.photoCard}>
-                                <img src="/images/checkup_clinic_2.jpg" alt="기초 검사실" className={styles.clinicImage} />
-                                <div className={styles.photoCaption}>기초 검사실</div>
-                            </div>
-                        </FadeIn>
-                        <FadeIn delay={0.6} direction="up">
-                            <div className={styles.photoCard}>
-                                <img src="/images/checkup_clinic_3.jpg" alt="안심 대기공간" className={styles.clinicImage} />
-                                <div className={styles.photoCaption}>안심 대기공간</div>
-                            </div>
-                        </FadeIn>
-                        <FadeIn delay={0.7} direction="up">
-                            <div className={styles.photoCard}>
-                                <img src="/images/checkup_clinic_4.jpg" alt="남/여 탈의실" className={styles.clinicImage} />
-                                <div className={styles.photoCaption}>남/여 탈의실</div>
-                            </div>
-                        </FadeIn>
-                        <FadeIn delay={0.8} direction="up">
-                            <div className={styles.photoCard}>
-                                <img src="/images/checkup_clinic_5.jpg" alt="임상병리실" className={styles.clinicImage} />
-                                <div className={styles.photoCaption}>임상병리실</div>
-                            </div>
-                        </FadeIn>
-                    </div>
+
 
                 </div>
             </section>
