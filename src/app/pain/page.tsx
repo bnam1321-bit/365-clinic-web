@@ -1,5 +1,5 @@
 import styles from "./page.module.css";
-import { Activity, Zap, ShieldCheck, Microscope, HeartPulse, Stethoscope, CheckCircle2 } from "lucide-react";
+import { Activity, ShieldCheck, Microscope, HeartPulse, Stethoscope, CheckCircle2 } from "lucide-react";
 import type { Metadata } from "next";
 import FadeIn from "@/components/ui/FadeIn";
 
@@ -63,13 +63,7 @@ export default function PainPage() {
                                 <p className={styles.painDesc}>어깨, 팔꿈치, 손목, 손, 고관절, 무릎, 발목, 발 등 인체의 다양한 관절의 염증과 관절 주위의 인대손상, 건(힘줄)의 염증 및 퇴행성 변화등을 정확히 진단하는 검사입니다.</p>
                             </div>
                         </FadeIn>
-                        <FadeIn delay={0.5}>
-                            <div className={styles.painItem}>
-                                <Zap size={36} color="#F59E0B" />
-                                <h3 className={styles.painTitle}>혈관초음파검사</h3>
-                                <p className={styles.painDesc}>팔다리 동정맥의 혈류량을 검사하고 이를 통해 폐색 또는 협착 정도를 파악하는 검사입니다.</p>
-                            </div>
-                        </FadeIn>
+
                     </div>
 
                     <FadeIn delay={0.6}>
@@ -82,9 +76,7 @@ export default function PainPage() {
                                 <li><CheckCircle2 size={20} className={styles.checkIcon}/> 종괴가 만져지는 경우</li>
                                 <li><CheckCircle2 size={20} className={styles.checkIcon}/> 근육파열과 같은 손상을 입은 경우</li>
                                 <li><CheckCircle2 size={20} className={styles.checkIcon}/> 봉와직염, 근육염등 염증이 생긴 경우</li>
-                                <li><CheckCircle2 size={20} className={styles.checkIcon}/> 혈관이 꾸불꾸불 튀어 나와 있는 경우</li>
-                                <li><CheckCircle2 size={20} className={styles.checkIcon}/> 다리가 자주 붓고 아픈경우</li>
-                                <li><CheckCircle2 size={20} className={styles.checkIcon}/> 팔다리의 혈액순환장애가 의심되는 경우</li>
+
                             </ul>
                         </div>
                     </FadeIn>
