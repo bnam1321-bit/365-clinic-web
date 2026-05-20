@@ -30,40 +30,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 2. Medical Team / Synergy Section */}
-      <section className={styles.synergySection}>
-        <div className={`container`}>
-            <div className={styles.sectionHeader}>
-                <span className={styles.sectionSubtitle}>OUR EXPERTISE</span>
-                <h2 className={styles.sectionTitle}>대학병원 출신 전문의 3인 협진</h2>
-                <p className={styles.sectionDesc}>내과, 소화기 내시경, 근골격계 통증 분야의 전문가들이 모여 유기적이고 심도 있는 진료 시스템을 구축했습니다.</p>
-            </div>
-            
-            <div className={styles.doctorsGrid}>
-                <FadeIn delay={0.1}>
-                    <div className={styles.doctorCard}>
-                        <div className={styles.doctorIcon}><Stethoscope size={36} /></div>
-                        <h3>이현석 대표원장</h3>
-                        <p>소화기 내시경 전문의 / 내과 전문의</p>
-                    </div>
-                </FadeIn>
-                <FadeIn delay={0.2}>
-                    <div className={styles.doctorCard}>
-                        <div className={styles.doctorIcon}><Users size={36} /></div>
-                        <h3>지재연 원장</h3>
-                        <p>대한 근골격 초음파 학회 / 통증 치료 전문</p>
-                    </div>
-                </FadeIn>
-                <FadeIn delay={0.3}>
-                    <div className={styles.doctorCard}>
-                        <div className={styles.doctorIcon}><Award size={36} /></div>
-                        <h3>노영석 원장</h3>
-                        <p>대한 위장내시경학회 내시경 전문의</p>
-                    </div>
-                </FadeIn>
-            </div>
-        </div>
-      </section>
 
       {/* 3. Services Grid (6-Card Menu) - High Visibility */}
       <section className={styles.services}>

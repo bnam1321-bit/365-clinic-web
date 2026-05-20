@@ -23,7 +23,7 @@ export default function Footer() {
                             </ul>
                         </div>
                         <div className={styles.linkGroup}>
-                            <h3>고객 센터</h3>
+                            <h3>전화 번호</h3>
                             <ul>
                                 <li className={styles.contactItem}><Phone size={16} /> 032-542-3659</li>
                                 <li className={styles.contactItem}><Printer size={16} /> 032-542-3660 (FAX)</li>
