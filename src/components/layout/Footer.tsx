@@ -1,5 +1,6 @@
 import Link from "next/link";
 import styles from "./Footer.module.css";
+import { Phone, MapPin, Printer } from "lucide-react";
 
 export default function Footer() {
     return (
@@ -16,18 +17,25 @@ export default function Footer() {
                             <h3>진료 안내</h3>
                             <ul>
                                 <li>평일: 09:00 - 19:00</li>
-                                <li>토요일: 09:00 - 14:00</li>
+                                <li>토요일: 09:00 - 14:00 (점심시간 없음)</li>
                                 <li>점심시간: 13:00 - 14:00</li>
-                                <li className={styles.highlight}>일요일/공휴일 휴진</li>
+                                <li className={styles.highlight}>일요일 및 공휴일 휴진</li>
+                            </ul>
+                        </div>
+                        <div className={styles.linkGroup}>
+                            <h3>고객 센터</h3>
+                            <ul>
+                                <li className={styles.contactItem}><Phone size={16} /> 032-542-3659</li>
+                                <li className={styles.contactItem}><Printer size={16} /> 032-542-3660 (FAX)</li>
                             </ul>
                         </div>
                     </div>
                 </div>
 
                 <div className={styles.bottomSection}>
-                    <div className={styles.contactInfo}>
-                        <p>인천 계양구 장제로 867 상우메디칼빌딩 3층</p>
-                        <p>TEL: 032-542-3659 | FAX: 032-542-3660</p>
+                    <div className={styles.address}>
+                        <MapPin size={18} className={styles.addressIcon} />
+                        <p>인천 계양구 장제로 867 상우메디칼빌딩 3층 365내과연합의원</p>
                     </div>
                     <p className={styles.copyright}>&copy; {new Date().getFullYear()} 365 Internal Medicine Clinic. All rights reserved.</p>
                 </div>

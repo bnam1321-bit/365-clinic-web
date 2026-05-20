@@ -1,20 +1,20 @@
 .home {
   font-family: var(--font-pretendard), sans-serif;
+  background-color: var(--color-background);
 }
 
-/* Wide Hero Section - Visibility Optimized */
-/* Wide Hero Section - Visibility Optimized */
+/* 1. Cinematic Hero Section */
 .hero {
   position: relative;
-  height: 85vh;
-  max-height: 900px;
-  /* Background moved to ::before for animation */
+  height: 90vh;
+  min-height: 700px;
+  max-height: 1000px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   color: white;
   overflow: hidden;
-  padding-left: 5%;
+  padding-top: 80px; /* Offset for header */
 }
 
 /* Background with Slow Zoom Animation */
@@ -32,16 +32,11 @@
 }
 
 @keyframes slowZoom {
-  from {
-    transform: scale(1);
-  }
-
-  to {
-    transform: scale(1.1);
-  }
+  from { transform: scale(1); }
+  to { transform: scale(1.1); }
 }
 
-/* Premium Gradient Overlay - ensuring text readability over the image */
+/* Cinematic Gradient Overlay */
 .heroOverlay {
   position: absolute;
   top: 0;
@@ -49,352 +44,359 @@
   right: 0;
   bottom: 0;
   background: linear-gradient(90deg, 
-    rgba(30, 64, 175, 0.95) 0%, 
-    rgba(30, 64, 175, 0.7) 50%, 
-    rgba(30, 64, 175, 0.3) 100%);
+    rgba(10, 25, 47, 0.95) 0%, 
+    rgba(10, 25, 47, 0.7) 40%, 
+    rgba(10, 25, 47, 0.2) 100%);
   z-index: 1;
 }
 
-/* Hero Content - No Box, Pure Text */
+/* Hero Content */
 .heroContent {
   width: 100%;
-  max-width: 700px;
-  /* Slightly wider for ease */
-  animation: fadeInMove var(--transition-normal);
+  max-width: 800px;
   position: relative;
   z-index: 10;
-
-  /* Removed Glass Box properties for clarity */
-  background: transparent;
-  backdrop-filter: none;
-  padding: 0;
-  /* Remove internal padding */
-  border: none;
-  box-shadow: none;
-}
-
-@keyframes fadeInMove {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  padding: 0 2rem;
 }
 
 .heroBadge {
   font-family: var(--font-serif);
-  font-style: normal;
   font-size: 1.1rem;
-  /* Slightly larger */
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.15em;
-  color: var(--color-secondary);
-  /* Brighter Blue for contrast against dark gradient */
+  color: var(--color-accent-gold);
   margin-bottom: 1.5rem;
-  display: inline-block;
-  border-bottom: 2px solid rgba(96, 165, 250, 0.5);
-  /* Thicker line */
-  padding-bottom: 0.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.heroBadge::before {
+  content: '';
+  display: block;
+  width: 30px;
+  height: 2px;
+  background-color: var(--color-accent-gold);
 }
 
 .heroTitle {
-  font-size: 4rem;
-  /* Big */
+  font-size: 4.5rem;
   font-weight: 800;
   line-height: var(--leading-tight);
   margin-bottom: 2rem;
   letter-spacing: var(--tracking-tight);
   color: white;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-  /* Slight text shadow for safety */
 }
 
 .highlight {
   display: block;
-  font-size: 1.1em;
-  color: #FFFFFF;
-  margin-top: 0.5rem;
   font-family: var(--font-serif);
   font-weight: 600;
-  /* Bolder */
-  font-style: normal;
+  color: white;
 }
 
 .heroSubtitle {
   font-size: 1.25rem;
   line-height: var(--leading-relaxed);
-  color: #E5E7EB;
-  /* Light Gray */
-  margin-bottom: 3rem;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 3.5rem;
   font-weight: 400;
-  max-width: 100%;
+  max-width: 90%;
 }
 
-/* 2x2 Huge Grid - High Contrast */
+/* Hero CTA Buttons */
+.heroActions {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.btnPrimary {
+  background-color: var(--color-secondary);
+  color: white;
+  padding: 1.25rem 2.5rem;
+  border-radius: var(--radius-full);
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+  box-shadow: 0 4px 14px 0 rgba(37, 99, 235, 0.39);
+}
+
+.btnPrimary:hover {
+  background-color: white;
+  color: var(--color-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.23);
+}
+
+.btnOutline {
+  background-color: transparent;
+  color: white;
+  padding: 1.25rem 2.5rem;
+  border-radius: var(--radius-full);
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-decoration: none;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  transition: all var(--transition-fast);
+}
+
+.btnOutline:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: white;
+}
+
+/* 2. Medical Team / Synergy Section */
+.synergySection {
+  padding: 8rem 0;
+  background-color: white;
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.sectionSubtitle {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  color: var(--color-accent-gold);
+  letter-spacing: 0.15em;
+  font-size: 0.95rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.sectionTitle {
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--color-primary-dark);
+  margin-bottom: 1.5rem;
+  letter-spacing: var(--tracking-tight);
+}
+
+.sectionDesc {
+  color: var(--color-text-secondary);
+  font-size: 1.15rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.doctorsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+  padding: 0 1rem;
+}
+
+.doctorCard {
+  text-align: center;
+  padding: 3rem 2rem;
+  background-color: var(--color-background);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+  transition: all var(--transition-normal);
+}
+
+.doctorCard:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+  border-color: rgba(197, 168, 128, 0.3); /* Soft gold border */
+}
+
+.doctorIcon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1.5rem;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary);
+  box-shadow: var(--shadow-sm);
+}
+
+.doctorCard h3 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--color-primary-dark);
+  margin-bottom: 0.5rem;
+}
+
+.doctorCard p {
+  color: var(--color-text-secondary);
+  font-weight: 500;
+  font-size: 1.05rem;
+}
+
+/* 3. Services Grid */
 .services {
-  padding: 0;
-  margin-top: -80px;
-  /* Overlap */
-  position: relative;
-  z-index: 20;
-  max-width: 1100px;
-  /* Wider for better breathing room */
-  margin-left: auto;
-  margin-right: auto;
-  padding-bottom: 6rem;
+  padding: 6rem 0 8rem;
+  background-color: var(--color-background);
 }
 
 .servicesGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
+  gap: 2.5rem;
   padding: 0 1rem;
 }
 
+.serviceCardLink {
+  text-decoration: none;
+  display: block;
+  height: 100%;
+}
+
 .serviceCard {
-  background-color: var(--color-surface);
-  padding: 4rem 3rem;
-  border-radius: var(--radius-md);
-  box-shadow: 0 20px 40px -5px rgba(0, 0, 0, 0.1);
-  /* Cleaner shadow */
+  background-color: white;
+  padding: 3.5rem 2.5rem;
+  border-radius: var(--radius-lg);
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  text-align: left;
-  gap: 1.5rem;
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  /* Bouncy transition */
-  cursor: pointer;
-  position: relative;
-  border: 1px solid #E5E7EB;
-  /* Distinct light border */
-  min-height: 340px;
   justify-content: space-between;
+  gap: 2rem;
+  height: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+}
+
+.serviceCard::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 4px;
+  background: var(--color-secondary);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--transition-normal);
 }
 
 .serviceCard:hover {
-  transform: translateY(-12px) scale(1.02);
-  /* More lift and scale */
-  box-shadow: 0 30px 60px -12px rgba(37, 99, 235, 0.25);
-  /* Blue tinted shadow on hover */
-  border-color: var(--color-secondary);
-  /* Blue border on hover */
-  z-index: 10;
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-hover);
+  border-color: rgba(37, 99, 235, 0.15);
+}
+
+.serviceCard:hover::before {
+  transform: scaleX(1);
 }
 
 .cardIcon {
   color: var(--color-primary);
-  background-color: transparent;
-  width: auto;
-  height: auto;
-  padding: 0;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
+  transition: transform var(--transition-fast);
+}
+
+.serviceCard:hover .cardIcon {
+  transform: scale(1.1) translateX(5px);
+  color: var(--color-secondary);
 }
 
 .serviceCard h3 {
-  font-size: 1.9rem;
-  /* Larger Title */
+  font-size: 1.7rem;
   font-weight: 800;
-  /* Extra Bold */
-  color: var(--color-text-primary);
-  letter-spacing: -0.02em;
-  margin-bottom: 0.5rem;
+  color: var(--color-primary-dark);
+  margin-bottom: 1rem;
 }
 
 .serviceCard p {
   color: var(--color-text-secondary);
   font-size: 1.1rem;
-  /* Readable body */
-  line-height: var(--leading-normal);
-  font-weight: 500;
-  /* Slightly heavier than normal */
+  line-height: var(--leading-relaxed);
 }
 
-.cardPlus {
-  width: 48px;
-  height: 48px;
-  background-color: #F3F4F6;
-  color: var(--color-text-primary);
-  border: none;
-  /* Removed border */
-  border-radius: 50%;
+.cardArrow {
+  align-self: flex-end;
+  color: var(--color-text-muted);
+  transition: all var(--transition-fast);
+  opacity: 0.5;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: var(--font-serif);
-  font-style: normal;
-  font-size: 1.5rem;
-  transition: all var(--transition-normal);
-  align-self: flex-end;
-}
-
-.serviceCard:hover .cardPlus {
-  background-color: var(--color-primary);
-  color: white;
-}
-
-/* Common Section Styles */
-.sectionHeader {
-  text-align: center;
-  margin-bottom: 4rem;
-}
-
-.sectionTitle {
-  font-size: 2.5rem;
-  font-weight: 800;
-  color: var(--color-primary);
-  margin-bottom: 0.5rem;
-}
-
-/* Equipment Section */
-.equipment {
-  padding: var(--spacing-section) 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
   background-color: var(--color-background);
 }
 
-.equipmentGrid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  /* Default 2 cols */
-  gap: 2rem;
+.serviceCard:hover .cardArrow {
+  opacity: 1;
+  color: white;
+  background-color: var(--color-secondary);
+  transform: translateX(5px);
 }
 
-.equipmentCard {
-  background-color: white;
-  padding: 1.5rem;
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-sm);
-  text-align: center;
+.guideCard {
+  background: linear-gradient(135deg, #0A192F, #1E3A8A);
+  border: none;
 }
 
-.equipmentImg {
-  height: 200px;
-  background-color: #eee;
-  border-radius: var(--radius-sm);
-  margin-bottom: 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.5rem;
-  color: #999;
+.guideCard h3, .guideCard p {
+  color: white;
 }
 
-.equipmentCard h5 {
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: var(--color-primary);
+.guideCard .cardIcon {
+  color: var(--color-accent-gold);
 }
 
-/* Animations */
-@keyframes fadeInDown {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.guideCard:hover .cardIcon {
+  color: white;
 }
 
-/* Media Queries - Stacking Order: Desktop First Base -> Mobile Overrides */
+.guideCard:hover .cardArrow {
+  background-color: var(--color-accent-gold);
+  color: var(--color-primary-dark);
+}
 
-/* Tablet & Mobile (Max 1024px) */
+/* Responsive */
 @media (max-width: 1024px) {
+  .doctorsGrid, .servicesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
   .heroTitle {
-    font-size: 3rem;
+    font-size: 3.5rem;
   }
 }
 
-/* Mobile (Max 768px) */
 @media (max-width: 768px) {
-
-  /* Hero */
   .hero {
     height: 100vh;
-    /* Full height on mobile */
-    align-items: center;
-    justify-content: center;
-    /* Center content on mobile */
-    padding-left: 0;
-    /* Removing left indent */
-    text-align: center;
+    padding-top: 60px;
   }
-
   .heroOverlay {
-    /* Stronger overlay on mobile for text readability */
-    background: linear-gradient(180deg,
-        rgba(30, 64, 175, 0.6) 0%,
-        rgba(30, 64, 175, 0.95) 100%);
+    background: linear-gradient(180deg, rgba(10, 25, 47, 0.4) 0%, rgba(10, 25, 47, 0.95) 100%);
   }
-
   .heroContent {
-    max-width: 90%;
-    padding: 2rem 1rem;
-    align-items: center;
-    /* Center align flex items if any */
+    padding: 1rem;
+    text-align: center;
     display: flex;
     flex-direction: column;
+    align-items: center;
   }
-
-  .heroBadge {
-    margin-bottom: 1rem;
-    font-size: 0.9rem;
-    align-self: center;
-  }
-
-  .heroTitle {
-    font-size: 2.25rem;
-    /* Smaller for mobile */
-    line-height: var(--leading-tight);
-    margin-bottom: 1.5rem;
-  }
-
-  .heroSubtitle {
+  .heroBadge::before {
     display: none;
-    /* Hide subtitle on mobile for cleaner look */
   }
-
-  /* Services Grid - Stacked */
-  .services {
-    margin-top: 0;
-    /* Remove negative margin on mobile */
-    padding-bottom: 3rem;
+  .heroTitle {
+    font-size: 2.75rem;
   }
-
-  .servicesGrid {
+  .heroActions {
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+  }
+  .btnPrimary, .btnOutline {
+    width: 100%;
+    text-align: center;
+  }
+  .doctorsGrid, .servicesGrid {
     grid-template-columns: 1fr;
-    /* Stack vertically 1 column */
-    padding: 0 1.5rem;
-    gap: 1.5rem;
   }
-
-  .serviceCard {
-    min-height: auto;
-    /* Let content dictate height */
-    padding: 2.5rem 2rem;
-  }
-
-  .serviceCard h3 {
-    font-size: 1.5rem;
-  }
-
-  /* Equipment Stacking */
-  .equipmentGrid {
-    grid-template-columns: 1fr;
-    /* Stack to 1 column */
-  }
-
-  .container {
-    padding: 0 1.5rem;
-  }
-
   .sectionTitle {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
 }
