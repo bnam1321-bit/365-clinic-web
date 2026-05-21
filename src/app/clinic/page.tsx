@@ -16,7 +16,6 @@ export default function ClinicPage() {
                 badge="INTERNAL MEDICINE"
                 title="내과 클리닉"
                 subtitle={<>만성질환부터 급성질환까지, 대학병원 출신<br />의료진의 전문적인 진료와 케어</>}
-                imagePath="/images/checkup_clinic_2.jpg"
             />
 
             {/* Main Content */}

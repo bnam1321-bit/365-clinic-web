@@ -101,6 +101,39 @@
   to { transform: scale(1.05); }
 }
 
+/* Text Only Layout Modifiers */
+.textOnlyHero {
+  min-height: 60vh;
+  padding-top: 100px;
+}
+
+.textOnlyContainer {
+  grid-template-columns: 1fr;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.textOnlyContainer .heroLeft {
+  padding-right: 0;
+}
+
+.centerBadge {
+  justify-content: center;
+}
+
+.centerBadge::before {
+  display: none;
+}
+
+.textOnlyContainer .heroSubtitle {
+  margin: 0 auto 3.5rem auto;
+}
+
+.textOnlyContainer .heroActions {
+  justify-content: center;
+}
+
 /* Responsive Rules */
 @media (max-width: 1200px) {
   .heroTitle {
