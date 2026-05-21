@@ -1,6 +1,7 @@
 import styles from "./page.module.css";
 import type { Metadata } from "next";
 import FadeIn from "@/components/ui/FadeIn";
+import SplitHero from "@/components/ui/SplitHero";
 import { Activity, Stethoscope, HeartPulse, ShieldCheck, Thermometer } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -11,17 +12,12 @@ export const metadata: Metadata = {
 export default function ClinicPage() {
     return (
         <main className={styles.container}>
-            {/* Restore Original Hero Section */}
-            <section className={styles.header}>
-                <FadeIn>
-                    <span className={styles.badge}>INTERNAL MEDICINE</span>
-                    <h1 className={styles.title}>내과 클리닉</h1>
-                    <p className={styles.subtitle}>
-                        만성질환부터 급성질환까지, 대학병원 출신<br />
-                        의료진의 전문적인 진료와 케어
-                    </p>
-                </FadeIn>
-            </section>
+            <SplitHero 
+                badge="INTERNAL MEDICINE"
+                title="내과 클리닉"
+                subtitle={<>만성질환부터 급성질환까지, 대학병원 출신<br />의료진의 전문적인 진료와 케어</>}
+                imagePath="/images/checkup_clinic_2.jpg"
+            />
 
             {/* Main Content */}
             <section className={styles.content}>

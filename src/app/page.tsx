@@ -27,7 +27,7 @@ export default function Home() {
             </FadeIn>
           </div>
           <div className={styles.heroRight}>
-            <FadeIn direction="left" delay={0.2} className={styles.imageFade}>
+            <FadeIn direction="left" delay={0.2} className={styles.imageFade} fullWidth={true}>
               <div className={styles.imageMask}></div>
             </FadeIn>
           </div>

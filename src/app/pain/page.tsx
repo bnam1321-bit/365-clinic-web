@@ -2,7 +2,7 @@ import styles from "./page.module.css";
 import { Activity, ShieldCheck, Microscope, HeartPulse, Stethoscope, CheckCircle2 } from "lucide-react";
 import type { Metadata } from "next";
 import FadeIn from "@/components/ui/FadeIn";
-
+import SplitHero from "@/components/ui/SplitHero";
 export const metadata: Metadata = {
     title: "통증클리닉 | 365내과연합의원",
     description: "근골격계 초음파 및 증식치료(프롤로테라피) 전문 클리닉입니다.",
@@ -11,16 +11,12 @@ export const metadata: Metadata = {
 export default function PainPage() {
     return (
         <main className={styles.container}>
-            <section className={styles.header}>
-                <FadeIn>
-                    <span className={styles.badge}>PAIN CLINIC</span>
-                    <h1 className={styles.title}>통증 클리닉</h1>
-                    <p className={styles.subtitle}>
-                        근골격계 초음파와 증식치료(프롤로테라피)를 통해<br />
-                        통증의 근본적인 원인을 정확히 진단하고 안전하게 치료합니다.
-                    </p>
-                </FadeIn>
-            </section>
+            <SplitHero 
+                badge="PAIN CLINIC"
+                title="통증 클리닉"
+                subtitle={<>근골격계 초음파와 증식치료(프롤로테라피)를 통해<br />통증의 근본적인 원인을 정확히 진단하고 안전하게 치료합니다.</>}
+                imagePath="/images/pain_clinic_1.jpg"
+            />
 
             <section className={styles.content}>
                 <div className="container">

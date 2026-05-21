@@ -2,7 +2,7 @@ import styles from "./page.module.css";
 import { MapPin, Clock, Phone } from "lucide-react";
 import type { Metadata } from "next";
 import FadeIn from "@/components/ui/FadeIn";
-
+import SplitHero from "@/components/ui/SplitHero";
 export const metadata: Metadata = {
     title: "이용 안내 | 365내과연합의원",
     description: "진료 시간, 오시는 길, 온라인 예약 안내.",
@@ -11,13 +11,12 @@ export const metadata: Metadata = {
 export default function Guide() {
     return (
         <div className={styles.guide}>
-            {/* Restore Page Header with Background */}
-            <section className={styles.pageHeader}>
-                <FadeIn>
-                    <h1 className={styles.pageTitle}>진료 안내</h1>
-                    <p className={styles.pageSubtitle}>365내과연합의원 오시는 길 및 진료 시간 안내입니다.</p>
-                </FadeIn>
-            </section>
+            <SplitHero 
+                badge="VISITOR GUIDE"
+                title="진료 안내"
+                subtitle="365내과연합의원 오시는 길 및 진료 시간 안내입니다."
+                imagePath="/images/clinic_main.jpg"
+            />
 
             <main className={styles.content}>
                 <div className={`container`}>

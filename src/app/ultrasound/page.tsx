@@ -2,7 +2,7 @@ import styles from "./page.module.css";
 import { Zap, Activity, HeartPulse, ShieldCheck } from "lucide-react";
 import type { Metadata } from "next";
 import FadeIn from "@/components/ui/FadeIn";
-
+import SplitHero from "@/components/ui/SplitHero";
 export const metadata: Metadata = {
     title: "초음파클리닉 | 365내과연합의원",
     description: "복부, 심장, 갑상선, 유방, 경동맥 정밀 초음파 검사.",
@@ -11,17 +11,12 @@ export const metadata: Metadata = {
 export default function UltrasoundPage() {
     return (
         <main className={styles.container}>
-            {/* Restore Premium Hero Section */}
-            <section className={styles.header}>
-                <FadeIn>
-                    <span className={styles.badge}>ULTRASOUND CLINIC</span>
-                    <h1 className={styles.title}>초음파 클리닉</h1>
-                    <p className={styles.subtitle}>
-                        대학병원급 하이엔드 장비로 정밀하게 진단합니다.<br />
-                        방사선 피폭 걱정 없이 안전한 정밀 검사
-                    </p>
-                </FadeIn>
-            </section>
+            <SplitHero 
+                badge="ULTRASOUND CLINIC"
+                title="초음파 클리닉"
+                subtitle={<>대학병원급 하이엔드 장비로 정밀하게 진단합니다.<br />방사선 피폭 걱정 없이 안전한 정밀 검사</>}
+                imagePath="/images/ultrasound_clinic_1.jpg"
+            />
 
             {/* Main Content */}
             <section className={styles.content}>

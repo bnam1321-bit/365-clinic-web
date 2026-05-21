@@ -2,6 +2,7 @@ import styles from "./page.module.css";
 import { Activity, ClipboardCheck, ShieldCheck, HeartPulse, Microscope } from "lucide-react";
 import type { Metadata } from "next";
 import FadeIn from "@/components/ui/FadeIn";
+import SplitHero from "@/components/ui/SplitHero";
 
 export const metadata: Metadata = {
     title: "종합건강검진 | 365내과연합의원",
@@ -11,16 +12,12 @@ export const metadata: Metadata = {
 export default function CheckupPage() {
     return (
         <main className={styles.container}>
-            <section className={styles.header}>
-                <FadeIn>
-                    <span className={styles.badge}>COMPREHENSIVE CHECKUP</span>
-                    <h1 className={styles.title}>종합건강검진</h1>
-                    <p className={styles.subtitle}>
-                        5대암 검진부터 초음파 정밀 검진까지,<br />
-                        정확한 진단으로 건강한 미래를 지킵니다.
-                    </p>
-                </FadeIn>
-            </section>
+            <SplitHero 
+                badge="COMPREHENSIVE CHECKUP"
+                title="종합건강검진"
+                subtitle={<>5대암 검진부터 초음파 정밀 검진까지,<br />정확한 진단으로 건강한 미래를 지킵니다.</>}
+                imagePath="/images/checkup_clinic_1.jpg"
+            />
 
             {/* Main Content */}
             <section className={styles.content}>
