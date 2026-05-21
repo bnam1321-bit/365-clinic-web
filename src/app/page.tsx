@@ -1,17 +1,16 @@
 import Link from "next/link";
 import styles from "./page.module.css";
-import { ArrowRight, ShieldCheck, Microscope, Zap, Activity, HeartPulse, Stethoscope, Award, Users } from "lucide-react";
+import { ArrowRight, ShieldCheck, Microscope, Zap, Activity, HeartPulse } from "lucide-react";
 import FadeIn from "@/components/ui/FadeIn";
 
 export default function Home() {
   return (
     <main className={styles.home}>
-      {/* 1. Cinematic Hero Section */}
-      <section className={styles.hero}>
-        <div className={styles.heroOverlay}></div>
-        <div className={`container`}>
-          <FadeIn direction="up">
-            <div className={styles.heroContent}>
+      {/* 1. Asymmetrical Split Hero Section */}
+      <section className={styles.splitHero}>
+        <div className={`container ${styles.heroContainer}`}>
+          <div className={styles.heroLeft}>
+            <FadeIn direction="up">
               <span className={styles.heroBadge}>PREMIUM HEALTHCARE</span>
               <h1 className={styles.heroTitle}>
                 풍부한 임상 경험으로<br />
@@ -23,28 +22,33 @@ export default function Home() {
               </p>
               <div className={styles.heroActions}>
                   <Link href="/guide" className={styles.btnPrimary}>진료 안내 및 오시는 길</Link>
-                  <Link href="/checkup" className={styles.btnOutline}>종합건강검진 안내</Link>
+                  <Link href="/checkup" className={styles.btnOutlineDark}>종합건강검진 안내</Link>
               </div>
-            </div>
-          </FadeIn>
+            </FadeIn>
+          </div>
+          <div className={styles.heroRight}>
+            <FadeIn direction="left" delay={0.2} className={styles.imageFade}>
+              <div className={styles.imageMask}></div>
+            </FadeIn>
+          </div>
         </div>
       </section>
 
-
-      {/* 3. Services Grid (6-Card Menu) - High Visibility */}
-      <section className={styles.services}>
+      {/* 2. Bento-Box Services Grid */}
+      <section className={styles.bentoSection}>
         <div className={`container`}>
           <div className={styles.sectionHeader}>
               <span className={styles.sectionSubtitle}>CLINIC SERVICES</span>
               <h2 className={styles.sectionTitle}>맞춤형 전문 진료</h2>
           </div>
-          <div className={styles.servicesGrid}>
-            {/* 1. Checkup */}
-            <FadeIn delay={0.1}>
-              <Link href="/checkup" className={styles.serviceCardLink}>
-                <div className={styles.serviceCard}>
-                  <div>
-                    <div className={styles.cardIcon}><ShieldCheck size={40} /></div>
+          <div className={styles.bentoGrid}>
+            
+            {/* 1. Checkup (Large Featured - 2 cols, 2 rows) */}
+            <FadeIn delay={0.1} className={styles.bentoItemLarge}>
+              <Link href="/checkup" className={styles.bentoLink}>
+                <div className={`${styles.bentoCard} ${styles.cardCheckup}`}>
+                  <div className={styles.bentoContent}>
+                    <div className={styles.cardIcon}><ShieldCheck size={48} /></div>
                     <h3>종합건강검진</h3>
                     <p>5대암 검진부터 정밀 혈액 검사까지, 개인별 맞춤형 종합 검진 센터입니다.</p>
                   </div>
@@ -53,12 +57,12 @@ export default function Home() {
               </Link>
             </FadeIn>
 
-            {/* 2. Endoscopy */}
-            <FadeIn delay={0.2}>
-              <Link href="/endoscopy" className={styles.serviceCardLink}>
-                <div className={styles.serviceCard}>
-                  <div>
-                    <div className={styles.cardIcon}><Microscope size={40} /></div>
+            {/* 2. Endoscopy (Wide - 2 cols, 1 row) */}
+            <FadeIn delay={0.2} className={styles.bentoItemWide}>
+              <Link href="/endoscopy" className={styles.bentoLink}>
+                <div className={`${styles.bentoCard} ${styles.cardEndoscopy}`}>
+                  <div className={styles.bentoContent}>
+                    <div className={styles.cardIcon}><Microscope size={36} /></div>
                     <h3>내시경 클리닉</h3>
                     <p>대학병원급 고화질 내시경 장비로 미세 용종까지 정확하게 발견하고 제거합니다.</p>
                   </div>
@@ -67,61 +71,62 @@ export default function Home() {
               </Link>
             </FadeIn>
 
-            {/* 3. Ultrasound */}
-            <FadeIn delay={0.3}>
-              <Link href="/ultrasound" className={styles.serviceCardLink}>
-                <div className={styles.serviceCard}>
-                  <div>
-                    <div className={styles.cardIcon}><Activity size={40} /></div>
+            {/* 3. Ultrasound (Standard - 1 col, 1 row) */}
+            <FadeIn delay={0.3} className={styles.bentoItemStandard}>
+              <Link href="/ultrasound" className={styles.bentoLink}>
+                <div className={`${styles.bentoCard} ${styles.cardLight}`}>
+                  <div className={styles.bentoContent}>
+                    <div className={styles.cardIcon}><Activity size={32} /></div>
                     <h3>초음파 클리닉</h3>
-                    <p>복부, 경동맥, 갑상선 등 정밀 초음파를 통해 신체 내부 상태를 면밀히 살핍니다.</p>
+                    <p>정밀 초음파를 통한 내부 장기 면밀 진단.</p>
                   </div>
                   <div className={styles.cardArrow}><ArrowRight size={24} /></div>
                 </div>
               </Link>
             </FadeIn>
 
-            {/* 4. Internal Medicine */}
-            <FadeIn delay={0.4}>
-              <Link href="/clinic" className={styles.serviceCardLink}>
-                <div className={styles.serviceCard}>
-                  <div>
-                    <div className={styles.cardIcon}><Attributes size={40} /></div>
-                    <h3>내과 클리닉</h3>
-                    <p>당뇨, 고혈압, 만성질환 관리부터 일반 진료까지 체계적인 건강 관리를 제공합니다.</p>
+            {/* 4. Internal Medicine (Standard - 1 col, 1 row) */}
+            <FadeIn delay={0.4} className={styles.bentoItemStandard}>
+              <Link href="/clinic" className={styles.bentoLink}>
+                <div className={`${styles.bentoCard} ${styles.cardLight}`}>
+                  <div className={styles.bentoContent}>
+                    <div className={styles.cardIcon}><Attributes size={32} /></div>
+                    <h3>내과 진료</h3>
+                    <p>당뇨, 고혈압 등 만성질환의 체계적 관리.</p>
                   </div>
                   <div className={styles.cardArrow}><ArrowRight size={24} /></div>
                 </div>
               </Link>
             </FadeIn>
 
-            {/* 5. Pain Clinic */}
-            <FadeIn delay={0.5}>
-              <Link href="/pain" className={styles.serviceCardLink}>
-                <div className={styles.serviceCard}>
-                  <div>
-                    <div className={styles.cardIcon}><Zap size={40} /></div>
+            {/* 5. Pain Clinic (Wide - 2 cols, 1 row) */}
+            <FadeIn delay={0.5} className={styles.bentoItemWide}>
+              <Link href="/pain" className={styles.bentoLink}>
+                <div className={`${styles.bentoCard} ${styles.cardDark}`}>
+                  <div className={styles.bentoContent}>
+                    <div className={styles.cardIcon}><Zap size={36} /></div>
                     <h3>통증 클리닉</h3>
-                    <p>근골격계 초음파 검사와 프롤로테라피(증식치료)를 통해 통증의 근본 원인을 정확하게 진단하고 치료합니다.</p>
+                    <p>근골격계 초음파와 프롤로테라피(증식치료)를 통한 근본적 통증 치료.</p>
                   </div>
                   <div className={styles.cardArrow}><ArrowRight size={24} /></div>
                 </div>
               </Link>
             </FadeIn>
 
-            {/* 6. Guide */}
-            <FadeIn delay={0.6}>
-              <Link href="/guide" className={styles.serviceCardLink}>
-                <div className={`${styles.serviceCard} ${styles.guideCard}`}>
-                  <div>
-                    <div className={styles.cardIcon}><HeartPulse size={40} /></div>
+            {/* 6. Guide (Wide - 2 cols, 1 row) */}
+            <FadeIn delay={0.6} className={styles.bentoItemWide}>
+              <Link href="/guide" className={styles.bentoLink}>
+                <div className={`${styles.bentoCard} ${styles.cardAccent}`}>
+                  <div className={styles.bentoContent}>
+                    <div className={styles.cardIcon}><HeartPulse size={36} /></div>
                     <h3>진료 안내</h3>
-                    <p>평일 19시, 토요일 14시까지 진료. 대학병원 출신 전문의 3인 협진.</p>
+                    <p>평일 19시, 토요일 14시까지 진료. 대학병원 출신 전문의 3인 협진 시스템.</p>
                   </div>
                   <div className={styles.cardArrow}><ArrowRight size={24} /></div>
                 </div>
               </Link>
             </FadeIn>
+
           </div>
         </div>
       </section>

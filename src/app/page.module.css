@@ -3,60 +3,28 @@
   background-color: var(--color-background);
 }
 
-/* 1. Cinematic Hero Section */
-.hero {
+/* 1. Asymmetrical Split Hero Section */
+.splitHero {
   position: relative;
-  height: 90vh;
-  min-height: 700px;
-  max-height: 1000px;
+  min-height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  color: white;
+  background-color: #FAFAFC; /* Alabaster Off-white */
   overflow: hidden;
-  padding-top: 80px; /* Offset for header */
+  padding-top: 64px; /* Offset for header */
 }
 
-/* Background with Slow Zoom Animation */
-.hero::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
+.heroContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 4rem;
   width: 100%;
-  height: 100%;
-  background: url('/images/clinic_main.jpg') no-repeat center center;
-  background-size: cover;
-  z-index: 0;
-  animation: slowZoom 30s ease-in-out infinite alternate;
 }
 
-@keyframes slowZoom {
-  from { transform: scale(1); }
-  to { transform: scale(1.1); }
-}
-
-/* Cinematic Gradient Overlay */
-.heroOverlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(90deg, 
-    rgba(10, 25, 47, 0.95) 0%, 
-    rgba(10, 25, 47, 0.7) 40%, 
-    rgba(10, 25, 47, 0.2) 100%);
-  z-index: 1;
-}
-
-/* Hero Content */
-.heroContent {
-  width: 100%;
-  max-width: 800px;
-  position: relative;
+.heroLeft {
   z-index: 10;
-  padding: 0 2rem;
+  padding-right: 2rem;
 }
 
 .heroBadge {
@@ -65,7 +33,7 @@
   font-weight: 700;
   letter-spacing: 0.15em;
   color: var(--color-accent-gold);
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
   display: flex;
   align-items: center;
   gap: 0.75rem;
@@ -82,29 +50,28 @@
 .heroTitle {
   font-size: 4.5rem;
   font-weight: 800;
-  line-height: var(--leading-tight);
+  line-height: 1.1;
   margin-bottom: 2rem;
   letter-spacing: var(--tracking-tight);
-  color: white;
+  color: var(--color-primary-dark);
 }
 
 .highlight {
   display: block;
   font-family: var(--font-serif);
   font-weight: 600;
-  color: white;
+  color: var(--color-secondary);
 }
 
 .heroSubtitle {
   font-size: 1.25rem;
   line-height: var(--leading-relaxed);
-  color: rgba(255, 255, 255, 0.85);
+  color: var(--color-text-secondary);
   margin-bottom: 3.5rem;
   font-weight: 400;
   max-width: 90%;
 }
 
-/* Hero CTA Buttons */
 .heroActions {
   display: flex;
   gap: 1.5rem;
@@ -112,7 +79,7 @@
 }
 
 .btnPrimary {
-  background-color: var(--color-secondary);
+  background-color: var(--color-primary);
   color: white;
   padding: 1.25rem 2.5rem;
   border-radius: var(--radius-full);
@@ -120,36 +87,69 @@
   font-size: 1.1rem;
   text-decoration: none;
   transition: all var(--transition-fast);
-  box-shadow: 0 4px 14px 0 rgba(37, 99, 235, 0.39);
+  box-shadow: 0 10px 20px -5px rgba(10, 25, 47, 0.2);
 }
 
 .btnPrimary:hover {
-  background-color: white;
-  color: var(--color-primary);
+  background-color: var(--color-secondary);
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.23);
+  box-shadow: 0 15px 25px -5px rgba(37, 99, 235, 0.3);
 }
 
-.btnOutline {
+.btnOutlineDark {
   background-color: transparent;
-  color: white;
+  color: var(--color-primary-dark);
   padding: 1.25rem 2.5rem;
   border-radius: var(--radius-full);
   font-weight: 700;
   font-size: 1.1rem;
   text-decoration: none;
-  border: 2px solid rgba(255, 255, 255, 0.5);
+  border: 2px solid rgba(10, 25, 47, 0.15);
   transition: all var(--transition-fast);
 }
 
-.btnOutline:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-  border-color: white;
+.btnOutlineDark:hover {
+  background-color: rgba(10, 25, 47, 0.04);
+  border-color: var(--color-primary);
 }
 
-/* 2. Medical Team / Synergy Section */
-.synergySection {
-  padding: 8rem 0;
+/* Right Side - Arched Image Mask */
+.heroRight {
+  position: relative;
+  height: 80vh;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imageFade {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.imageMask {
+  width: 90%;
+  height: 90%;
+  background: url('/images/clinic_main.jpg') no-repeat center center;
+  background-size: cover;
+  /* Premium Pill-shape / Arch mask */
+  border-radius: 500px 500px 2rem 2rem;
+  box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.15);
+  animation: slowZoom 30s ease-in-out infinite alternate;
+  transform-origin: center;
+}
+
+@keyframes slowZoom {
+  from { transform: scale(1); }
+  to { transform: scale(1.05); }
+}
+
+/* 2. Bento-Box Services Grid */
+.bentoSection {
+  padding: 8rem 0 10rem;
   background-color: white;
 }
 
@@ -176,227 +176,212 @@
   letter-spacing: var(--tracking-tight);
 }
 
-.sectionDesc {
-  color: var(--color-text-secondary);
-  font-size: 1.15rem;
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.doctorsGrid {
+.bentoGrid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2.5rem;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: minmax(280px, auto);
+  gap: 1.5rem;
   padding: 0 1rem;
 }
 
-.doctorCard {
-  text-align: center;
-  padding: 3rem 2rem;
-  background-color: var(--color-background);
-  border-radius: var(--radius-lg);
-  border: 1px solid var(--color-border);
-  transition: all var(--transition-normal);
+/* Bento Sizing Classes */
+.bentoItemLarge {
+  grid-column: span 2;
+  grid-row: span 2;
 }
 
-.doctorCard:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-md);
-  border-color: rgba(197, 168, 128, 0.3); /* Soft gold border */
+.bentoItemWide {
+  grid-column: span 2;
+  grid-row: span 1;
 }
 
-.doctorIcon {
-  width: 80px;
-  height: 80px;
-  margin: 0 auto 1.5rem;
-  background-color: white;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--color-primary);
-  box-shadow: var(--shadow-sm);
+.bentoItemStandard {
+  grid-column: span 1;
+  grid-row: span 1;
 }
 
-.doctorCard h3 {
-  font-size: 1.5rem;
-  font-weight: 800;
-  color: var(--color-primary-dark);
-  margin-bottom: 0.5rem;
-}
-
-.doctorCard p {
-  color: var(--color-text-secondary);
-  font-weight: 500;
-  font-size: 1.05rem;
-}
-
-/* 3. Services Grid */
-.services {
-  padding: 6rem 0 8rem;
-  background-color: var(--color-background);
-}
-
-.servicesGrid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2.5rem;
-  padding: 0 1rem;
-}
-
-.serviceCardLink {
+.bentoLink {
   text-decoration: none;
   display: block;
   height: 100%;
 }
 
-.serviceCard {
-  background-color: white;
-  padding: 3.5rem 2.5rem;
-  border-radius: var(--radius-lg);
+.bentoCard {
+  padding: 3rem 2.5rem;
+  border-radius: 1.5rem; /* Larger modern radius */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 2rem;
   height: 100%;
-  border: 1px solid rgba(0, 0, 0, 0.05);
-  box-shadow: var(--shadow-sm);
-  transition: all var(--transition-normal);
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
   position: relative;
   overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.03);
 }
 
-.serviceCard::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; width: 100%; height: 4px;
-  background: var(--color-secondary);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform var(--transition-normal);
+.bentoCard:hover {
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: 0 24px 48px -12px rgba(0, 0, 0, 0.08);
 }
 
-.serviceCard:hover {
-  transform: translateY(-10px);
-  box-shadow: var(--shadow-hover);
-  border-color: rgba(37, 99, 235, 0.15);
+.bentoContent {
+  position: relative;
+  z-index: 2;
 }
 
-.serviceCard:hover::before {
-  transform: scaleX(1);
+/* Specific Card Styles for Visual Hierarchy */
+.cardCheckup {
+  background: linear-gradient(135deg, #0A192F, #1E3A8A);
+  color: white;
 }
 
+.cardCheckup .cardIcon { color: var(--color-accent-gold); }
+.cardCheckup h3 { color: white; font-size: 2.2rem; }
+.cardCheckup p { color: rgba(255, 255, 255, 0.85); font-size: 1.2rem; }
+.cardCheckup .cardArrow { background: rgba(255,255,255,0.1); color: white; }
+.cardCheckup:hover .cardArrow { background: var(--color-accent-gold); color: var(--color-primary-dark); }
+
+.cardEndoscopy {
+  background-color: #F0F4F8; /* Soft blue-gray */
+  border: 1px solid rgba(0,0,0,0.02);
+}
+.cardEndoscopy h3 { color: var(--color-primary-dark); font-size: 1.8rem; }
+.cardEndoscopy p { color: var(--color-text-secondary); }
+
+.cardLight {
+  background-color: white;
+  border: 1px solid rgba(0,0,0,0.05);
+}
+.cardLight h3 { color: var(--color-primary-dark); font-size: 1.5rem; }
+.cardLight p { color: var(--color-text-secondary); font-size: 1rem; }
+
+.cardDark {
+  background-color: var(--color-primary);
+  color: white;
+}
+.cardDark h3 { color: white; font-size: 1.8rem; }
+.cardDark p { color: rgba(255, 255, 255, 0.85); }
+.cardDark .cardIcon { color: #93C5FD; }
+.cardDark .cardArrow { background: rgba(255,255,255,0.1); color: white; }
+.cardDark:hover .cardArrow { background: white; color: var(--color-primary); }
+
+.cardAccent {
+  background: linear-gradient(135deg, #C5A880, #D4AF37);
+  color: white;
+}
+.cardAccent h3 { color: white; font-size: 1.8rem; }
+.cardAccent p { color: rgba(255, 255, 255, 0.95); }
+.cardAccent .cardIcon { color: white; }
+.cardAccent .cardArrow { background: rgba(255,255,255,0.2); color: white; }
+.cardAccent:hover .cardArrow { background: white; color: #D4AF37; }
+
+
+/* General Icon & Arrow shared logic */
 .cardIcon {
-  color: var(--color-primary);
-  margin-bottom: 1.5rem;
-  transition: transform var(--transition-fast);
-}
-
-.serviceCard:hover .cardIcon {
-  transform: scale(1.1) translateX(5px);
+  margin-bottom: 2rem;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
   color: var(--color-secondary);
 }
 
-.serviceCard h3 {
-  font-size: 1.7rem;
+.bentoCard:hover .cardIcon {
+  transform: scale(1.1) translateX(5px);
+}
+
+.bentoCard h3 {
   font-weight: 800;
-  color: var(--color-primary-dark);
   margin-bottom: 1rem;
 }
 
-.serviceCard p {
-  color: var(--color-text-secondary);
-  font-size: 1.1rem;
+.bentoCard p {
   line-height: var(--leading-relaxed);
 }
 
 .cardArrow {
   align-self: flex-end;
   color: var(--color-text-muted);
-  transition: all var(--transition-fast);
-  opacity: 0.5;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   display: flex;
   align-items: center;
   justify-content: center;
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  background-color: var(--color-background);
+  background-color: rgba(0, 0, 0, 0.04);
+  z-index: 2;
 }
 
-.serviceCard:hover .cardArrow {
-  opacity: 1;
-  color: white;
+.cardEndoscopy:hover .cardArrow,
+.cardLight:hover .cardArrow {
   background-color: var(--color-secondary);
-  transform: translateX(5px);
-}
-
-.guideCard {
-  background: linear-gradient(135deg, #0A192F, #1E3A8A);
-  border: none;
-}
-
-.guideCard h3, .guideCard p {
   color: white;
+  transform: translateX(5px) scale(1.05);
 }
 
-.guideCard .cardIcon {
-  color: var(--color-accent-gold);
+.cardCheckup:hover .cardArrow,
+.cardDark:hover .cardArrow,
+.cardAccent:hover .cardArrow {
+  transform: translateX(5px) scale(1.05);
 }
 
-.guideCard:hover .cardIcon {
-  color: white;
-}
-
-.guideCard:hover .cardArrow {
-  background-color: var(--color-accent-gold);
-  color: var(--color-primary-dark);
-}
-
-/* Responsive */
-@media (max-width: 1024px) {
-  .doctorsGrid, .servicesGrid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+/* Responsive Rules */
+@media (max-width: 1200px) {
   .heroTitle {
     font-size: 3.5rem;
   }
 }
 
+@media (max-width: 1024px) {
+  .heroContainer {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .heroLeft {
+    padding: 2rem;
+    padding-top: 4rem;
+  }
+  .heroRight {
+    height: 60vh;
+    min-height: 400px;
+    padding: 2rem;
+  }
+  .imageMask {
+    border-radius: 200px 200px 1.5rem 1.5rem;
+    width: 100%;
+  }
+
+  .bentoGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  /* Reset Bento Grid for Tablets */
+  .bentoItemLarge { grid-column: span 2; grid-row: span 1; }
+  .bentoItemWide { grid-column: span 2; grid-row: span 1; }
+  .bentoItemStandard { grid-column: span 1; grid-row: span 1; }
+}
+
 @media (max-width: 768px) {
-  .hero {
-    height: 100vh;
-    padding-top: 60px;
-  }
-  .heroOverlay {
-    background: linear-gradient(180deg, rgba(10, 25, 47, 0.4) 0%, rgba(10, 25, 47, 0.95) 100%);
-  }
-  .heroContent {
-    padding: 1rem;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .heroBadge::before {
-    display: none;
-  }
   .heroTitle {
     font-size: 2.75rem;
   }
   .heroActions {
-    justify-content: center;
     flex-direction: column;
-    width: 100%;
   }
-  .btnPrimary, .btnOutline {
+  .btnPrimary, .btnOutlineDark {
     width: 100%;
     text-align: center;
   }
-  .doctorsGrid, .servicesGrid {
+
+  /* Stack completely on Mobile */
+  .bentoGrid {
     grid-template-columns: 1fr;
+    grid-auto-rows: auto;
   }
-  .sectionTitle {
-    font-size: 2.2rem;
+  .bentoItemLarge, .bentoItemWide, .bentoItemStandard {
+    grid-column: span 1;
+    grid-row: auto;
+  }
+  
+  .bentoCard {
+    padding: 2rem 1.5rem;
   }
 }

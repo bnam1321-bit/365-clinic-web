@@ -28,7 +28,7 @@
     font-size: 1.8rem;
     font-family: var(--font-serif);
     font-weight: 800;
-    color: white;
+    color: var(--color-primary);
     text-decoration: none;
     letter-spacing: var(--tracking-normal);
     display: flex;
@@ -42,7 +42,7 @@
 
 .logo span {
     font-family: var(--font-pretendard);
-    color: rgba(255, 255, 255, 0.9);
+    color: var(--color-text-primary);
     font-weight: 500;
     font-size: 1.3rem;
     margin-left: 0.25rem;
@@ -68,7 +68,7 @@
 }
 
 .navLink {
-    color: rgba(255, 255, 255, 0.9);
+    color: var(--color-text-primary);
     font-weight: 600;
     font-size: 1.05rem;
     text-decoration: none;
@@ -83,7 +83,7 @@
 }
 
 .navLink:hover {
-    color: white;
+    color: var(--color-secondary);
 }
 
 .header.scrolled .navLink:hover {
@@ -116,13 +116,13 @@
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    color: white;
+    color: var(--color-primary);
     font-weight: 700;
     font-size: 1rem;
     text-decoration: none;
     padding: 0.5rem 1rem;
     border-radius: var(--radius-full);
-    border: 1px solid rgba(255, 255, 255, 0.4);
+    border: 1px solid rgba(10, 25, 47, 0.1);
     transition: all var(--transition-fast);
 }
 
@@ -132,7 +132,7 @@
 }
 
 .phoneBtn:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(10, 25, 47, 0.04);
 }
 
 .header.scrolled .phoneBtn:hover {
@@ -143,7 +143,7 @@
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    background-color: rgba(255, 255, 255, 0.15);
+    background-color: var(--color-primary);
     color: white;
     font-weight: 600;
     font-size: 0.95rem;
@@ -151,7 +151,7 @@
     padding: 0.6rem 1.25rem;
     border-radius: var(--radius-full);
     transition: all var(--transition-fast);
-    box-shadow: none;
+    box-shadow: var(--shadow-sm);
 }
 
 .header.scrolled .locationBtn {
@@ -160,7 +160,8 @@
 }
 
 .locationBtn:hover {
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: var(--color-secondary);
+    box-shadow: var(--shadow-md);
     transform: translateY(-1px);
 }
 
@@ -172,7 +173,7 @@
 /* Mobile Menu Toggle */
 .menuButton {
     display: block;
-    color: white;
+    color: var(--color-primary);
     z-index: 1001; /* Keep above mobile nav */
     transition: color var(--transition-fast);
 }
