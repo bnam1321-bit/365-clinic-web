@@ -4,6 +4,7 @@ import Link from "next/link";
 import styles from "./Header.module.css";
 import { Menu, X, Phone, MapPin } from "lucide-react";
 import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -21,8 +22,12 @@ export default function Header() {
         setIsMenuOpen(!isMenuOpen);
     };
 
+    const pathname = usePathname();
+    const isMainPage = pathname === "/";
+    const isTransparent = isMainPage && !scrolled;
+
     return (
-        <header className={`${styles.header} ${scrolled ? styles.scrolled : ""}`}>
+        <header className={`${styles.header} ${scrolled ? styles.scrolled : ""} ${isTransparent ? styles.transparent : ""}`}>
             <div className={`container ${styles.headerContainer}`}>
                 {/* Logo */}
                 <Link href="/" className={styles.logo}>

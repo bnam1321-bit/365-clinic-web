@@ -178,6 +178,54 @@
     transition: color var(--transition-fast);
 }
 
+/* ==========================================================================
+   Dynamic Transparent Theme (For Main Page Unscrolled State)
+   ========================================================================== */
+.header.transparent {
+    background-color: transparent;
+    box-shadow: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.header.transparent .logo {
+    color: white;
+}
+
+.header.transparent .logo span {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.header.transparent .navLink {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.header.transparent .navLink:hover {
+    color: white;
+}
+
+.header.transparent .phoneBtn {
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.header.transparent .phoneBtn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.header.transparent .locationBtn {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: white;
+    box-shadow: none;
+}
+
+.header.transparent .locationBtn:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.header.transparent .menuButton {
+    color: white;
+}
+
 .header.scrolled .menuButton {
     color: var(--color-primary);
 }

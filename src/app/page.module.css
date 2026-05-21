@@ -3,148 +3,67 @@
   background-color: var(--color-background);
 }
 
-/* 1. Asymmetrical Split Hero Section */
-.splitHero {
-  position: relative;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  background-color: #FAFAFC; /* Alabaster Off-white */
-  overflow: hidden;
-  padding-top: 64px; /* Offset for header */
+/* ==========================================================================
+   1. Hero Section (Reverted Full-Screen Layout)
+   ========================================================================== */
+.hero {
+    height: 90vh;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background: url('/images/clinic_main.jpg') no-repeat center center;
+    background-size: cover;
+    color: white;
+    text-align: center;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(10, 25, 47, 0.6);
+    z-index: 1;
 }
 
 .heroContainer {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  gap: 4rem;
-  width: 100%;
-}
-
-.heroLeft {
-  z-index: 10;
-  padding-right: 2rem;
-}
-
-.heroBadge {
-  font-family: var(--font-serif);
-  font-size: 1.1rem;
-  font-weight: 700;
-  letter-spacing: 0.15em;
-  color: var(--color-accent-gold);
-  margin-bottom: 2rem;
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-}
-
-.heroBadge::before {
-  content: '';
-  display: block;
-  width: 30px;
-  height: 2px;
-  background-color: var(--color-accent-gold);
-}
-
-.heroTitle {
-  font-size: 4.5rem;
-  font-weight: 800;
-  line-height: 1.1;
-  margin-bottom: 2rem;
-  letter-spacing: var(--tracking-tight);
-  color: var(--color-primary-dark);
+    position: relative;
+    z-index: 2;
+    padding: 0 1rem;
 }
 
 .highlight {
-  display: block;
-  font-family: var(--font-serif);
-  font-weight: 600;
-  color: var(--color-secondary);
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: var(--color-secondary);
+    color: white;
+    font-weight: 700;
+    font-size: 1rem;
+    border-radius: var(--radius-full);
+    margin-bottom: 1.5rem;
+    letter-spacing: var(--tracking-wide);
+}
+
+.heroTitle {
+    font-size: 4.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.02em;
+    color: white;
 }
 
 .heroSubtitle {
-  font-size: 1.25rem;
-  line-height: var(--leading-relaxed);
-  color: var(--color-text-secondary);
-  margin-bottom: 3.5rem;
-  font-weight: 400;
-  max-width: 90%;
-}
-
-.heroActions {
-  display: flex;
-  gap: 1.5rem;
-  flex-wrap: wrap;
-}
-
-.btnPrimary {
-  background-color: var(--color-primary);
-  color: white;
-  padding: 1.25rem 2.5rem;
-  border-radius: var(--radius-full);
-  font-weight: 700;
-  font-size: 1.1rem;
-  text-decoration: none;
-  transition: all var(--transition-fast);
-  box-shadow: 0 10px 20px -5px rgba(10, 25, 47, 0.2);
-}
-
-.btnPrimary:hover {
-  background-color: var(--color-secondary);
-  transform: translateY(-2px);
-  box-shadow: 0 15px 25px -5px rgba(37, 99, 235, 0.3);
-}
-
-.btnOutlineDark {
-  background-color: transparent;
-  color: var(--color-primary-dark);
-  padding: 1.25rem 2.5rem;
-  border-radius: var(--radius-full);
-  font-weight: 700;
-  font-size: 1.1rem;
-  text-decoration: none;
-  border: 2px solid rgba(10, 25, 47, 0.15);
-  transition: all var(--transition-fast);
-}
-
-.btnOutlineDark:hover {
-  background-color: rgba(10, 25, 47, 0.04);
-  border-color: var(--color-primary);
-}
-
-/* Right Side - Arched Image Mask */
-.heroRight {
-  position: relative;
-  height: 80vh;
-  min-height: 600px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.imageFade {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: flex-end;
-}
-
-.imageMask {
-  width: 90%;
-  height: 90%;
-  background: url('/images/clinic_main.jpg') no-repeat center center;
-  background-size: cover;
-  /* Premium Pill-shape / Arch mask */
-  border-radius: 500px 500px 2rem 2rem;
-  box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.15);
-  animation: slowZoom 30s ease-in-out infinite alternate;
-  transform-origin: center;
-}
-
-@keyframes slowZoom {
-  from { transform: scale(1); }
-  to { transform: scale(1.05); }
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: var(--leading-relaxed);
+    max-width: 800px;
+    margin: 0 auto;
+    font-weight: 300;
 }
 
 /* 2. Bento-Box Services Grid */
@@ -331,24 +250,6 @@
 }
 
 @media (max-width: 1024px) {
-  .heroContainer {
-    grid-template-columns: 1fr;
-    gap: 0;
-  }
-  .heroLeft {
-    padding: 2rem;
-    padding-top: 4rem;
-  }
-  .heroRight {
-    height: 60vh;
-    min-height: 400px;
-    padding: 2rem;
-  }
-  .imageMask {
-    border-radius: 200px 200px 1.5rem 1.5rem;
-    width: 100%;
-  }
-
   .bentoGrid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -361,14 +262,10 @@
 
 @media (max-width: 768px) {
   .heroTitle {
-    font-size: 2.75rem;
+    font-size: 2.5rem;
   }
-  .heroActions {
-    flex-direction: column;
-  }
-  .btnPrimary, .btnOutlineDark {
-    width: 100%;
-    text-align: center;
+  .heroSubtitle {
+    font-size: 1.1rem;
   }
 
   /* Stack completely on Mobile */

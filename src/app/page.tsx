@@ -6,31 +6,20 @@ import FadeIn from "@/components/ui/FadeIn";
 export default function Home() {
   return (
     <main className={styles.home}>
-      {/* 1. Asymmetrical Split Hero Section */}
-      <section className={styles.splitHero}>
+      {/* 1. Full Screen Hero Section (Reverted) */}
+      <section className={styles.hero}>
         <div className={`container ${styles.heroContainer}`}>
-          <div className={styles.heroLeft}>
-            <FadeIn direction="up">
-              <span className={styles.heroBadge}>PREMIUM HEALTHCARE</span>
-              <h1 className={styles.heroTitle}>
-                풍부한 임상 경험으로<br />
-                <span className={styles.highlight}>정확하게 진단합니다</span>
-              </h1>
-              <p className={styles.heroSubtitle}>
-                수많은 진료 현장에서 쌓아온 노하우를 바탕으로 환자 개개인에게 꼭 필요한 진료를 제공합니다.<br />
-                전문의 3인의 유기적인 협진 시스템을 통해 진단의 정확도를 높였습니다.
-              </p>
-              <div className={styles.heroActions}>
-                  <Link href="/guide" className={styles.btnPrimary}>진료 안내 및 오시는 길</Link>
-                  <Link href="/checkup" className={styles.btnOutlineDark}>종합건강검진 안내</Link>
-              </div>
-            </FadeIn>
-          </div>
-          <div className={styles.heroRight}>
-            <FadeIn direction="left" delay={0.2} className={styles.imageFade} fullWidth={true}>
-              <div className={styles.imageMask}></div>
-            </FadeIn>
-          </div>
+          <FadeIn direction="up">
+            <span className={styles.highlight}>정확하게 진단합니다</span>
+            <h1 className={styles.heroTitle}>
+              대학병원 출신 전문의 3인<br />
+              <strong>365내과연합의원</strong>
+            </h1>
+            <p className={styles.heroSubtitle}>
+              내과 전문의, 소화기 내시경 전문의, 근골격계 초음파 전문의가 유기적으로 협진하여<br />
+              환자분들에게 가장 안전하고 정확한 진료를 제공합니다.
+            </p>
+          </FadeIn>
         </div>
       </section>
 
