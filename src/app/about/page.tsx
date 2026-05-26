@@ -68,10 +68,31 @@ export default function About() {
                             </div>
                         </FadeIn>
 
-                        {/* Doctor 2: 지재연 */}
+                        {/* Doctor 2: 노영석 */}
                         <FadeIn delay={0.4}>
                             <div className="editorial-card offset-card">
                                 <div className="bg-number">2</div>
+                                <div className="card-content">
+                                    <h3 className="card-title">노영석 원장</h3>
+                                    <p className="card-subtitle">대한 위장내시경학회 내시경 전문의</p>
+                                    <ul className="editorial-list">
+                                        <li>고려대학교 의과대학 외래교수</li>
+                                        <li>대한 비만건강학회 비만전문가 과정 수료</li>
+                                        <li>포천중문의대 대체의학 대학원 IMS 고위자 과정 수료</li>
+                                        <li>신경근 치료 공인 국제강사</li>
+                                        <li>시리아스 정형의학회 정회원</li>
+                                        <li>대한 근골격 초음파 학회 정회원</li>
+                                        <li>대한 척추통증 중재시술회 정회원</li>
+                                        <li>대한 비만의사회 정회원</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </FadeIn>
+
+                        {/* Doctor 3: 지재연 */}
+                        <FadeIn delay={0.5}>
+                            <div className="editorial-card">
+                                <div className="bg-number">3</div>
                                 <div className="card-content">
                                     <h3 className="card-title">지재연 원장</h3>
                                     <p className="card-subtitle">신경근 치료 공인 국제강사 / 전문의</p>
@@ -86,27 +107,6 @@ export default function About() {
                                         <li>대한 척추통증 중재 시술회 정회원</li>
                                         <li>대한 골프의학회 정회원</li>
                                         <li>대한 노인병학회 전문의 인정의</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </FadeIn>
-
-                        {/* Doctor 3: 노영석 */}
-                        <FadeIn delay={0.5}>
-                            <div className="editorial-card">
-                                <div className="bg-number">3</div>
-                                <div className="card-content">
-                                    <h3 className="card-title">노영석 원장</h3>
-                                    <p className="card-subtitle">대한 위장내시경학회 내시경 전문의</p>
-                                    <ul className="editorial-list">
-                                        <li>고려대학교 의과대학 외래교수</li>
-                                        <li>대한 비만건강학회 비만전문가 과정 수료</li>
-                                        <li>포천중문의대 대체의학 대학원 IMS 고위자 과정 수료</li>
-                                        <li>신경근 치료 공인 국제강사</li>
-                                        <li>시리아스 정형의학회 정회원</li>
-                                        <li>대한 근골격 초음파 학회 정회원</li>
-                                        <li>대한 척추통증 중재시술회 정회원</li>
-                                        <li>대한 비만의사회 정회원</li>
                                     </ul>
                                 </div>
                             </div>
