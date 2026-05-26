@@ -141,76 +141,51 @@
     margin-bottom: 0.5rem;
 }
 
-.doctorsGrid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 3rem;
-    padding: 0 1rem;
+.threeColGrid {
+    grid-template-columns: repeat(3, 1fr) !important;
 }
 
-.doctorItem {
-    background: white;
-    border-radius: var(--radius-lg);
-    overflow: hidden;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
-    border: 1px solid #E2E8F0;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+.doctorBento {
     display: flex;
     flex-direction: column;
-    height: 100%;
-}
-
-.doctorItem:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-}
-
-.doctorHeader {
-    background: linear-gradient(135deg, #F8FAFC, #EFF6FF);
-    padding: 2.5rem 2rem;
+    align-items: center;
     text-align: center;
-    border-bottom: 1px solid #E2E8F0;
 }
 
-.doctorHeader h3 {
-    font-size: 1.8rem;
-    font-weight: 800;
-    color: var(--color-primary-dark);
-    margin: 0;
-    letter-spacing: -0.02em;
-}
-
-.doctorInfo {
-    padding: 2.5rem 2rem;
-    flex-grow: 1;
-}
-
-.doctorBio {
-    list-style: none;
+.doctorIconWrapper {
+    width: 64px;
+    height: 64px;
+    background-color: #EFF6FF;
+    color: var(--color-secondary);
+    border-radius: 50%;
     display: flex;
-    flex-direction: column;
-    gap: 0.85rem;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.bentoList {
+    list-style: none;
     padding: 0;
     margin: 0;
+    color: var(--color-text-secondary);
+    line-height: 1.8;
 }
 
-.doctorBio li {
-    font-size: 1.05rem;
-    color: var(--color-neutral);
-    position: relative;
-    padding-left: 1.2rem;
-    line-height: 1.6;
-    word-break: keep-all;
+.bentoList li {
+    padding: 0.25rem 0;
 }
 
-.doctorBio li::before {
-    content: "•";
-    color: var(--color-secondary);
-    position: absolute;
-    left: 0;
-    font-weight: bold;
-    font-size: 1.2rem;
-    line-height: 1.4;
+@media (max-width: 1024px) {
+    .threeColGrid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .threeColGrid {
+        grid-template-columns: 1fr !important;
+    }
 }
 
 @media (min-width: 768px) {

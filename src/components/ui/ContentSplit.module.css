@@ -1,0 +1,74 @@
+.splitContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 6rem;
+  margin: 6rem 0;
+  width: 100%;
+}
+
+.splitContainer.reversed {
+  /* Only reverse visually using CSS Grid for desktop */
+}
+
+@media (min-width: 1025px) {
+  .splitContainer.reversed .splitContent {
+    order: 2;
+  }
+  .splitContainer.reversed .splitMedia {
+    order: 1;
+  }
+}
+
+.splitContent {
+  padding-right: 2rem;
+}
+
+.splitContainer.reversed .splitContent {
+  padding-right: 0;
+  padding-left: 2rem;
+}
+
+.splitMedia {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mediaFade {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.1);
+}
+
+.mediaFade img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 10s ease;
+}
+
+.mediaFade:hover img {
+  transform: scale(1.05);
+}
+
+@media (max-width: 1024px) {
+  .splitContainer {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    margin: 4rem 0;
+  }
+  .splitContent, .splitContainer.reversed .splitContent {
+    padding: 0;
+  }
+  .splitMedia {
+    min-height: 300px;
+  }
+}

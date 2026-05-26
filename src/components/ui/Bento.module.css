@@ -1,0 +1,97 @@
+.bentoGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: minmax(250px, auto);
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.bentoWrapper {
+  display: flex;
+  height: 100%;
+}
+
+.fadeWrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+/* Sizing */
+.itemLarge { grid-column: span 2; grid-row: span 2; }
+.itemWide { grid-column: span 2; grid-row: span 1; }
+.itemStandard { grid-column: span 1; grid-row: span 1; }
+
+/* Base Card */
+.bentoCard {
+  width: 100%;
+  padding: 2.5rem;
+  border-radius: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+  border: 1px solid rgba(0,0,0,0.04);
+}
+
+.bentoCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.08);
+}
+
+/* Themes */
+.themeLight {
+  background-color: white;
+  color: var(--color-text-primary);
+}
+.themeLight h3 { color: var(--color-primary-dark); }
+.themeLight p { color: var(--color-text-secondary); }
+
+.themeDark {
+  background: linear-gradient(135deg, #0A192F, #1E3A8A);
+  color: white;
+  border: none;
+}
+.themeDark h3 { color: white; }
+.themeDark p { color: rgba(255, 255, 255, 0.85); }
+
+.themeAccent {
+  background: linear-gradient(135deg, #C5A880, #D4AF37);
+  color: white;
+  border: none;
+}
+.themeAccent h3 { color: white; }
+.themeAccent p { color: rgba(255, 255, 255, 0.95); }
+
+.themePrimary {
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+}
+.themePrimary h3 { color: white; }
+.themePrimary p { color: rgba(255, 255, 255, 0.85); }
+
+.themeGlass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.5);
+  color: var(--color-text-primary);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .bentoGrid { grid-template-columns: repeat(2, 1fr); }
+  .itemLarge, .itemWide { grid-column: span 2; grid-row: span 1; }
+  .itemStandard { grid-column: span 1; grid-row: span 1; }
+}
+
+@media (max-width: 768px) {
+  .bentoGrid { grid-template-columns: 1fr; }
+  .itemLarge, .itemWide, .itemStandard { grid-column: span 1; grid-row: auto; }
+  .bentoCard { padding: 2rem 1.5rem; }
+}
