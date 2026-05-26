@@ -1,10 +1,8 @@
 import styles from "./page.module.css";
-import { Activity, ShieldCheck, Microscope, HeartPulse, Stethoscope, CheckCircle2, Zap } from "lucide-react";
+import { Activity, ShieldCheck, Microscope, HeartPulse, Stethoscope, CheckCircle2 } from "lucide-react";
 import type { Metadata } from "next";
 import FadeIn from "@/components/ui/FadeIn";
 import SplitHero from "@/components/ui/SplitHero";
-import { BentoGrid, BentoCard } from "@/components/ui/Bento";
-import { ContentSplit } from "@/components/ui/ContentSplit";
 export const metadata: Metadata = {
     title: "통증클리닉 | 365내과연합의원",
     description: "근골격계 초음파 및 증식치료(프롤로테라피) 전문 클리닉입니다.",
@@ -22,107 +20,149 @@ export default function PainPage() {
             <section className={styles.content}>
                 <div className="container">
 
-                    {/* Section 1: Musculoskeletal Ultrasound - ContentSplit */}
-                    <div style={{ marginBottom: '6rem' }}>
-                        <FadeIn>
-                            <h2 style={{ textAlign: 'center', fontSize: '2rem', fontWeight: 800, color: 'var(--color-primary)', marginBottom: '3rem' }}>근골격계 초음파</h2>
+                    {/* Section 1: Musculoskeletal Ultrasound */}
+                    <FadeIn delay={0.1}>
+                        <div className={styles.sectionHeader}>
+                            <Microscope size={48} className={styles.sectionIcon} />
+                            <h2>근골격계 초음파</h2>
+                            <p>MUSCULOSKELETAL ULTRASOUND</p>
+                        </div>
+                    </FadeIn>
+
+                    <FadeIn delay={0.2}>
+                        <div className={styles.ultrasoundIntro}>
+                            <div className={styles.ultrasoundImageWrapper}>
+                                <img src="/images/samsung-ultrasound.png" alt="삼성 초음파 기기" className={styles.ultrasoundImage} />
+                            </div>
+                            <div className={styles.mainInfoCard}>
+                                <h3 className={styles.mainInfoTitle}>근골격계 초음파검사란?</h3>
+                                <p className={styles.mainInfoDesc}>
+                                    관절, 연골, 인대, 건(힘줄), 점액낭, 근육, 신경, 혈관 등 우리 몸을 움직이는 근골격에 시행하는 초음파 검사입니다.
+                                </p>
+                            </div>
+                        </div>
+                    </FadeIn>
+
+                    <div className={styles.painGrid}>
+                        <FadeIn delay={0.3}>
+                            <div className={styles.painItem}>
+                                <Activity size={36} color="var(--color-secondary)" />
+                                <h3 className={styles.painTitle}>연부초음파검사</h3>
+                                <p className={styles.painDesc}>근육, 피부, 피하연부조직에 생긴 종괴, 염증, 근육의 파열 및 손상등을 진단하는 검사입니다.</p>
+                            </div>
                         </FadeIn>
-                        <ContentSplit 
-                            content={
-                                <div>
-                                    <span style={{ color: 'var(--color-secondary)', fontWeight: 700, letterSpacing: '0.1em' }}>ULTRASOUND DIAGNOSIS</span>
-                                    <h2 style={{ fontSize: '2.5rem', fontWeight: 800, margin: '1rem 0', color: 'var(--color-primary)' }}>통증의 원인을<br />눈으로 확인합니다</h2>
-                                    <p style={{ fontSize: '1.1rem', color: 'var(--color-text-secondary)', lineHeight: 1.8, marginBottom: '2rem' }}>
-                                        관절, 연골, 인대, 건(힘줄), 근육, 신경 등 우리 몸을 움직이는 근골격계 질환을 방사선 노출 없이 대학병원급 초음파로 정밀하게 진단합니다.
+                        <FadeIn delay={0.4}>
+                            <div className={styles.painItem}>
+                                <HeartPulse size={36} color="#EF4444" />
+                                <h3 className={styles.painTitle}>관절초음파검사</h3>
+                                <p className={styles.painDesc}>어깨, 팔꿈치, 손목, 손, 고관절, 무릎, 발목, 발 등 인체의 다양한 관절의 염증과 관절 주위의 인대손상, 건(힘줄)의 염증 및 퇴행성 변화등을 정확히 진단하는 검사입니다.</p>
+                            </div>
+                        </FadeIn>
+
+                    </div>
+
+                    <FadeIn delay={0.6}>
+                        <div className={styles.listSection}>
+                            <h3 className={styles.listTitle}>이럴 때 검사 받으세요!</h3>
+                            <ul className={styles.checkList}>
+                                <li><CheckCircle2 size={20} className={styles.checkIcon}/> 관절부위를 다친 경우</li>
+                                <li><CheckCircle2 size={20} className={styles.checkIcon}/> 이유없이 관절주위가 붓고 아픈 경우</li>
+                                <li><CheckCircle2 size={20} className={styles.checkIcon}/> 관절이 잘 움직이지 않고 기능이 저하된 경우</li>
+                                <li><CheckCircle2 size={20} className={styles.checkIcon}/> 종괴가 만져지는 경우</li>
+                                <li><CheckCircle2 size={20} className={styles.checkIcon}/> 근육파열과 같은 손상을 입은 경우</li>
+                                <li><CheckCircle2 size={20} className={styles.checkIcon}/> 봉와직염, 근육염등 염증이 생긴 경우</li>
+
+                            </ul>
+                        </div>
+                    </FadeIn>
+
+                    <div className={styles.divider}></div>
+
+                    {/* Section 2: Prolotherapy */}
+                    <FadeIn delay={0.1}>
+                        <div className={styles.sectionHeader}>
+                            <Stethoscope size={48} className={styles.sectionIcon} />
+                            <h2>증식치료</h2>
+                            <p>PROLOTHERAPY</p>
+                        </div>
+                    </FadeIn>
+
+                    <div className={styles.treatmentSection}>
+                        <div className={styles.treatmentGrid}>
+                            <FadeIn delay={0.2}>
+                                <div className={styles.treatmentCard}>
+                                    <div className={styles.treatmentHeader}>
+                                        <ShieldCheck size={28} className={styles.blueIcon} />
+                                        <h3 className={styles.treatmentTitle}>증식치료란?</h3>
+                                    </div>
+                                    <p className={styles.treatmentText}>
+                                        자극성이 있는 주사제를 인대나 힘줄이 뼈에 부착되는 부위에 주사하여 국소부위의 성장 인자의 생성을 촉진하고 염증이 일어나게 하여 혈액순환을 증가시키고 영양분 공급을 증가시켜 <strong>조직이 재생되도록 하는 치료</strong>입니다.
                                     </p>
-                                    <div style={{ display: 'flex', gap: '1rem', flexDirection: 'column' }}>
-                                        <div style={{ padding: '1.5rem', background: '#F8FAFC', borderRadius: '1rem', borderLeft: '4px solid var(--color-secondary)' }}>
-                                            <h4 style={{ fontWeight: 700, marginBottom: '0.5rem', color: 'var(--color-primary-dark)', fontSize: '1.2rem' }}>연부 초음파 검사</h4>
-                                            <p style={{ color: 'var(--color-text-secondary)' }}>근육, 피부, 피하연부조직의 염증 및 근육 파열 손상 진단</p>
-                                        </div>
-                                        <div style={{ padding: '1.5rem', background: '#F8FAFC', borderRadius: '1rem', borderLeft: '4px solid var(--color-accent-gold)' }}>
-                                            <h4 style={{ fontWeight: 700, marginBottom: '0.5rem', color: 'var(--color-primary-dark)', fontSize: '1.2rem' }}>관절 초음파 검사</h4>
-                                            <p style={{ color: 'var(--color-text-secondary)' }}>어깨, 무릎, 손목 등 관절 주위의 인대 손상 및 염증, 퇴행성 변화 진단</p>
-                                        </div>
+                                </div>
+                            </FadeIn>
+                            <FadeIn delay={0.3}>
+                                <div className={styles.treatmentCard}>
+                                    <div className={styles.treatmentHeader}>
+                                        <Activity size={28} className={styles.blueIcon} />
+                                        <h3 className={styles.treatmentTitle}>치료방법은 어떻게 되나요?</h3>
+                                    </div>
+                                    <p className={styles.treatmentText}>
+                                        힘줄 또는 인대가 약화 된 부위를 초음파로 관찰하면서 증식제를 직접 주사합니다. 부위에 따라 1주 또는 4주 간격으로 3회 ~ 6회 시행합니다.
+                                    </p>
+                                </div>
+                            </FadeIn>
+                        </div>
+
+                        <FadeIn delay={0.4}>
+                            <div className={styles.advantagesWrapper}>
+                                <h3 className={styles.listTitle}>증식치료의 장점</h3>
+                                <div className={styles.advantageGrid}>
+                                    <div className={styles.advantageItem}>
+                                        <span className={styles.numberBadge}>1</span>
+                                        <p>원인에 대한 근본적인 치료 방법</p>
+                                    </div>
+                                    <div className={styles.advantageItem}>
+                                        <span className={styles.numberBadge}>2</span>
+                                        <p>비수술적 치료로 안전합니다</p>
+                                    </div>
+                                    <div className={styles.advantageItem}>
+                                        <span className={styles.numberBadge}>3</span>
+                                        <p>수술에 비하여 가격이 저렴합니다</p>
+                                    </div>
+                                    <div className={styles.advantageItem}>
+                                        <span className={styles.numberBadge}>4</span>
+                                        <p>입원이 필요하지 않습니다</p>
+                                    </div>
+                                    <div className={styles.advantageItem}>
+                                        <span className={styles.numberBadge}>5</span>
+                                        <p>합병증이나 부작용의 위험이 없다</p>
+                                    </div>
+                                    <div className={styles.advantageItem}>
+                                        <span className={styles.numberBadge}>6</span>
+                                        <p>치료하면서 평상시의 가벼운 운동이나 생활 유지 가능</p>
                                     </div>
                                 </div>
-                            }
-                            media={<img src="/images/samsung-ultrasound.png" alt="근골격계 초음파" style={{ objectFit: 'contain', width: '100%', height: '100%', backgroundColor: '#F0F4F8' }} />}
-                        />
-                    </div>
-
-                    <div style={{ marginBottom: '8rem' }}>
-                        <BentoGrid>
-                            <BentoCard size="wide" theme="glass" style={{ background: '#EFF6FF', border: '1px solid #DBEAFE' }}>
-                                <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1.5rem' }}>
-                                    <Microscope size={28} style={{ color: 'var(--color-secondary)' }} />
-                                    <h3 style={{ fontSize: '1.5rem', color: 'var(--color-primary)' }}>이럴 때 초음파 검사를 받으세요!</h3>
-                                </div>
-                                <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '1rem', color: 'var(--color-text-secondary)' }}>
-                                    <li><CheckCircle2 size={16} style={{ color: 'var(--color-secondary)', display: 'inline', marginRight: '0.5rem' }}/> 관절 부위를 다친 경우</li>
-                                    <li><CheckCircle2 size={16} style={{ color: 'var(--color-secondary)', display: 'inline', marginRight: '0.5rem' }}/> 이유 없이 관절 주위가 붓고 아플 때</li>
-                                    <li><CheckCircle2 size={16} style={{ color: 'var(--color-secondary)', display: 'inline', marginRight: '0.5rem' }}/> 관절이 잘 움직이지 않을 때</li>
-                                    <li><CheckCircle2 size={16} style={{ color: 'var(--color-secondary)', display: 'inline', marginRight: '0.5rem' }}/> 피부 밑에 종괴가 만져지는 경우</li>
-                                    <li><CheckCircle2 size={16} style={{ color: 'var(--color-secondary)', display: 'inline', marginRight: '0.5rem' }}/> 근육 파열과 같은 손상을 입은 경우</li>
-                                    <li><CheckCircle2 size={16} style={{ color: 'var(--color-secondary)', display: 'inline', marginRight: '0.5rem' }}/> 봉와직염 등 염증이 생긴 경우</li>
-                                </ul>
-                            </BentoCard>
-                        </BentoGrid>
-                    </div>
-
-                    {/* Section 2: Prolotherapy - ContentSplit Reversed */}
-                    <div style={{ marginBottom: '6rem' }}>
-                        <FadeIn>
-                            <h2 style={{ textAlign: 'center', fontSize: '2rem', fontWeight: 800, color: 'var(--color-primary)', marginBottom: '3rem' }}>증식치료 (프롤로테라피)</h2>
+                            </div>
                         </FadeIn>
-                        <ContentSplit 
-                            reversed={true}
-                            content={
-                                <div>
-                                    <span style={{ color: 'var(--color-accent-gold)', fontWeight: 700, letterSpacing: '0.1em' }}>PROLOTHERAPY</span>
-                                    <h2 style={{ fontSize: '2.5rem', fontWeight: 800, margin: '1rem 0', color: 'var(--color-primary)' }}>손상된 인대와 힘줄을<br />근본적으로 재생합니다</h2>
-                                    <p style={{ fontSize: '1.1rem', color: 'var(--color-text-secondary)', lineHeight: 1.8, marginBottom: '2rem' }}>
-                                        인대나 힘줄이 뼈에 부착되는 부위에 자극성 주사제를 투여하여, 국소 부위의 성장 인자 생성을 촉진하고 <strong>조직이 스스로 재생되도록 유도하는 비수술적 근본 치료법</strong>입니다.
-                                    </p>
-                                    <div style={{ padding: '1.5rem', background: '#FDF4FF', borderRadius: '1rem', borderLeft: '4px solid #D946EF' }}>
-                                        <h4 style={{ fontWeight: 700, marginBottom: '0.5rem', color: '#86198F', fontSize: '1.2rem' }}>치료 방법</h4>
-                                        <p style={{ color: '#A21CAF' }}>초음파로 손상 부위를 직접 확인하며 증식제를 정밀하게 주사합니다. 부위에 따라 1~4주 간격으로 3~6회 시행합니다.</p>
-                                    </div>
-                                </div>
-                            }
-                            media={
-                                <div style={{ width: '100%', height: '100%', minHeight: '350px', background: 'linear-gradient(135deg, #1E3A8A, #0A192F)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', flexDirection: 'column', borderRadius: '1.5rem' }}>
-                                    <Zap size={64} style={{ color: 'var(--color-accent-gold)', marginBottom: '1.5rem' }} />
-                                    <h3 style={{ fontSize: '1.8rem', fontWeight: 800, textAlign: 'center' }}>수술 없이 안전하게<br />통증의 근본 원인 해결</h3>
-                                </div>
-                            }
-                        />
-                    </div>
 
-                    <div style={{ marginBottom: '4rem' }}>
-                        <BentoGrid>
-                            <BentoCard size="large" theme="dark">
-                                <h3 style={{ fontSize: '1.8rem', marginBottom: '1.5rem', color: '#93C5FD' }}>어떨 때 치료를 받아야 하나요?</h3>
-                                <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'grid', gridTemplateColumns: '1fr', gap: '1rem', color: 'rgba(255,255,255,0.9)' }}>
-                                    <li><CheckCircle2 size={16} style={{ color: '#93C5FD', display: 'inline', marginRight: '0.5rem' }}/> 허리디스크, 경추디스크, 만성 좌골신경통</li>
-                                    <li><CheckCircle2 size={16} style={{ color: '#93C5FD', display: 'inline', marginRight: '0.5rem' }}/> 퇴행성관절염 및 만성 무릎 질환</li>
-                                    <li><CheckCircle2 size={16} style={{ color: '#93C5FD', display: 'inline', marginRight: '0.5rem' }}/> 어깨통증 (오십견, 회전근개파열, 충돌증후군)</li>
-                                    <li><CheckCircle2 size={16} style={{ color: '#93C5FD', display: 'inline', marginRight: '0.5rem' }}/> 인대손상 (발목염좌, 팔꿈치 테니스엘보 손상)</li>
-                                    <li><CheckCircle2 size={16} style={{ color: '#93C5FD', display: 'inline', marginRight: '0.5rem' }}/> 만성두통, 목뻐근함, 턱관절 증후군</li>
-                                    <li><CheckCircle2 size={16} style={{ color: '#93C5FD', display: 'inline', marginRight: '0.5rem' }}/> 수술 후 통증 조절 및 재발 방지</li>
+                        <FadeIn delay={0.5}>
+                            <div className={styles.listSection} style={{ marginTop: '4rem', backgroundColor: 'white', border: '1px solid #E2E8F0' }}>
+                                <h3 className={styles.listTitle}>어떨 때 치료를 받아야 하나요?</h3>
+                                <ul className={styles.checkList}>
+                                    <li><CheckCircle2 size={20} className={styles.checkIcon}/> 허리디스크, 경추디스크</li>
+                                    <li><CheckCircle2 size={20} className={styles.checkIcon}/> 퇴행성관절염 및 만성 무릎 질환</li>
+                                    <li><CheckCircle2 size={20} className={styles.checkIcon}/> 만성 허리통증 및 좌골신경통</li>
+                                    <li><CheckCircle2 size={20} className={styles.checkIcon}/> 어깨통증 (오십견, 회전근개파열, 충돌증후군)</li>
+                                    <li><CheckCircle2 size={20} className={styles.checkIcon}/> 인대손상 (발목염좌, 팔꿈치 손상)</li>
+                                    <li><CheckCircle2 size={20} className={styles.checkIcon}/> 사고 후유증이나 스포츠 손상 후 발생한 합병증</li>
+                                    <li><CheckCircle2 size={20} className={styles.checkIcon}/> 만성두통, 목뻐근함, 턱관절</li>
+                                    <li><CheckCircle2 size={20} className={styles.checkIcon}/> 수술 후 통증 (통증의 조절 및 재발방지)</li>
+                                    <li><CheckCircle2 size={20} className={styles.checkIcon}/> 골반 불균형, 만성미골통, 부정렬증후군</li>
                                 </ul>
-                            </BentoCard>
+                            </div>
+                        </FadeIn>
+                        
 
-                            <BentoCard size="wide" theme="accent">
-                                <h3 style={{ fontSize: '1.5rem', marginBottom: '1.5rem' }}>프롤로테라피의 장점</h3>
-                                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', color: 'rgba(255,255,255,0.9)', fontSize: '0.95rem' }}>
-                                    <div style={{ background: 'rgba(255,255,255,0.1)', padding: '1rem', borderRadius: '0.5rem' }}>원인에 대한 근본적인 재생 치료</div>
-                                    <div style={{ background: 'rgba(255,255,255,0.1)', padding: '1rem', borderRadius: '0.5rem' }}>절개나 마취가 없는 비수술적 치료</div>
-                                    <div style={{ background: 'rgba(255,255,255,0.1)', padding: '1rem', borderRadius: '0.5rem' }}>입원 없이 일상생활 바로 가능</div>
-                                    <div style={{ background: 'rgba(255,255,255,0.1)', padding: '1rem', borderRadius: '0.5rem' }}>합병증이나 부작용 위험 최소화</div>
-                                </div>
-                            </BentoCard>
-                        </BentoGrid>
                     </div>
 
                 </div>

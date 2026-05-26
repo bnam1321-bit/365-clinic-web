@@ -9,8 +9,6 @@ export const metadata: Metadata = {
 
 import FadeIn from "@/components/ui/FadeIn";
 import SplitHero from "@/components/ui/SplitHero";
-import { BentoGrid, BentoCard } from "@/components/ui/Bento";
-import { ContentSplit } from "@/components/ui/ContentSplit";
 export default function EndoscopyPage() {
     return (
         <main className={styles.container}>
@@ -25,112 +23,163 @@ export default function EndoscopyPage() {
             <section className={styles.content}>
                 <div className="container" style={{ display: 'flex', flexDirection: 'column', gap: '6rem' }}>
 
-                    {/* 01. Equipment - ContentSplit */}
-                    <ContentSplit 
-                        content={
-                            <div>
-                                <span style={{ color: 'var(--color-secondary)', fontWeight: 700, letterSpacing: '0.1em' }}>OLYMPUS CV-290</span>
-                                <h2 style={{ fontSize: '2.5rem', fontWeight: 800, margin: '1rem 0', color: 'var(--color-primary)' }}>대학병원급 최고사양 내시경 기기</h2>
-                                <p style={{ fontSize: '1.1rem', color: 'var(--color-text-secondary)', lineHeight: 1.8 }}>
-                                    365내과연합의원은 대학병원에서 사용하는 것과 동일한 <strong>최상위 등급의 고해상도 장비</strong>를 도입하여 운영하고 있습니다. 초고화질 영상과 특수 정밀 관찰 기술을 통해 눈에 잘 띄지 않는 아주 미세한 조기 암 병변까지도 놓치지 않고 정확하게 진단합니다.
-                                </p>
-                            </div>
-                        }
-                        media={<img src="/images/olympus-endoscopy.jpg" alt="Olympus CV-290" />}
-                    />
-
-                    {/* 02. Endoscopy Types - BentoGrid */}
+                    {/* 01. General Endoscopy Info */}
                     <div>
                         <FadeIn>
-                            <h2 style={{ textAlign: 'center', fontSize: '2rem', fontWeight: 800, color: 'var(--color-primary)', marginBottom: '3rem' }}>주요 내시경 클리닉</h2>
+                            <div className={styles.sectionHeader}>
+                                <Microscope size={48} className={styles.sectionIcon} />
+                                <h2>소화기 내시경 센터</h2>
+                                <p>위암, 대장암 예방의 시작은 정기적인 내시경 검사입니다.</p>
+                            </div>
                         </FadeIn>
-                        <BentoGrid>
-                            <BentoCard size="wide" theme="primary">
-                                <Microscope size={36} style={{ marginBottom: '1rem', color: '#93C5FD' }} />
-                                <h3 style={{ fontSize: '1.8rem', marginBottom: '1rem' }}>위내시경 (Gastroscopy)</h3>
-                                <p style={{ marginBottom: '1.5rem', fontSize: '1.1rem' }}>식도, 위, 십이지장의 질환을 정밀하게 관찰합니다.</p>
-                                <ul style={{ listStyle: 'circle', paddingLeft: '1.5rem', color: 'rgba(255,255,255,0.85)', lineHeight: 1.8 }}>
-                                    <li>수면 / 비수면 선택 가능 (안전 모니터링)</li>
-                                    <li>역류성 식도염, 위염, 위궤양, 위암 진단</li>
-                                    <li>헬리코박터균 검사 및 제균 치료 상담</li>
-                                </ul>
-                            </BentoCard>
-                            <BentoCard size="wide" theme="light">
-                                <Activity size={36} style={{ marginBottom: '1rem', color: 'var(--color-secondary)' }} />
-                                <h3 style={{ fontSize: '1.8rem', marginBottom: '1rem' }}>대장내시경 (Colonoscopy)</h3>
-                                <p style={{ marginBottom: '1.5rem', fontSize: '1.1rem' }}>항문을 통해 대장 전체와 소장 말단 부위를 관찰합니다.</p>
-                                <ul style={{ listStyle: 'circle', paddingLeft: '1.5rem', color: 'var(--color-text-secondary)', lineHeight: 1.8 }}>
-                                    <li>가스 통증 없는 CO2 가스 주입 시스템</li>
-                                    <li>용종 발견 시 당일 즉시 절제술 시행 (One-stop)</li>
-                                    <li>철저한 소독 관리 (1:1 기구 사용 원칙)</li>
-                                </ul>
-                            </BentoCard>
-                        </BentoGrid>
+
+                        {/* Olympus Equipment Intro */}
+                        <FadeIn delay={0.1}>
+                            <div className={styles.equipmentIntro}>
+                                <div className={styles.equipmentImageWrapper}>
+                                    <img src="/images/olympus-endoscopy.jpg" alt="Olympus CV-290" className={styles.equipmentImage} />
+                                </div>
+                                <div className={styles.equipmentText}>
+                                    <h3 className={styles.equipmentSubtitle}>365내과연합의원 내시경 센터</h3>
+                                    <h2 className={styles.equipmentTitle}>대학병원급 최고사양 내시경 기기</h2>
+                                    <p className={styles.equipmentDesc}>
+                                        365내과연합의원은 대학병원에서 사용하는 것과 동일한 <strong>최상위 등급의 고해상도 장비</strong>를 도입하여 운영하고 있습니다. 초고화질 영상과 특수 정밀 관찰 기술을 통해 눈에 잘 띄지 않는 아주 미세한 조기 암 병변까지도 놓치지 않고 정확하게 진단합니다.
+                                    </p>
+                                </div>
+                            </div>
+                        </FadeIn>
+
+                        <section className={styles.content}>
+                            <div className={styles.grid2}>
+                                <FadeIn delay={0.1}>
+                                    <div className={styles.card}>
+                                        <div className={styles.cardIcon}><Microscope size={36} /></div>
+                                        <h3>위 내시경</h3>
+                                        <p>식도, 위, 십이지장의 염증, 궤양, 암 등을 조기 진단합니다. 수면 내시경으로 편안하게 검사받으실 수 있습니다.</p>
+                                    </div>
+                                </FadeIn>
+                                <FadeIn delay={0.2}>
+                                    <div className={styles.card}>
+                                        <div className={styles.cardIcon}><Activity size={36} /></div>
+                                        <h3>대장 내시경</h3>
+                                        <p>대장암의 씨앗인 대장 용종을 발견하고 즉시 절제합니다. 최신 세척 소독기로 감염 걱정 없이 안전합니다.</p>
+                                    </div>
+                                </FadeIn>
+                                <FadeIn delay={0.3}>
+                                    <div className={styles.card}>
+                                        <div className={styles.cardIcon}><ShieldCheck size={36} /></div>
+                                        <h3>용종 절제술</h3>
+                                        <p>발견된 용종은 현장에서 즉시 제거(Polypectomy)하여 대장암을 효과적으로 예방합니다. 대학병원 수준의 시술이 가능합니다.</p>
+                                    </div>
+                                </FadeIn>
+                            </div>
+                        </section>
+
+                        <div className={styles.grid2}>
+                            <FadeIn delay={0.4}>
+                                <div className={styles.card}>
+                                    <h3>위내시경 (Gastroscopy)</h3>
+                                    <p className={styles.cardDesc}>식도, 위, 십이지장의 질환을 정밀하게 관찰합니다.</p>
+                                    <ul className={styles.featureList}>
+                                        <li>수면 / 비수면 선택 가능 (안전 모니터링)</li>
+                                        <li>역류성 식도염, 위염, 위궤양, 위암 진단</li>
+                                        <li>헬리코박터균 검사 및 제균 치료 상담</li>
+                                    </ul>
+                                </div>
+                            </FadeIn>
+                            <FadeIn delay={0.5}>
+                                <div className={styles.card}>
+                                    <h3>대장내시경 (Colonoscopy)</h3>
+                                    <p className={styles.cardDesc}>항문을 통해 대장 전체와 소장 말단 부위를 관찰합니다.</p>
+                                    <ul className={styles.featureList}>
+                                        <li>가스 통증 없는 CO2 가스 주입 시스템</li>
+                                        <li>용종 발견 시 당일 즉시 절제술 시행 (One-stop)</li>
+                                        <li>철저한 소독 관리 (1:1 기구 사용 원칙)</li>
+                                    </ul>
+                                </div>
+                            </FadeIn>
+                        </div>
                     </div>
 
-                    {/* 03. Polypectomy - ContentSplit Reversed */}
-                    <ContentSplit 
-                        reversed={true}
-                        content={
-                            <div>
-                                <span style={{ color: 'var(--color-accent-gold)', fontWeight: 700, letterSpacing: '0.1em' }}>ONE-STOP CARE</span>
-                                <h2 style={{ fontSize: '2.5rem', fontWeight: 800, margin: '1rem 0', color: 'var(--color-primary)' }}>당일 용종 절제술</h2>
-                                <p style={{ fontSize: '1.1rem', color: 'var(--color-text-secondary)', lineHeight: 1.8, marginBottom: '2rem' }}>
-                                    대장내시경 중 발견된 용종을 <strong>당일 즉시 절제</strong>합니다. 대학병원 출신 전문의가 직접 시술하여 더욱 안전하고 정확합니다.
-                                </p>
-                                <div style={{ display: 'flex', gap: '1rem', flexDirection: 'column' }}>
-                                    <div style={{ padding: '1.5rem', background: '#F8FAFC', borderRadius: '1rem', borderLeft: '4px solid var(--color-secondary)' }}>
-                                        <h4 style={{ fontWeight: 700, marginBottom: '0.5rem', color: 'var(--color-primary-dark)' }}>대장 용종이란?</h4>
-                                        <p style={{ color: 'var(--color-text-secondary)' }}>장 점막이 돌출된 상태로, 제거하면 대장암 예방이 가능합니다.</p>
-                                    </div>
-                                    <div style={{ padding: '1.5rem', background: '#F8FAFC', borderRadius: '1rem', borderLeft: '4px solid var(--color-accent-gold)' }}>
-                                        <h4 style={{ fontWeight: 700, marginBottom: '0.5rem', color: 'var(--color-primary-dark)' }}>선종성 용종</h4>
-                                        <p style={{ color: 'var(--color-text-secondary)' }}>암으로 발전할 가능성이 매우 높아 반드시 제거해야 합니다.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        }
-                        media={
-                            <div style={{ width: '100%', height: '100%', minHeight: '400px', background: 'linear-gradient(135deg, #1E3A8A, #0A192F)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', flexDirection: 'column' }}>
-                                <Scissors size={64} style={{ color: '#93C5FD', marginBottom: '1.5rem' }} />
-                                <h3 style={{ fontSize: '2rem', fontWeight: 800 }}>Polypectomy</h3>
-                                <p style={{ color: 'rgba(255,255,255,0.7)', marginTop: '1rem' }}>대장암 예방의 핵심</p>
-                            </div>
-                        }
-                    />
-
-                    {/* 04. Precautions */}
-                    <div style={{ marginTop: '2rem' }}>
+                    {/* 02. Polypectomy Info */}
+                    <div>
                         <FadeIn>
-                            <h2 style={{ textAlign: 'center', fontSize: '2rem', fontWeight: 800, color: 'var(--color-primary)', marginBottom: '3rem' }}>내시경 검사 주의사항</h2>
+                            <div className={styles.sectionHeader}>
+                                <Scissors size={48} className={styles.sectionIcon} />
+                                <h2>용종절제술</h2>
+                                <p>대장암은 95% 이상이 용종이 자라면서 발병합니다.</p>
+                            </div>
                         </FadeIn>
-                        <BentoGrid>
-                            <BentoCard size="wide" theme="glass" style={{ background: '#EFF6FF', border: '1px solid #DBEAFE' }}>
-                                <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1.5rem' }}>
-                                    <AlertCircle size={28} style={{ color: 'var(--color-secondary)' }} />
-                                    <h3 style={{ fontSize: '1.5rem', color: 'var(--color-primary)' }}>시술 전 주의사항</h3>
-                                </div>
-                                <ul style={{ listStyle: 'circle', paddingLeft: '1.5rem', color: 'var(--color-text-secondary)', lineHeight: 1.8 }}>
-                                    <li><strong>검사 전 날 식사</strong>: 아침, 점심은 밥, 저녁(5시경)은 미음 또는 죽</li>
-                                    <li><strong>검사 시간 오전</strong>: 1차 복용(전날 7시) → 2차 복용(당일 아침 6시)</li>
-                                    <li>약 복용 후에는 제한 없이 물을 많이 섭취하세요.</li>
-                                    <li>복용 중인 약물(항응고제, 당뇨약 등)은 미리 말씀해 주세요.</li>
-                                </ul>
-                            </BentoCard>
 
-                            <BentoCard size="wide" theme="glass" style={{ background: '#FDF4FF', border: '1px solid #FBCFE8' }}>
-                                <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1.5rem' }}>
-                                    <AlertCircle size={28} style={{ color: '#BE185D' }} />
-                                    <h3 style={{ fontSize: '1.5rem', color: '#831843' }}>시술 후 주의사항</h3>
+                        {/* Refactored Polypectomy Layout for Uniformity */}
+                        <div className={styles.grid2}>
+                            <FadeIn delay={0.2}>
+                                <div className={styles.card}>
+                                    <h3>당일 용종 절제술 (One-Stop)</h3>
+                                    <p className={styles.cardDesc}>
+                                        본원에서는 대장내시경 중 발견된 용종을 <strong>당일 즉시 절제</strong>합니다.<br />
+                                        대학병원 출신 전문의가 직접 시술하여 더욱 안전하고 정확합니다.
+                                    </p>
+                                    <ul className={styles.featureList}>
+                                        <li>선종성 용종: 암으로 진행될 가능성이 높아 반드시 제거</li>
+                                        <li>과형성 용종: 추적 관찰이 필요할 수 있음</li>
+                                    </ul>
                                 </div>
-                                <ul style={{ listStyle: 'circle', paddingLeft: '1.5rem', color: 'var(--color-text-secondary)', lineHeight: 1.8 }}>
-                                    <li>시술 후 복부 팽만감이 있을 수 있습니다. (가스 배출 노력 필요)</li>
-                                    <li>시술 후 <strong>한 달 동안 음주, 자극적인 음식</strong> 등은 삼갑니다.</li>
-                                    <li>검사 후 출혈이 있을 수 있으며, 양이 많을 경우 병원 연락 바랍니다.</li>
-                                    <li>시술 후 일주일 정도는 과격한 운동이나 사우나를 피하세요.</li>
-                                </ul>
-                            </BentoCard>
-                        </BentoGrid>
+                            </FadeIn>
+
+                            <FadeIn delay={0.3}>
+                                <div className={styles.card}>
+                                    <h3>대장 용종이란?</h3>
+                                    <p className={styles.cardDesc}>
+                                        장 점막이 비정상적으로 자라나 혹처럼 돌출된 상태입니다.<br />
+                                        대장내시경을 통해 용종을 미리 제거하면 <strong>대장암 예방</strong>이 가능합니다.
+                                    </p>
+                                    <ul className={styles.featureList}>
+                                        <li>5mm 이상 큰 용종은 출혈 위험으로 절제 필요</li>
+                                        <li>선종: 발견 즉시 제거 필요 (암 발전 가능성 높음)</li>
+                                        <li>톱니 형태 선종: 암으로 진행될 수 있어 주의 필요</li>
+                                    </ul>
+                                </div>
+                            </FadeIn>
+                        </div>
+                    </div>
+
+                    {/* 03. Precautions */}
+                    <div>
+                        <FadeIn>
+                            <div className={styles.sectionHeader}>
+                                <AlertCircle size={48} className={styles.sectionIcon} />
+                                <h2>내시경 검사 주의사항</h2>
+                                <p>안전하고 정확한 검사를 위해 주의사항을 꼭 준수해 주세요.</p>
+                            </div>
+                        </FadeIn>
+
+                        <FadeIn delay={0.2}>
+                            <div className={styles.precautionContainer}>
+                                <div className={styles.precautionBox}>
+                                    <h3 className={styles.precautionHeader}>시술 전 주의사항</h3>
+                                    <ul className={styles.precautionList}>
+                                        <li><strong>검사 전 날 식사</strong>: 아침, 점심은 밥, 저녁(5시경)은 미음 또는 죽을 드세요.</li>
+                                        <li><strong>검사 시간이 오전일 경우</strong>: 1차 복용(전날 저녁 7시) → 2차 복용(당일 아침 6시)</li>
+                                        <li><strong>검사 시간이 오후일 경우</strong>: 1차 복용(전날 저녁 11시) → 2차 복용(당일 아침 10시)</li>
+                                        <li>물은 많이 마실수록 좋으며, 약을 복용한 후에는 제한 없이 물을 많이 섭취하시는 게 좋습니다.</li>
+                                        <li>복용 중인 약물이 있다면 반드시 의료진에게 미리 알려주세요 (항응고제, 당뇨약 등).</li>
+                                    </ul>
+                                </div>
+
+                                <div className={styles.precautionBox}>
+                                    <h3 className={styles.precautionHeader}>시술 후 주의사항</h3>
+                                    <ul className={styles.precautionList}>
+                                        <li>대변에 피가 섞여 나올 수 있으나, 일시적인 현상이므로 걱정하지 않으셔도 됩니다.</li>
+                                        <li>시술 후 복부 팽만감, 발열 등의 증상이 나타날 수 있습니다. (가스 배출 노력 필요)</li>
+                                        <li>시술 후 <strong>한 달 동안 음주, 자극적인 음식</strong> 등은 삼갑니다.</li>
+                                        <li>검사 후 휴지에 묻을 정도로 출혈이 있을 수 있으며, 양이 많은 경우 병원으로 연락 바랍니다.</li>
+                                        <li>시술 후 일주일 정도는 과격한 운동이나 사우나를 피하고 안정을 취합니다.</li>
+                                        <li>시술 후 2주 이내 출혈이 발생할 경우 즉시 내원해 주시기 바랍니다.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </FadeIn>
                     </div>
 
 
