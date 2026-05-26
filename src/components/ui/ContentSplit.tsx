@@ -7,11 +7,12 @@ interface ContentSplitProps {
   media: React.ReactNode;
   reversed?: boolean;
   className?: string;
+  style?: React.CSSProperties;
 }
 
-export function ContentSplit({ content, media, reversed = false, className = '' }: ContentSplitProps) {
+export function ContentSplit({ content, media, reversed = false, className = '', style }: ContentSplitProps) {
   return (
-    <div className={`${styles.splitContainer} ${reversed ? styles.reversed : ''} ${className}`}>
+    <div className={`${styles.splitContainer} ${reversed ? styles.reversed : ''} ${className}`} style={style}>
       <div className={styles.splitContent}>
         <FadeIn direction={reversed ? 'right' : 'left'}>{content}</FadeIn>
       </div>

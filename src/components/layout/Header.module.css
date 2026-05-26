@@ -176,6 +176,10 @@
     color: var(--color-primary);
     z-index: 1001; /* Keep above mobile nav */
     transition: color var(--transition-fast);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
 }
 
 /* ==========================================================================

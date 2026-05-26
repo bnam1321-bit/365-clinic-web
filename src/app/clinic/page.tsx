@@ -1,5 +1,4 @@
 import styles from "./page.module.css";
-import type { Metadata } from "next";
 import { Activity, Stethoscope, HeartPulse, ShieldCheck, Thermometer, Droplet, Flame, ArrowRight } from "lucide-react";
 import type { Metadata } from "next";
 import FadeIn from "@/components/ui/FadeIn";
