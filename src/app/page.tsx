@@ -8,6 +8,7 @@ export default function Home() {
     <main className={styles.home}>
       {/* 1. Full Screen Hero Section (Reverted) */}
       <section className={styles.hero}>
+        <div className={styles.heroBg}></div>
         <div className={`container ${styles.heroContainer}`}>
           <FadeIn direction="up">
             <span className={styles.highlight}>진심을 다해 최선으로 진료합니다</span>
