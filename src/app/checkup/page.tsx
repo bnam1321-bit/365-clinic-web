@@ -57,61 +57,64 @@ export default function CheckupPage() {
 
                     {/* Detailed Sections - 5 Major Cancers */}
                     <div className={styles.section}>
-                        <h2 className={styles.sectionTitle}>5대암 검진 프로그램</h2>
-                        <div className={styles.cancerGrid}>
-                            <div className={styles.cancerItem}>
-                                <div className={styles.cancerHeader}>
-                                    <span className={styles.num}>01</span>
-                                    <h4>위암 검진</h4>
+                        <div className="editorial-header">
+                            <h2 className="editorial-title">5대암 검진 프로그램</h2>
+                            <p className="editorial-desc">대한민국 발병률이 가장 높은 5대암, 정기적인 검진이 최고의 예방입니다.</p>
+                        </div>
+                        <div className="editorial-grid">
+                            <div className="editorial-card">
+                                <div className="bg-number">01</div>
+                                <div className="card-content">
+                                    <h4 className="card-title">위암 검진</h4>
+                                    <p className="card-subtitle">만 40세 이상 남녀 (2년 주기)</p>
+                                    <ul className="editorial-list">
+                                        <li>위내시경 검사 (수면/비수면)</li>
+                                        <li>위장조영촬영</li>
+                                    </ul>
                                 </div>
-                                <p>만 40세 이상 남녀 (2년 주기)</p>
-                                <ul className={styles.list}>
-                                    <li>위내시경 검사 (수면/비수면)</li>
-                                    <li>위장조영촬영</li>
-                                </ul>
                             </div>
-                            <div className={styles.cancerItem}>
-                                <div className={styles.cancerHeader}>
-                                    <span className={styles.num}>02</span>
-                                    <h4>대장암 검진</h4>
+                            <div className="editorial-card offset-card">
+                                <div className="bg-number">02</div>
+                                <div className="card-content">
+                                    <h4 className="card-title">대장암 검진</h4>
+                                    <p className="card-subtitle">만 50세 이상 남녀 (1년 주기)</p>
+                                    <ul className="editorial-list">
+                                        <li>분변잠혈검사 (대변검사)</li>
+                                        <li>대장내시경 (양성 시 진행)</li>
+                                    </ul>
                                 </div>
-                                <p>만 50세 이상 남녀 (1년 주기)</p>
-                                <ul className={styles.list}>
-                                    <li>분변잠혈검사 (대변검사)</li>
-                                    <li>대장내시경 (양성 시 진행)</li>
-                                </ul>
                             </div>
-                            <div className={styles.cancerItem}>
-                                <div className={styles.cancerHeader}>
-                                    <span className={styles.num}>03</span>
-                                    <h4>간암 검진</h4>
+                            <div className="editorial-card">
+                                <div className="bg-number">03</div>
+                                <div className="card-content">
+                                    <h4 className="card-title">간암 검진</h4>
+                                    <p className="card-subtitle">만 40세 이상 고위험군 (6개월 주기)</p>
+                                    <ul className="editorial-list">
+                                        <li>간 초음파 검사</li>
+                                        <li>혈청알파태아단백검사(혈액)</li>
+                                    </ul>
                                 </div>
-                                <p>만 40세 이상 고위험군 (6개월 주기)</p>
-                                <ul className={styles.list}>
-                                    <li>간 초음파 검사</li>
-                                    <li>혈청알파태아단백검사(혈액)</li>
-                                </ul>
                             </div>
-                            <div className={styles.cancerItem}>
-                                <div className={styles.cancerHeader}>
-                                    <span className={styles.num}>04</span>
-                                    <h4>유방암 검진</h4>
+                            <div className="editorial-card offset-card">
+                                <div className="bg-number">04</div>
+                                <div className="card-content">
+                                    <h4 className="card-title">유방암 검진</h4>
+                                    <p className="card-subtitle">만 40세 이상 여성 (2년 주기)</p>
+                                    <ul className="editorial-list">
+                                        <li>유방촬영술 (Mammography)</li>
+                                        <li>유방 초음파 (선택 정밀)</li>
+                                    </ul>
                                 </div>
-                                <p>만 40세 이상 여성 (2년 주기)</p>
-                                <ul className={styles.list}>
-                                    <li>유방촬영술 (Mammography)</li>
-                                    <li>유방 초음파 (선택 정밀)</li>
-                                </ul>
                             </div>
-                            <div className={styles.cancerItem}>
-                                <div className={styles.cancerHeader}>
-                                    <span className={styles.num}>05</span>
-                                    <h4>자궁경부암</h4>
+                            <div className="editorial-card">
+                                <div className="bg-number">05</div>
+                                <div className="card-content">
+                                    <h4 className="card-title">자궁경부암</h4>
+                                    <p className="card-subtitle">만 20세 이상 여성 (2년 주기)</p>
+                                    <ul className="editorial-list">
+                                        <li>자궁경부세포검사</li>
+                                    </ul>
                                 </div>
-                                <p>만 20세 이상 여성 (2년 주기)</p>
-                                <ul className={styles.list}>
-                                    <li>자궁경부세포검사</li>
-                                </ul>
                             </div>
                         </div>
                     </div>

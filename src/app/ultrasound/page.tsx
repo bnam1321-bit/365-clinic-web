@@ -65,17 +65,19 @@ export default function UltrasoundPage() {
                     </div>
 
                     {/* 5 Major Ultrasounds Detail */}
-                    <div className={styles.detailList}>
+                    <div className="editorial-header">
+                        <h2 className="editorial-title">5대 정밀 초음파</h2>
+                        <p className="editorial-desc">최고 사양 초음파 기기를 통해 미세한 병변까지 놓치지 않습니다.</p>
+                    </div>
+                    <div className="editorial-grid">
 
                         {/* 01 Abdomen */}
                         <FadeIn delay={0.1}>
-                            <div className={styles.detailItem}>
-                                <div className={styles.itemHeader}>
-                                    <span className={styles.itemNumber}>01</span>
-                                    <h3 className={styles.itemTitle}>복부초음파</h3>
-                                </div>
-                                <div className={styles.itemContent}>
-                                    <p>
+                            <div className="editorial-card">
+                                <div className="bg-number">01</div>
+                                <div className="card-content">
+                                    <h3 className="card-title">복부초음파</h3>
+                                    <p className="card-text">
                                         복부 초음파검사는 상복부 초음파검사와 충수 초음파검사 등이 흔하게 시행되고 있습니다.
                                         상복부 초음파검사가 가장 일반적인 초음파검사라고 할 수 있으며
                                         <strong>간, 담낭, 담관, 췌장</strong> 등이 주로 검사 대상이 되는 장기이나
@@ -88,13 +90,11 @@ export default function UltrasoundPage() {
 
                         {/* 02 Heart */}
                         <FadeIn delay={0.2}>
-                            <div className={styles.detailItem}>
-                                <div className={styles.itemHeader}>
-                                    <span className={styles.itemNumber}>02</span>
-                                    <h3 className={styles.itemTitle}>심장초음파 검사</h3>
-                                </div>
-                                <div className={styles.itemContent}>
-                                    <p>
+                            <div className="editorial-card offset-card">
+                                <div className="bg-number">02</div>
+                                <div className="card-content">
+                                    <h3 className="card-title">심장초음파 검사</h3>
+                                    <p className="card-text">
                                         심장 초음파검사는 크게 나누어 M-mode 심장 초음파검사, 이면성 심장 초음파검사, 도플러 심장 초음파검사, 부하 심장 초음파검사 등이 있으며
                                         이 외에 관혈적인 검사 방법으로 식도를 통해 영상을 얻는 경식도(transesophageal) 초음파검사, 혈관 내 초음파검사 등이 있습니다.
                                         일반적으로 시행하는 <strong>경흉부 심장 초음파(TTE)</strong>는 비침습적이고 안전하며,
@@ -107,17 +107,15 @@ export default function UltrasoundPage() {
 
                         {/* 03 Thyroid */}
                         <FadeIn delay={0.3}>
-                            <div className={styles.detailItem}>
-                                <div className={styles.itemHeader}>
-                                    <span className={styles.itemNumber}>03</span>
-                                    <h3 className={styles.itemTitle}>갑상선 초음파 검사</h3>
-                                </div>
-                                <div className={styles.itemContent}>
-                                    <p>
+                            <div className="editorial-card">
+                                <div className="bg-number">03</div>
+                                <div className="card-content">
+                                    <h3 className="card-title">갑상선 초음파 검사</h3>
+                                    <p className="card-text">
                                         컴퓨터와 연결된 높은 주파수의 탐촉자는 초음파를 발생시키고 또 인체에 반사되는 음파를 받아들이게 되며 이를 재구성하여 영상을 실시간으로 확인합니다.
                                         갑상선 및 주변 기관의 형태적 이상, 특히 <strong>갑상선 결절</strong>에 대해서 다른 어떤 검사보다도 높은 해상도를 가지고 있는 필수 검사입니다.
                                     </p>
-                                    <ul className={styles.checkList}>
+                                    <ul className="editorial-list">
                                         <li>갑상선 종괴가 촉지 되는 경우</li>
                                         <li>만져지지 않는 결절이 발견되었을 때</li>
                                         <li>미만성 갑상선 질환에서 악성이 의심되는 종괴가 발견되었을 때</li>
@@ -131,18 +129,16 @@ export default function UltrasoundPage() {
 
                         {/* 04 Breast */}
                         <FadeIn delay={0.4}>
-                            <div className={styles.detailItem}>
-                                <div className={styles.itemHeader}>
-                                    <span className={styles.itemNumber}>04</span>
-                                    <h3 className={styles.itemTitle}>유방초음파검사</h3>
-                                </div>
-                                <div className={styles.itemContent}>
-                                    <p>
+                            <div className="editorial-card offset-card">
+                                <div className="bg-number">04</div>
+                                <div className="card-content">
+                                    <h3 className="card-title">유방초음파검사</h3>
+                                    <p className="card-text">
                                         유방 질환을 진단하는 검사입니다. 유방에 멍울이 만져지거나, 혈성 유두 분비 증상이 있는 여성에서 1차 검사로 추천됩니다.
                                         방사선 노출이 없으며 양성 혹(섬유선종), 악성 혹(유방암), 염증성 병변(농양), 물혹(낭종) 등을 영상 소견으로 구분하는 데 그 정확도가 매우 높습니다.
                                         <strong>치밀 유방</strong> 구성을 보이는 한국 여성의 경우, 유방촬영술보다 초음파검사가 진단에 더 유리할 수 있습니다.
                                     </p>
-                                    <ul className={styles.checkList}>
+                                    <ul className="editorial-list">
                                         <li>유방촬영술에서 종괴성 병변이 의심되어 종괴의 특성을 정확하게 평가하기 위해</li>
                                         <li>젊은 여성에서 만져지는 유방 종괴의 검사</li>
                                         <li>치밀 유방 구성을 보이는 경우의 추가 선별 검사</li>
@@ -155,13 +151,11 @@ export default function UltrasoundPage() {
 
                         {/* 05 Carotid */}
                         <FadeIn delay={0.5}>
-                            <div className={styles.detailItem}>
-                                <div className={styles.itemHeader}>
-                                    <span className={styles.itemNumber}>05</span>
-                                    <h3 className={styles.itemTitle}>경동맥초음파검사</h3>
-                                </div>
-                                <div className={styles.itemContent}>
-                                    <p>
+                            <div className="editorial-card">
+                                <div className="bg-number">05</div>
+                                <div className="card-content">
+                                    <h3 className="card-title">경동맥초음파검사</h3>
+                                    <p className="card-text">
                                         경동맥은 뇌로 가는 혈관의 80%가 이어지는 중요한 혈관입니다.
                                         초음파를 이용하여 혈류의 양과 경동맥 협착 정도를 측정하며, 이는 <strong>뇌졸중 위험도</strong>와 깊은 연관성이 있습니다.
                                         당뇨, 고혈압, 고지혈증 등 위험인자를 가지고 있는 분들은 반드시 경동맥 초음파 검사를 통해 뇌혈관 상태를 파악하고,

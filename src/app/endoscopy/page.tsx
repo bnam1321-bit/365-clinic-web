@@ -75,27 +75,31 @@ export default function EndoscopyPage() {
                             </div>
                         </section>
 
-                        <div className={styles.grid2}>
+                        <div className="editorial-grid">
                             <FadeIn delay={0.4}>
-                                <div className={styles.card}>
-                                    <h3>위내시경 (Gastroscopy)</h3>
-                                    <p className={styles.cardDesc}>식도, 위, 십이지장의 질환을 정밀하게 관찰합니다.</p>
-                                    <ul className={styles.featureList}>
-                                        <li>수면 / 비수면 선택 가능 (안전 모니터링)</li>
-                                        <li>역류성 식도염, 위염, 위궤양, 위암 진단</li>
-                                        <li>헬리코박터균 검사 및 제균 치료 상담</li>
-                                    </ul>
+                                <div className="editorial-card">
+                                    <div className="card-content">
+                                        <h3 className="card-title">위내시경 (Gastroscopy)</h3>
+                                        <p className="card-subtitle">식도, 위, 십이지장의 질환을 정밀하게 관찰합니다.</p>
+                                        <ul className="editorial-list">
+                                            <li>수면 / 비수면 선택 가능 (안전 모니터링)</li>
+                                            <li>역류성 식도염, 위염, 위궤양, 위암 진단</li>
+                                            <li>헬리코박터균 검사 및 제균 치료 상담</li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </FadeIn>
                             <FadeIn delay={0.5}>
-                                <div className={styles.card}>
-                                    <h3>대장내시경 (Colonoscopy)</h3>
-                                    <p className={styles.cardDesc}>항문을 통해 대장 전체와 소장 말단 부위를 관찰합니다.</p>
-                                    <ul className={styles.featureList}>
-                                        <li>가스 통증 없는 CO2 가스 주입 시스템</li>
-                                        <li>용종 발견 시 당일 즉시 절제술 시행 (One-stop)</li>
-                                        <li>철저한 소독 관리 (1:1 기구 사용 원칙)</li>
-                                    </ul>
+                                <div className="editorial-card offset-card">
+                                    <div className="card-content">
+                                        <h3 className="card-title">대장내시경 (Colonoscopy)</h3>
+                                        <p className="card-subtitle">항문을 통해 대장 전체와 소장 말단 부위를 관찰합니다.</p>
+                                        <ul className="editorial-list">
+                                            <li>가스 통증 없는 CO2 가스 주입 시스템</li>
+                                            <li>용종 발견 시 당일 즉시 절제술 시행 (One-stop)</li>
+                                            <li>철저한 소독 관리 (1:1 기구 사용 원칙)</li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </FadeIn>
                         </div>
@@ -112,33 +116,39 @@ export default function EndoscopyPage() {
                         </FadeIn>
 
                         {/* Refactored Polypectomy Layout for Uniformity */}
-                        <div className={styles.grid2}>
+                        <div className="editorial-grid">
                             <FadeIn delay={0.2}>
-                                <div className={styles.card}>
-                                    <h3>당일 용종 절제술 (One-Stop)</h3>
-                                    <p className={styles.cardDesc}>
-                                        본원에서는 대장내시경 중 발견된 용종을 <strong>당일 즉시 절제</strong>합니다.<br />
-                                        대학병원 출신 전문의가 직접 시술하여 더욱 안전하고 정확합니다.
-                                    </p>
-                                    <ul className={styles.featureList}>
-                                        <li>선종성 용종: 암으로 진행될 가능성이 높아 반드시 제거</li>
-                                        <li>과형성 용종: 추적 관찰이 필요할 수 있음</li>
-                                    </ul>
+                                <div className="editorial-card">
+                                    <div className="bg-number">01</div>
+                                    <div className="card-content">
+                                        <h3 className="card-title">당일 용종 절제술</h3>
+                                        <p className="card-text">
+                                            본원에서는 대장내시경 중 발견된 용종을 <strong>당일 즉시 절제</strong>합니다.<br />
+                                            대학병원 출신 전문의가 직접 시술하여 더욱 안전하고 정확합니다.
+                                        </p>
+                                        <ul className="editorial-list">
+                                            <li>선종성 용종: 암으로 진행될 가능성이 높아 반드시 제거</li>
+                                            <li>과형성 용종: 추적 관찰이 필요할 수 있음</li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </FadeIn>
 
                             <FadeIn delay={0.3}>
-                                <div className={styles.card}>
-                                    <h3>대장 용종이란?</h3>
-                                    <p className={styles.cardDesc}>
-                                        장 점막이 비정상적으로 자라나 혹처럼 돌출된 상태입니다.<br />
-                                        대장내시경을 통해 용종을 미리 제거하면 <strong>대장암 예방</strong>이 가능합니다.
-                                    </p>
-                                    <ul className={styles.featureList}>
-                                        <li>5mm 이상 큰 용종은 출혈 위험으로 절제 필요</li>
-                                        <li>선종: 발견 즉시 제거 필요 (암 발전 가능성 높음)</li>
-                                        <li>톱니 형태 선종: 암으로 진행될 수 있어 주의 필요</li>
-                                    </ul>
+                                <div className="editorial-card offset-card">
+                                    <div className="bg-number">02</div>
+                                    <div className="card-content">
+                                        <h3 className="card-title">대장 용종이란?</h3>
+                                        <p className="card-text">
+                                            장 점막이 비정상적으로 자라나 혹처럼 돌출된 상태입니다.<br />
+                                            대장내시경을 통해 용종을 미리 제거하면 <strong>대장암 예방</strong>이 가능합니다.
+                                        </p>
+                                        <ul className="editorial-list">
+                                            <li>5mm 이상 큰 용종은 출혈 위험으로 절제 필요</li>
+                                            <li>선종: 발견 즉시 제거 필요 (암 발전 가능성 높음)</li>
+                                            <li>톱니 형태 선종: 암으로 진행될 수 있어 주의 필요</li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </FadeIn>
                         </div>

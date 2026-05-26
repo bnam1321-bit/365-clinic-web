@@ -43,22 +43,25 @@ export default function PainPage() {
                         </div>
                     </FadeIn>
 
-                    <div className={styles.painGrid}>
+                    <div className="editorial-grid">
                         <FadeIn delay={0.3}>
-                            <div className={styles.painItem}>
-                                <Activity size={36} color="var(--color-secondary)" />
-                                <h3 className={styles.painTitle}>연부초음파검사</h3>
-                                <p className={styles.painDesc}>근육, 피부, 피하연부조직에 생긴 종괴, 염증, 근육의 파열 및 손상등을 진단하는 검사입니다.</p>
+                            <div className="editorial-card">
+                                <div className="bg-number">01</div>
+                                <div className="card-content">
+                                    <h3 className="card-title">연부초음파검사</h3>
+                                    <p className="card-text">근육, 피부, 피하연부조직에 생긴 종괴, 염증, 근육의 파열 및 손상등을 진단하는 검사입니다.</p>
+                                </div>
                             </div>
                         </FadeIn>
                         <FadeIn delay={0.4}>
-                            <div className={styles.painItem}>
-                                <HeartPulse size={36} color="#EF4444" />
-                                <h3 className={styles.painTitle}>관절초음파검사</h3>
-                                <p className={styles.painDesc}>어깨, 팔꿈치, 손목, 손, 고관절, 무릎, 발목, 발 등 인체의 다양한 관절의 염증과 관절 주위의 인대손상, 건(힘줄)의 염증 및 퇴행성 변화등을 정확히 진단하는 검사입니다.</p>
+                            <div className="editorial-card offset-card">
+                                <div className="bg-number">02</div>
+                                <div className="card-content">
+                                    <h3 className="card-title">관절초음파검사</h3>
+                                    <p className="card-text">어깨, 팔꿈치, 손목, 손, 고관절, 무릎, 발목, 발 등 인체의 다양한 관절의 염증과 관절 주위의 인대손상, 건(힘줄)의 염증 및 퇴행성 변화등을 정확히 진단하는 검사입니다.</p>
+                                </div>
                             </div>
                         </FadeIn>
-
                     </div>
 
                     <FadeIn delay={0.6}>
@@ -88,27 +91,27 @@ export default function PainPage() {
                     </FadeIn>
 
                     <div className={styles.treatmentSection}>
-                        <div className={styles.treatmentGrid}>
+                        <div className="editorial-grid">
                             <FadeIn delay={0.2}>
-                                <div className={styles.treatmentCard}>
-                                    <div className={styles.treatmentHeader}>
-                                        <ShieldCheck size={28} className={styles.blueIcon} />
-                                        <h3 className={styles.treatmentTitle}>증식치료란?</h3>
+                                <div className="editorial-card">
+                                    <div className="bg-number">P</div>
+                                    <div className="card-content">
+                                        <h3 className="card-title">증식치료란?</h3>
+                                        <p className="card-text">
+                                            자극성이 있는 주사제를 인대나 힘줄이 뼈에 부착되는 부위에 주사하여 국소부위의 성장 인자의 생성을 촉진하고 염증이 일어나게 하여 혈액순환을 증가시키고 영양분 공급을 증가시켜 <strong>조직이 재생되도록 하는 치료</strong>입니다.
+                                        </p>
                                     </div>
-                                    <p className={styles.treatmentText}>
-                                        자극성이 있는 주사제를 인대나 힘줄이 뼈에 부착되는 부위에 주사하여 국소부위의 성장 인자의 생성을 촉진하고 염증이 일어나게 하여 혈액순환을 증가시키고 영양분 공급을 증가시켜 <strong>조직이 재생되도록 하는 치료</strong>입니다.
-                                    </p>
                                 </div>
                             </FadeIn>
                             <FadeIn delay={0.3}>
-                                <div className={styles.treatmentCard}>
-                                    <div className={styles.treatmentHeader}>
-                                        <Activity size={28} className={styles.blueIcon} />
-                                        <h3 className={styles.treatmentTitle}>치료방법은 어떻게 되나요?</h3>
+                                <div className="editorial-card offset-card">
+                                    <div className="bg-number">Q</div>
+                                    <div className="card-content">
+                                        <h3 className="card-title">치료방법은 어떻게 되나요?</h3>
+                                        <p className="card-text">
+                                            힘줄 또는 인대가 약화 된 부위를 초음파로 관찰하면서 증식제를 직접 주사합니다. 부위에 따라 1주 또는 4주 간격으로 3회 ~ 6회 시행합니다.
+                                        </p>
                                     </div>
-                                    <p className={styles.treatmentText}>
-                                        힘줄 또는 인대가 약화 된 부위를 초음파로 관찰하면서 증식제를 직접 주사합니다. 부위에 따라 1주 또는 4주 간격으로 3회 ~ 6회 시행합니다.
-                                    </p>
                                 </div>
                             </FadeIn>
                         </div>
