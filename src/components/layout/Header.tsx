@@ -24,7 +24,7 @@ export default function Header() {
 
     const pathname = usePathname();
     const isMainPage = pathname === "/";
-    const isTransparent = isMainPage && !scrolled;
+    const isTransparent = isMainPage && !scrolled && !isMenuOpen;
 
     return (
         <header className={`${styles.header} ${scrolled ? styles.scrolled : ""} ${isTransparent ? styles.transparent : ""}`}>
