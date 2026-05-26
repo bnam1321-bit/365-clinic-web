@@ -10,14 +10,14 @@ export default function Home() {
       <section className={styles.hero}>
         <div className={`container ${styles.heroContainer}`}>
           <FadeIn direction="up">
-            <span className={styles.highlight}>정확하게 진단합니다</span>
+            <span className={styles.highlight}>진심을 다해 최선으로 진료합니다</span>
             <h1 className={styles.heroTitle}>
-              대학병원 출신 전문의 3인<br />
+              분야별 전문의 3인 협진 진료<br />
               <strong>365내과연합의원</strong>
             </h1>
             <p className={styles.heroSubtitle}>
-              내과 전문의, 소화기 내시경 전문의, 근골격계 초음파 전문의가 유기적으로 협진하여<br />
-              환자분들에게 가장 안전하고 정확한 진료를 제공합니다.
+              내과, 소화기 내시경, 근골격계 초음파 전문의 3인이 유기적으로 협진하며,<br />
+              환자분들을 위해 언제나 진심으로 최선을 다해 안전하고 정확하게 진료합니다.
             </p>
           </FadeIn>
         </div>
