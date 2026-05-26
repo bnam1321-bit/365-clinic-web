@@ -122,6 +122,18 @@ button {
   padding: 0 var(--spacing-lg);
 }
 
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;

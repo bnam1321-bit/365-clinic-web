@@ -285,11 +285,32 @@
 }
 
 /* Responsive Rules */
-@media (min-width: 1024px) {
-    .desktopNav, .desktopActions {
+@media (min-width: 768px) {
+    .desktopNav {
         display: flex;
     }
     .menuButton {
         display: none;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .navList {
+        gap: 1.25rem;
+    }
+    .navLink {
+        font-size: 0.95rem;
+    }
+    .logo {
+        font-size: 1.5rem;
+    }
+    .logo span {
+        font-size: 1.1rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .desktopActions {
+        display: flex;
     }
 }

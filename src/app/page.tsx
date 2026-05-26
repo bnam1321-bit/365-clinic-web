@@ -16,8 +16,7 @@ export default function Home() {
               <strong>365내과연합의원</strong>
             </h1>
             <p className={styles.heroSubtitle}>
-              내과, 소화기 내시경, 근골격계 초음파 전문의 3인이 유기적으로 협진하며,<br />
-              환자분들을 위해 언제나 진심으로 최선을 다해 안전하고 정확하게 진료합니다.
+              전문의 3인이 유기적으로 협진하며, 환자분들을 위해 언제나 진심으로 최선을 다해 안전하고 정확하게 진료합니다.
             </p>
           </FadeIn>
         </div>
