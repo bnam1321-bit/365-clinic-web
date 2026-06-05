@@ -15,6 +15,7 @@ export default function UltrasoundPage() {
                 badge="ULTRASOUND CLINIC"
                 title="초음파 클리닉"
                 subtitle={<>대학병원급 하이엔드 장비로 정밀하게 진단합니다.<br />방사선 피폭 걱정 없이 안전한 정밀 검사</>}
+                imagePath="/images/ultrasound_clinic_1.jpg"
             />
 
             {/* Main Content */}

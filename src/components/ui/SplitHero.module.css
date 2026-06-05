@@ -4,9 +4,44 @@
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background-color: #FAFAFC; /* Alabaster Off-white */
+  background-color: #F8FAFC;
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(37, 99, 235, 0.03) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(197, 168, 128, 0.06) 0px, transparent 50%),
+    radial-gradient(at 50% 100%, rgba(37, 99, 235, 0.02) 0px, transparent 50%);
   overflow: hidden;
   padding-top: 64px; /* Offset for header */
+  border-bottom: 1px solid rgba(10, 25, 47, 0.04);
+}
+
+.splitHero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(rgba(10, 25, 47, 0.015) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(10, 25, 47, 0.015) 1px, transparent 1px);
+  background-size: 50px 50px;
+  background-position: center center;
+  mask-image: radial-gradient(circle at center, black 40%, transparent 95%);
+  -webkit-mask-image: radial-gradient(circle at center, black 40%, transparent 95%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.splitHero::after {
+  content: '';
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(197, 168, 128, 0.07) 0%, transparent 70%);
+  top: -150px;
+  right: -100px;
+  z-index: 1;
+  pointer-events: none;
+  filter: blur(50px);
 }
 
 .heroContainer {
@@ -103,8 +138,9 @@
 
 /* Text Only Layout Modifiers */
 .textOnlyHero {
-  min-height: 60vh;
-  padding-top: 100px;
+  min-height: 50vh;
+  padding-top: 130px;
+  padding-bottom: 50px;
 }
 
 .textOnlyContainer {

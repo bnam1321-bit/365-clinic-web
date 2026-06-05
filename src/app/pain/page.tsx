@@ -15,6 +15,7 @@ export default function PainPage() {
                 badge="PAIN CLINIC"
                 title="통증 클리닉"
                 subtitle={<>근골격계 초음파와 증식치료(프롤로테라피)를 통해<br />통증의 근본적인 원인을 정확히 진단하고 안전하게 치료합니다.</>}
+                imagePath="/images/pain_clinic_1.jpg"
             />
 
             <section className={styles.content}>

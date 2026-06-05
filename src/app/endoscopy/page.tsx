@@ -17,6 +17,7 @@ export default function EndoscopyPage() {
                 badge="DIGESTIVE ENDOSCOPY"
                 title="내시경 클리닉"
                 subtitle={<>소화기내과 전문의가 직접 시행하는 정밀하고 안전한 내시경.<br />대학병원급 최고사양 장비로 미세 병변까지 찾아냅니다.</>}
+                imagePath="/images/endoscopy_clinic_1.jpg"
             />
 
             {/* Main Content */}

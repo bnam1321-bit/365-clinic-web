@@ -2,6 +2,7 @@ import styles from "./page.module.css";
 import { Stethoscope, Award, Heart } from "lucide-react";
 import type { Metadata } from "next";
 import FadeIn from "@/components/ui/FadeIn";
+import SplitHero from "@/components/ui/SplitHero";
 
 export const metadata: Metadata = {
     title: "병원 소개 | 365내과연합의원",
@@ -11,9 +12,15 @@ export const metadata: Metadata = {
 export default function About() {
     return (
         <main className={styles.aboutContainer}>
+            <SplitHero 
+                badge="ABOUT CLINIC"
+                title="병원 소개"
+                subtitle="365내과연합의원 의료진 및 진료 철학을 소개합니다."
+                imagePath="/images/checkup_clinic_5.jpg"
+            />
             <div className={`container`}>
                 <FadeIn>
-                    <section className={styles.philosophy}>
+                    <section className={styles.philosophy} style={{ paddingTop: '5rem' }}>
                         <div className="editorial-header">
                             <h2 className="editorial-title">인사말</h2>
                             <p className="editorial-desc">"환자분의 건강을 내 가족처럼 생각합니다"</p>
