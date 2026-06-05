@@ -5,7 +5,7 @@ import FadeIn from "@/components/ui/FadeIn";
 import SplitHero from "@/components/ui/SplitHero";
 export const metadata: Metadata = {
     title: "초음파클리닉 | 365내과연합의원",
-    description: "복부, 심장, 갑상선, 유방, 경동맥 정밀 초음파 검사.",
+    description: "복부, 갑상선, 경동맥 정밀 초음파 검사.",
 };
 
 export default function UltrasoundPage() {
@@ -43,30 +43,23 @@ export default function UltrasoundPage() {
                         </FadeIn>
                         <FadeIn delay={0.2}>
                             <div className={styles.card}>
-                                <div className={styles.cardIcon}><HeartPulse size={32} /></div>
-                                <h3>경동맥 초음파</h3>
-                                <p>뇌졸중의 위험 인자인 경동맥의 협착 및 혈전 유무를 확인하여 뇌혈관 질환을 예방합니다.</p>
-                            </div>
-                        </FadeIn>
-                        <FadeIn delay={0.3}>
-                            <div className={styles.card}>
                                 <div className={styles.cardIcon}><ShieldCheck size={32} /></div>
                                 <h3>갑상선 초음파</h3>
                                 <p>갑상선 결절, 암, 염증 등을 진단하며, 필요 시 세포 흡인 검사(FNA) 연계도 가능합니다.</p>
                             </div>
                         </FadeIn>
-                        <FadeIn delay={0.4}>
+                        <FadeIn delay={0.3}>
                             <div className={styles.card}>
-                                <div className={styles.cardIcon}><Zap size={32} /></div>
-                                <h3>기타 초음파</h3>
-                                <p>유방, 심장 등 다양한 부위에 대한 정밀 검사를 시행합니다.</p>
+                                <div className={styles.cardIcon}><HeartPulse size={32} /></div>
+                                <h3>경동맥 초음파</h3>
+                                <p>뇌졸중의 위험 인자인 경동맥의 협착 및 혈전 유무를 확인하여 뇌혈관 질환을 예방합니다.</p>
                             </div>
                         </FadeIn>
                     </div>
 
-                    {/* 5 Major Ultrasounds Detail */}
+                    {/* 3 Major Ultrasounds Detail */}
                     <div className="editorial-header">
-                        <h2 className="editorial-title">5대 정밀 초음파</h2>
+                        <h2 className="editorial-title">3대 정밀 초음파</h2>
                         <p className="editorial-desc">최고 사양 초음파 기기를 통해 미세한 병변까지 놓치지 않습니다.</p>
                     </div>
                     <div className="editorial-grid">
@@ -88,27 +81,10 @@ export default function UltrasoundPage() {
                             </div>
                         </FadeIn>
 
-                        {/* 02 Heart */}
+                        {/* 02 Thyroid */}
                         <FadeIn delay={0.2}>
                             <div className="editorial-card offset-card">
                                 <div className="bg-number">02</div>
-                                <div className="card-content">
-                                    <h3 className="card-title">심장초음파 검사</h3>
-                                    <p className="card-text">
-                                        심장 초음파검사는 크게 나누어 M-mode 심장 초음파검사, 이면성 심장 초음파검사, 도플러 심장 초음파검사, 부하 심장 초음파검사 등이 있으며
-                                        이 외에 관혈적인 검사 방법으로 식도를 통해 영상을 얻는 경식도(transesophageal) 초음파검사, 혈관 내 초음파검사 등이 있습니다.
-                                        일반적으로 시행하는 <strong>경흉부 심장 초음파(TTE)</strong>는 비침습적이고 안전하며,
-                                        심장의 구조와 기능을 평가하는 가장 중요한 검사 중 하나입니다.
-                                        소요 시간은 검사에 따라 다르지만 보통 20분에서 한 시간 내에 끝나게 됩니다.
-                                    </p>
-                                </div>
-                            </div>
-                        </FadeIn>
-
-                        {/* 03 Thyroid */}
-                        <FadeIn delay={0.3}>
-                            <div className="editorial-card">
-                                <div className="bg-number">03</div>
                                 <div className="card-content">
                                     <h3 className="card-title">갑상선 초음파 검사</h3>
                                     <p className="card-text">
@@ -127,32 +103,10 @@ export default function UltrasoundPage() {
                             </div>
                         </FadeIn>
 
-                        {/* 04 Breast */}
-                        <FadeIn delay={0.4}>
-                            <div className="editorial-card offset-card">
-                                <div className="bg-number">04</div>
-                                <div className="card-content">
-                                    <h3 className="card-title">유방초음파검사</h3>
-                                    <p className="card-text">
-                                        유방 질환을 진단하는 검사입니다. 유방에 멍울이 만져지거나, 혈성 유두 분비 증상이 있는 여성에서 1차 검사로 추천됩니다.
-                                        방사선 노출이 없으며 양성 혹(섬유선종), 악성 혹(유방암), 염증성 병변(농양), 물혹(낭종) 등을 영상 소견으로 구분하는 데 그 정확도가 매우 높습니다.
-                                        <strong>치밀 유방</strong> 구성을 보이는 한국 여성의 경우, 유방촬영술보다 초음파검사가 진단에 더 유리할 수 있습니다.
-                                    </p>
-                                    <ul className="editorial-list">
-                                        <li>유방촬영술에서 종괴성 병변이 의심되어 종괴의 특성을 정확하게 평가하기 위해</li>
-                                        <li>젊은 여성에서 만져지는 유방 종괴의 검사</li>
-                                        <li>치밀 유방 구성을 보이는 경우의 추가 선별 검사</li>
-                                        <li>임산부나 수유부에서 안전하고 정확한 유방 검사</li>
-                                        <li>유방성형술을 받은 여성의 보형물 및 유방조직 검사</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </FadeIn>
-
-                        {/* 05 Carotid */}
-                        <FadeIn delay={0.5}>
+                        {/* 03 Carotid */}
+                        <FadeIn delay={0.3}>
                             <div className="editorial-card">
-                                <div className="bg-number">05</div>
+                                <div className="bg-number">03</div>
                                 <div className="card-content">
                                     <h3 className="card-title">경동맥초음파검사</h3>
                                     <p className="card-text">

@@ -43,7 +43,7 @@ export default function CheckupPage() {
                             <div className={styles.introCard}>
                                 <div className={styles.icon}><Microscope size={32} /></div>
                                 <h3>초음파 정밀 검진</h3>
-                                <p>대학병원급 고해상도 초음파로<br />복부/심장/갑상선 미세 병변 진단</p>
+                                <p>대학병원급 고해상도 초음파로<br />복부/갑상선/경동맥 미세 병변 진단</p>
                             </div>
                         </FadeIn>
                         <FadeIn delay={0.4}>
@@ -102,7 +102,6 @@ export default function CheckupPage() {
                                     <p className="card-subtitle">만 40세 이상 여성 (2년 주기)</p>
                                     <ul className="editorial-list">
                                         <li>유방촬영술 (Mammography)</li>
-                                        <li>유방 초음파 (선택 정밀)</li>
                                     </ul>
                                 </div>
                             </div>
