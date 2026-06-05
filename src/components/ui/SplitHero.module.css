@@ -4,14 +4,14 @@
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background-color: #F8FAFC;
+  background-color: #F4F6FA;
   background-image: 
-    radial-gradient(at 0% 0%, rgba(37, 99, 235, 0.03) 0px, transparent 50%),
-    radial-gradient(at 100% 0%, rgba(197, 168, 128, 0.06) 0px, transparent 50%),
-    radial-gradient(at 50% 100%, rgba(37, 99, 235, 0.02) 0px, transparent 50%);
+    radial-gradient(at 0% 0%, rgba(37, 99, 235, 0.05) 0px, transparent 60%),
+    radial-gradient(at 100% 0%, rgba(197, 168, 128, 0.1) 0px, transparent 60%),
+    radial-gradient(at 50% 100%, rgba(37, 99, 235, 0.03) 0px, transparent 60%);
   overflow: hidden;
   padding-top: 64px; /* Offset for header */
-  border-bottom: 1px solid rgba(10, 25, 47, 0.04);
+  border-bottom: 1px solid rgba(10, 25, 47, 0.05);
 }
 
 .splitHero::before {
@@ -21,27 +21,14 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: linear-gradient(rgba(10, 25, 47, 0.015) 1px, transparent 1px),
-                    linear-gradient(90deg, rgba(10, 25, 47, 0.015) 1px, transparent 1px);
-  background-size: 50px 50px;
+  background-image: linear-gradient(rgba(10, 25, 47, 0.025) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(10, 25, 47, 0.025) 1px, transparent 1px);
+  background-size: 40px 40px;
   background-position: center center;
-  mask-image: radial-gradient(circle at center, black 40%, transparent 95%);
-  -webkit-mask-image: radial-gradient(circle at center, black 40%, transparent 95%);
+  mask-image: radial-gradient(circle at center, black 50%, transparent 95%);
+  -webkit-mask-image: radial-gradient(circle at center, black 50%, transparent 95%);
   z-index: 1;
   pointer-events: none;
-}
-
-.splitHero::after {
-  content: '';
-  position: absolute;
-  width: 500px;
-  height: 500px;
-  background: radial-gradient(circle, rgba(197, 168, 128, 0.07) 0%, transparent 70%);
-  top: -150px;
-  right: -100px;
-  z-index: 1;
-  pointer-events: none;
-  filter: blur(50px);
 }
 
 .heroContainer {
@@ -148,6 +135,17 @@
   text-align: center;
   max-width: 800px;
   margin: 0 auto;
+  position: relative;
+}
+
+.textOnlyContainer::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--color-accent-gold), #E2C29B);
+  border-radius: var(--radius-full);
+  margin: 2.5rem auto 0 auto;
 }
 
 .textOnlyContainer .heroLeft {
@@ -163,11 +161,61 @@
 }
 
 .textOnlyContainer .heroSubtitle {
-  margin: 0 auto 3.5rem auto;
+  margin: 0 auto;
 }
 
 .textOnlyContainer .heroActions {
   justify-content: center;
+}
+
+/* Background Glow Orbs */
+.glow1 {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(37, 99, 235, 0.06) 0%, transparent 70%);
+    top: -150px;
+    left: -100px;
+    filter: blur(50px);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.glow2 {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(197, 168, 128, 0.12) 0%, transparent 70%);
+    bottom: -150px;
+    right: -100px;
+    filter: blur(50px);
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Elegant Outline Circles */
+.circle1 {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    border: 1px solid rgba(197, 168, 128, 0.15);
+    border-radius: 50%;
+    top: -200px;
+    left: -200px;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.circle2 {
+    position: absolute;
+    width: 450px;
+    height: 450px;
+    border: 1px solid rgba(37, 99, 235, 0.08);
+    border-radius: 50%;
+    bottom: -100px;
+    right: -150px;
+    z-index: 1;
+    pointer-events: none;
 }
 
 /* Responsive Rules */

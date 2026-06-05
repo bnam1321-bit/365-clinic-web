@@ -13,6 +13,12 @@ interface SplitHeroProps {
 export default function SplitHero({ badge, title, subtitle, imagePath, actions }: SplitHeroProps) {
     return (
         <section className={`${styles.splitHero} ${!imagePath ? styles.textOnlyHero : ''}`}>
+            {/* Decorative Background Elements */}
+            <div className={styles.glow1}></div>
+            <div className={styles.glow2}></div>
+            <div className={styles.circle1}></div>
+            <div className={styles.circle2}></div>
+
             <div className={`container ${styles.heroContainer} ${!imagePath ? styles.textOnlyContainer : ''}`}>
                 <div className={styles.heroLeft}>
                     <FadeIn direction="up">
