@@ -25,6 +25,7 @@ export default function SplitHero({ badge, title, subtitle, imagePath, actions }
                         <span className={`${styles.heroBadge} ${!imagePath ? styles.centerBadge : ''}`}>{badge}</span>
                         <h1 className={styles.heroTitle}>{title}</h1>
                         <p className={styles.heroSubtitle}>{subtitle}</p>
+                        {!imagePath && <div className={styles.goldLine}></div>}
                         {actions && <div className={styles.heroActions}>{actions}</div>}
                     </FadeIn>
                 </div>
