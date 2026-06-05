@@ -16,7 +16,6 @@ export default function CheckupPage() {
                 badge="COMPREHENSIVE CHECKUP"
                 title="종합건강검진"
                 subtitle={<>5대암 검진부터 초음파 정밀 검진까지,<br />정확한 진단으로 건강한 미래를 지킵니다.</>}
-                imagePath="/images/checkup_clinic_1.jpg"
             />
 
             {/* Main Content */}

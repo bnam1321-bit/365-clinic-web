@@ -16,7 +16,6 @@ export default function About() {
                 badge="ABOUT CLINIC"
                 title="병원 소개"
                 subtitle="365내과연합의원 의료진 및 진료 철학을 소개합니다."
-                imagePath="/images/checkup_clinic_5.jpg"
             />
             <div className={`container`}>
                 <FadeIn>

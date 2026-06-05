@@ -15,7 +15,6 @@ export default function Guide() {
                 badge="VISITOR GUIDE"
                 title="진료 안내"
                 subtitle="365내과연합의원 오시는 길 및 진료 시간 안내입니다."
-                imagePath="/images/checkup_clinic_4.jpg"
             />
 
             <main className={styles.content}>
