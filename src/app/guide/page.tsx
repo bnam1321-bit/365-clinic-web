@@ -73,13 +73,11 @@ export default function Guide() {
                                         </iframe>
                                     </div>
 
-                                    {/* Naver & Kakao Map Direct Link Overlay */}
+                                    {/* Naver Map Direct Link Overlay */}
                                     <div style={{
                                         position: 'absolute',
                                         bottom: '20px',
                                         right: '20px',
-                                        display: 'flex',
-                                        gap: '10px',
                                         zIndex: 10
                                     }}>
                                         {/* Naver Map Button */}
@@ -90,20 +88,20 @@ export default function Guide() {
                                             style={{
                                                 background: '#03C75A',
                                                 color: '#FFFFFF',
-                                                padding: '10px 16px',
+                                                padding: '12px 20px',
                                                 borderRadius: '8px',
                                                 boxShadow: '0 4px 12px rgba(0,0,0,0.15)',
                                                 display: 'flex',
                                                 alignItems: 'center',
-                                                gap: '6px',
+                                                gap: '8px',
                                                 fontWeight: '700',
-                                                fontSize: '0.9rem',
+                                                fontSize: '0.95rem',
                                                 textDecoration: 'none'
                                             }}
                                         >
                                             <span style={{ 
-                                                width: '18px', 
-                                                height: '18px', 
+                                                width: '20px', 
+                                                height: '20px', 
                                                 backgroundColor: '#FFFFFF', 
                                                 color: '#03C75A', 
                                                 borderRadius: '3px', 
@@ -111,41 +109,8 @@ export default function Guide() {
                                                 alignItems: 'center', 
                                                 justifyContent: 'center', 
                                                 fontWeight: '900', 
-                                                fontSize: '11px' 
-                                            }}>N</span> 네이버 지도
-                                        </a>
-
-                                        {/* Kakao Map Button */}
-                                        <a 
-                                            href="https://map.kakao.com/link/to/365내과연합의원,37.5458,126.7366" 
-                                            target="_blank" 
-                                            rel="noopener noreferrer" 
-                                            style={{
-                                                background: '#FEE500',
-                                                color: '#1E1E1E',
-                                                padding: '10px 16px',
-                                                borderRadius: '8px',
-                                                boxShadow: '0 4px 12px rgba(0,0,0,0.15)',
-                                                display: 'flex',
-                                                alignItems: 'center',
-                                                gap: '6px',
-                                                fontWeight: '700',
-                                                fontSize: '0.9rem',
-                                                textDecoration: 'none'
-                                            }}
-                                        >
-                                            <span style={{ 
-                                                width: '18px', 
-                                                height: '18px', 
-                                                backgroundColor: '#3C1E1E', 
-                                                color: '#FEE500', 
-                                                borderRadius: '3px', 
-                                                display: 'flex', 
-                                                alignItems: 'center', 
-                                                justifyContent: 'center', 
-                                                fontWeight: '900', 
-                                                fontSize: '11px' 
-                                            }}>K</span> 카카오맵
+                                                fontSize: '12px' 
+                                            }}>N</span> 네이버 지도에서 보기
                                         </a>
                                     </div>
                                 </div>
