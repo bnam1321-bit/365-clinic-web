@@ -109,7 +109,7 @@ export default function PainPage() {
                                     <div className="card-content">
                                         <h3 className="card-title">치료방법은 어떻게 되나요?</h3>
                                         <p className="card-text">
-                                            힘줄 또는 인대가 약화 된 부위를 초음파로 관찰하면서 증식제를 직접 주사합니다. 환자마다 치료기간과 접종횟수는 다릅니다.
+                                            힘줄 또는 인대가 약화 된 부위를 초음파로 관찰하면서 증식제를 직접 주사합니다. 환자의 상태에 따라 치료기간과 접종횟수는 다를 수 있습니다.
                                         </p>
                                     </div>
                                 </div>
