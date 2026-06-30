@@ -60,12 +60,12 @@ export default function Guide() {
                                 </div>
 
                                 <div className={styles.mapPlaceholder}>
-                                    {/* Kakao Map Embed (Vastly superior detail in Korea compared to Google Maps) */}
+                                    {/* Clean Google Maps Embed (No ads, menus, or cluttered UI) */}
                                     <div style={{ width: '100%', height: '100%', position: 'relative', overflow: 'hidden' }}>
                                         <iframe 
                                             width="100%" 
                                             height="100%" 
-                                            src="https://map.kakao.com/link/map/365내과연합의원,37.5458,126.7366" 
+                                            src="https://maps.google.com/maps?q=인천+계양구+장제로+867&t=&z=17&ie=UTF8&iwloc=&output=embed" 
                                             frameBorder="0" 
                                             style={{ border: 0 }} 
                                             allowFullScreen={true} 
