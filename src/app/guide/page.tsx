@@ -60,12 +60,12 @@ export default function Guide() {
                                 </div>
 
                                 <div className={styles.mapPlaceholder}>
-                                    {/* Google Maps Embed (Stable iframe support with address pin) */}
+                                    {/* Kakao Map Embed (Vastly superior detail in Korea compared to Google Maps) */}
                                     <div style={{ width: '100%', height: '100%', position: 'relative', overflow: 'hidden' }}>
                                         <iframe 
                                             width="100%" 
                                             height="100%" 
-                                            src="https://maps.google.com/maps?q=인천+계양구+장제로+867&t=&z=17&ie=UTF8&iwloc=&output=embed" 
+                                            src="https://map.kakao.com/link/map/365내과연합의원,37.5458,126.7366" 
                                             frameBorder="0" 
                                             style={{ border: 0 }} 
                                             allowFullScreen={true} 
@@ -73,29 +73,79 @@ export default function Guide() {
                                         </iframe>
                                     </div>
 
-                                    {/* Kakao Map Direct Link Overlay */}
+                                    {/* Naver & Kakao Map Direct Link Overlay */}
                                     <div style={{
                                         position: 'absolute',
                                         bottom: '20px',
                                         right: '20px',
-                                        background: 'rgba(255, 255, 255, 0.95)',
-                                        padding: '12px 20px',
-                                        borderRadius: '8px',
-                                        boxShadow: '0 4px 12px rgba(0,0,0,0.15)',
                                         display: 'flex',
-                                        alignItems: 'center',
-                                        gap: '8px',
+                                        gap: '10px',
                                         zIndex: 10
                                     }}>
-                                        <div style={{ width: '20px', height: '20px', backgroundColor: '#FEE500', borderRadius: '4px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 'bold', color: '#000', fontSize: '12px' }}>K</div>
-                                        <a href="https://map.kakao.com/link/to/365내과연합의원,37.5458,126.7366" target="_blank" rel="noopener noreferrer" style={{
-                                            fontSize: '1rem',
-                                            fontWeight: '700',
-                                            color: '#3B1E1E',
-                                            textDecoration: 'none',
-                                            letterSpacing: '-0.5px'
-                                        }}>
-                                            카카오맵 길찾기
+                                        {/* Naver Map Button */}
+                                        <a 
+                                            href="https://map.naver.com/v5/search/인천%20계양구%20장제로%20867%20365내과연합의원" 
+                                            target="_blank" 
+                                            rel="noopener noreferrer" 
+                                            style={{
+                                                background: '#03C75A',
+                                                color: '#FFFFFF',
+                                                padding: '10px 16px',
+                                                borderRadius: '8px',
+                                                boxShadow: '0 4px 12px rgba(0,0,0,0.15)',
+                                                display: 'flex',
+                                                alignItems: 'center',
+                                                gap: '6px',
+                                                fontWeight: '700',
+                                                fontSize: '0.9rem',
+                                                textDecoration: 'none'
+                                            }}
+                                        >
+                                            <span style={{ 
+                                                width: '18px', 
+                                                height: '18px', 
+                                                backgroundColor: '#FFFFFF', 
+                                                color: '#03C75A', 
+                                                borderRadius: '3px', 
+                                                display: 'flex', 
+                                                alignItems: 'center', 
+                                                justifyContent: 'center', 
+                                                fontWeight: '900', 
+                                                fontSize: '11px' 
+                                            }}>N</span> 네이버 지도
+                                        </a>
+
+                                        {/* Kakao Map Button */}
+                                        <a 
+                                            href="https://map.kakao.com/link/to/365내과연합의원,37.5458,126.7366" 
+                                            target="_blank" 
+                                            rel="noopener noreferrer" 
+                                            style={{
+                                                background: '#FEE500',
+                                                color: '#1E1E1E',
+                                                padding: '10px 16px',
+                                                borderRadius: '8px',
+                                                boxShadow: '0 4px 12px rgba(0,0,0,0.15)',
+                                                display: 'flex',
+                                                alignItems: 'center',
+                                                gap: '6px',
+                                                fontWeight: '700',
+                                                fontSize: '0.9rem',
+                                                textDecoration: 'none'
+                                            }}
+                                        >
+                                            <span style={{ 
+                                                width: '18px', 
+                                                height: '18px', 
+                                                backgroundColor: '#3C1E1E', 
+                                                color: '#FEE500', 
+                                                borderRadius: '3px', 
+                                                display: 'flex', 
+                                                alignItems: 'center', 
+                                                justifyContent: 'center', 
+                                                fontWeight: '900', 
+                                                fontSize: '11px' 
+                                            }}>K</span> 카카오맵
                                         </a>
                                     </div>
                                 </div>
