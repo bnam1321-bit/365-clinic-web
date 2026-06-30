@@ -33,11 +33,11 @@ export default function Guide() {
                                             <td>09:00 - 19:00</td>
                                         </tr>
                                         <tr>
-                                            <th>토요일</th>
+                                            <th>토요일 / 공휴일</th>
                                             <td>09:00 - 14:00 (점심시간 없음)</td>
                                         </tr>
                                         <tr>
-                                            <th>일요일 / 공휴일</th>
+                                            <th>일요일</th>
                                             <td className={styles.highlight}>휴진</td>
                                         </tr>
                                         <tr>
@@ -46,7 +46,7 @@ export default function Guide() {
                                         </tr>
                                     </tbody>
                                 </table>
-                                <p className={styles.note}>* 일요일 및 공휴일은 휴진입니다.</p>
+                                <p className={styles.note}>* 일요일은 휴진입니다.</p>
                             </div>
                         </FadeIn>
 
