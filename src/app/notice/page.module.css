@@ -180,6 +180,16 @@
     vertical-align: middle;
 }
 
+.subCategoryCell {
+    font-weight: 700;
+    color: var(--color-primary-dark);
+    background-color: #F8FAFC;
+    border-right: 1px solid #E2E8F0 !important;
+    vertical-align: middle !important;
+    text-align: center;
+    padding: 1.2rem 1rem !important;
+}
+
 .feeTable tr:last-child td {
     border-bottom: none;
 }
