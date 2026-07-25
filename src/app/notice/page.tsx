@@ -45,8 +45,6 @@ const feeData: FeeItem[] = [
     { category: "제증명 수수료", subCategory: "진단서", name: "일반 진단서", price: "20,000 원" },
     { category: "제증명 수수료", subCategory: "진단서", name: "영문 일반 진단서", price: "20,000 원" },
     { category: "제증명 수수료", subCategory: "진단서", name: "근로능력 평가용 진단서", price: "10,000 원" },
-    { category: "제증명 수수료", subCategory: "진단서", name: "면허신청용 진단서", price: "35,000 원" },
-    { category: "제증명 수수료", subCategory: "진단서", name: "요양원입소용 진단서", price: "35,000 원" },
 
     { category: "제증명 수수료", subCategory: "건강진단서 & 채용검사", name: "기숙사제출용 건강진단서", price: "35,000 원" },
     { category: "제증명 수수료", subCategory: "건강진단서 & 채용검사", name: "기숙사제출용 건강진단서 (흉부 엑스레이만)", price: "25,000 원" },
