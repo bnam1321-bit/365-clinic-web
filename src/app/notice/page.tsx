@@ -96,8 +96,7 @@ export default function NoticePage() {
                     </div>
                     <p className={styles.legalText}>
                         · 의료법 제45조(비급여 진료비용 등의 고지) 및 동법 시행규칙 제42조의2 규정에 따라 본 원의 비급여 진료비용을 공지합니다.<br />
-                        · 게시된 비급여 진료비용은 환자의 증상, 상태 및 진료 조건에 따라 변동될 수 있습니다.<br />
-                        · 수액(영양주사 수액류) 항목은 제외된 안내표입니다.
+                        · 게시된 비급여 진료비용은 환자의 증상, 상태 및 진료 조건에 따라 변동될 수 있습니다.
                     </p>
                 </div>
 
@@ -197,8 +196,6 @@ export default function NoticePage() {
 
                 {/* Table Footer Note */}
                 <div className={styles.tableFooterNote}>
-                    <p><strong>[참고사항]</strong></p>
-                    <p>· 상기 금액은 원화(KRW) 기준이며 부가세 포함 금액입니다.</p>
                     <p>· 정확한 진료비 문의 및 기타 서류 안내는 병원 대표전화(032-542-3659)로 문의 주시면 친절히 안내해 드리겠습니다.</p>
                 </div>
             </div>
