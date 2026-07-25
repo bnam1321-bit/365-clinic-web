@@ -61,7 +61,6 @@ export default function About() {
                                     <p className="card-subtitle">내과 전문의 / 소화기 내시경 전문의</p>
                                     <ul className="editorial-list">
                                         <li>차의과대학 외래교수</li>
-                                        <li>을지의과대학 외래교수</li>
                                         <li>대한 소화기학회 평생회원</li>
                                         <li>대한 소화기 내시경학회 평생회원</li>
                                         <li>대한 소화관 운동학회 정회원</li>

@@ -52,7 +52,7 @@ export default function Home() {
                 <div className={`${styles.bentoCard} ${styles.cardEndoscopy}`}>
                   <div className={styles.bentoContent}>
                     <div className={styles.cardIcon}><Microscope size={36} /></div>
-                    <h3>내시경 클리닉</h3>
+                    <h3>내시경 클리닉 (위·대장내시경)</h3>
                     <p>고성능 고화질 내시경 장비로 미세 용종까지 정확하게 발견하고 제거합니다.</p>
                   </div>
                   <div className={styles.cardArrow}><ArrowRight size={24} /></div>
