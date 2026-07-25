@@ -5,7 +5,14 @@ import Footer from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
   title: "365내과연합의원 - 임학역 3번 출구",
-  description: "인천 계양구 임학역 앞, 이현석/노영석/지재연 전문의 3인 진료, 대학병원급 건강검진 센터.",
+  description: "인천 계양구 임학역 앞, 이현석/노영석/지재연 전문의 3인 진료, 건강검진 센터.",
+  icons: {
+    icon: [
+      { url: "/icon.svg", type: "image/svg+xml" },
+      { url: "/favicon.svg", type: "image/svg+xml" },
+    ],
+    apple: "/icon.svg",
+  },
 };
 
 export default function RootLayout({
