@@ -60,7 +60,7 @@ export default function Guide() {
                                 <h2 className={styles.sectionTitle}><MapPin size={28} /> 오시는 길</h2>
                                 <div className={styles.locationDetails}>
                                     <p className={styles.addressDisplay}>인천 계양구 장제로 867 상우메디칼빌딩 3층</p>
-                                    <p className={styles.stationDisplay}>임학역 인근</p>
+                                    <p className={styles.stationDisplay}>임학역 3번 출구 앞 30m (도보 1분 이내)</p>
                                 </div>
 
                                 <div className={styles.mapPlaceholder}>
@@ -130,7 +130,7 @@ export default function Guide() {
                                 <h3><span className={styles.subwayIcon}>지하철</span></h3>
                                 <p>
                                     인천 1호선<br />
-                                    <strong>임학역 3번 출구</strong> (도보 3분)
+                                    <strong>임학역 3번 출구 앞 30m</strong> (도보 1분 이내)
                                 </p>
                             </div>
                             <div className={styles.transportItem}>
