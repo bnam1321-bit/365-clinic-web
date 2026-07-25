@@ -21,8 +21,7 @@ const feeData: FeeItem[] = [
     { category: "검사료", subCategory: "검체 검사", name: "독감·코로나 동시 검사", price: "50,000 원" },
 
     { category: "검사료", subCategory: "내시경 검사", name: "위 수면관리료", price: "45,000 원" },
-    { category: "검사료", subCategory: "내시경 검사", name: "대장 수면관리료 (일반)", price: "80,000 원" },
-    { category: "검사료", subCategory: "내시경 검사", name: "대장 수면관리료 (치료/정밀)", price: "100,000 원" },
+    { category: "검사료", subCategory: "내시경 검사", name: "대장 수면관리료", price: "80,000 원 / 100,000 원" },
 
     { category: "검사료", subCategory: "초음파 검사", name: "갑상선 초음파", price: "40,000 원" },
     { category: "검사료", subCategory: "초음파 검사", name: "경동맥 초음파", price: "50,000 원" },
