@@ -41,11 +41,7 @@ const feeData: FeeItem[] = [
     { category: "치료료", subCategory: "증식 치료", name: "인대증식 (사지관절)", price: "50,000 원 / 100,000 원" },
     { category: "치료료", subCategory: "증식 치료", name: "인대증식 (척추부위)", price: "50,000 원 / 100,000 원" },
 
-    // 4. 주사료 (영양 주사 - 수액류 제외)
-    { category: "주사료", subCategory: "영양 주사", name: "태반주사", price: "25,000 원" },
-    { category: "주사료", subCategory: "영양 주사", name: "비타민D (주)", price: "30,000 원" },
-
-    // 5. 제증명 수수료
+    // 4. 제증명 수수료
     { category: "제증명 수수료", subCategory: "진단서", name: "일반 진단서", price: "20,000 원" },
     { category: "제증명 수수료", subCategory: "진단서", name: "영문 일반 진단서", price: "20,000 원" },
     { category: "제증명 수수료", subCategory: "진단서", name: "근로능력 평가용 진단서", price: "10,000 원" },
@@ -65,7 +61,7 @@ const feeData: FeeItem[] = [
     { category: "제증명 수수료", subCategory: "확인서 & 사본 / 영상", name: "진료기록 영상 (CD)", price: "10,000 원" },
 ];
 
-const categories = ["전체", "검사료", "예방접종", "치료료", "주사료", "제증명 수수료"];
+const categories = ["전체", "검사료", "예방접종", "치료료", "제증명 수수료"];
 
 export default function NoticePage() {
     const [activeTab, setActiveTab] = useState("전체");
