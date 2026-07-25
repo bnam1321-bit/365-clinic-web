@@ -21,7 +21,7 @@ export default function Services() {
             title: "만성질환 클리닉",
             description: "합병증 예방을 위한 체계적인 관리",
             icon: <ShieldCheck size={40} />,
-            items: ["고혈압 / 당뇨병 / 고지혈증", "갑상선 질환", "골다공증", "호흡기 및 알레르기 질환"],
+            items: ["고혈압 / 당뇨병 / 고지혈증", "골다공증 검사 및 치료", "알레르기 / 음식물 알레르기 검사", "갑상선 및 호흡기 질환"],
         },
         {
             id: "iv",

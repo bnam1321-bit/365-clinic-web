@@ -80,10 +80,10 @@ export default function ClinicPage() {
 
                     <div style={{ height: '4rem' }}></div>
 
-                    {/* Liver Disease & Shingles - Using Editorial Layout */}
+                    {/* Liver Disease, Shingles, Allergy & Osteoporosis - Using Editorial Layout */}
                     <div className="editorial-header">
                         <h2 className="editorial-title">특수 진료 클리닉</h2>
-                        <p className="editorial-desc">간 질환 및 대상포진 등 특화된 진료를 제공합니다.</p>
+                        <p className="editorial-desc">간 질환, 대상포진, 알레르기 검사 및 골다공증 등 특화된 정밀 진료를 제공합니다.</p>
                     </div>
                     <div className="editorial-grid">
                         <FadeIn delay={0.5}>
@@ -116,6 +116,40 @@ export default function ClinicPage() {
                                     <p className="card-text">
                                         피부 발진 발생 후 72시간 내에 항바이러스제를 투여해야 효과가 좋습니다.
                                         통증이 심할 경우 신경차단술 등의 적극적인 통증 치료가 필요합니다.
+                                    </p>
+                                </div>
+                            </div>
+                        </FadeIn>
+
+                        <FadeIn delay={0.7}>
+                            <div className="editorial-card">
+                                <div className="bg-number">A</div>
+                                <div className="card-content">
+                                    <h3 className="card-title">알레르기 검사 클리닉</h3>
+                                    <p className="card-subtitle">음식물 & 호흡기 알레르기 검사 (MAST)</p>
+                                    <p className="card-text">
+                                        음식물 및 흡인성 알레르기를 유발하는 원인 항원을 한 번의 채혈로 100여 가지 이상 동시 진단합니다.
+                                    </p>
+                                    <p className="card-subtitle">맞춤 관리</p>
+                                    <p className="card-text">
+                                        검사 결과를 바탕으로 원인 물질 회피 및 맞춤 약물 처방을 시행합니다.
+                                    </p>
+                                </div>
+                            </div>
+                        </FadeIn>
+
+                        <FadeIn delay={0.8}>
+                            <div className="editorial-card offset-card">
+                                <div className="bg-number">O</div>
+                                <div className="card-content">
+                                    <h3 className="card-title">골다공증 클리닉</h3>
+                                    <p className="card-subtitle">골밀도 검사 & 정밀 진단</p>
+                                    <p className="card-text">
+                                        뼈의 강도가 약해져 골절되기 쉬운 골다공증을 정밀 검사로 조기에 진단합니다.
+                                    </p>
+                                    <p className="card-subtitle">맞춤 치료 & 예방</p>
+                                    <p className="card-text">
+                                        환자의 연령과 골밀도 수치에 맞춰 효과적인 약물 및 주사 치료를 진행합니다.
                                     </p>
                                 </div>
                             </div>
