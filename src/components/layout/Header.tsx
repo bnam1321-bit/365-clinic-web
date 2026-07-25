@@ -43,6 +43,7 @@ export default function Header() {
                         <li><Link href="/ultrasound" className={styles.navLink}>초음파센터</Link></li>
                         <li><Link href="/clinic" className={styles.navLink}>내과진료</Link></li>
                         <li><Link href="/pain" className={styles.navLink}>통증치료</Link></li>
+                        <li><Link href="/notice" className={styles.navLink}>비급여안내</Link></li>
                     </ul>
                 </nav>
 
@@ -74,6 +75,7 @@ export default function Header() {
                         <li><Link href="/ultrasound" onClick={toggleMenu}>초음파센터</Link></li>
                         <li><Link href="/clinic" onClick={toggleMenu}>내과진료</Link></li>
                         <li><Link href="/pain" onClick={toggleMenu}>통증치료</Link></li>
+                        <li><Link href="/notice" onClick={toggleMenu}>비급여 안내</Link></li>
                         <li className={styles.mobileAction}>
                             <Link href="/guide" onClick={toggleMenu} className={styles.locationBtn}>
                                 <MapPin size={18} /> 오시는 길 안내

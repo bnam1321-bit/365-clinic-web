@@ -24,10 +24,15 @@ export default function Footer() {
                             </ul>
                         </div>
                         <div className={styles.linkGroup}>
-                            <h3>전화 번호</h3>
+                            <h3>전화 번호 & 정보</h3>
                             <ul>
                                 <li className={styles.contactItem}><Phone size={16} /> 032-542-3659</li>
                                 <li className={styles.contactItem}><Printer size={16} /> 032-542-3655 (FAX)</li>
+                                <li style={{ marginTop: '0.75rem' }}>
+                                    <Link href="/notice" style={{ color: '#0EA5E9', fontWeight: 600, fontSize: '0.9rem' }}>
+                                        비급여 진료비 고지 안내 →
+                                    </Link>
+                                </li>
                             </ul>
                         </div>
                     </div>
