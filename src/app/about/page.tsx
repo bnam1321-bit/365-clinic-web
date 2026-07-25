@@ -27,7 +27,6 @@ export default function About() {
                         <div className="editorial-card" style={{ maxWidth: '900px', margin: '0 auto' }}>
                             <div className="bg-number">"</div>
                             <div className="card-content">
-                                <h3 className="card-title" style={{ marginBottom: '2rem' }}>원장 이현석 드림</h3>
                                 <p className="card-text">
                                     저희 병원을 찾아주신 환자 여러분께 깊은 감사의 말씀을 드립니다.<br />
                                     아플 때 가장 먼저 생각나는 병원, 환자의 아픔을 내 가족의 일처럼 공감하는 병원이 되고자 합니다.
@@ -37,10 +36,13 @@ export default function About() {
                                     정확한 진단과 올바른 치료를 약속드립니다.<br />
                                     언제나 환자분들을 생각하는 든든한 건강 주치의로서, 지역 주민 여러분의 평생 건강을 지키는 동반자가 되겠습니다.
                                 </p>
-                                <p className="card-text">
+                                <p className="card-text" style={{ marginBottom: '0' }}>
                                     작은 소리에도 귀 기울이며, 마음까지 치유하는 따뜻한 진료로 보답하겠습니다.<br />
                                     감사합니다.
                                 </p>
+                                <h3 className="card-title" style={{ textAlign: 'right', marginTop: '4rem', marginBottom: '0', fontSize: '1.6rem' }}>
+                                    원장 이현석 드림
+                                </h3>
                             </div>
                         </div>
                     </section>
