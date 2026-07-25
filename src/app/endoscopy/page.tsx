@@ -16,7 +16,7 @@ export default function EndoscopyPage() {
             <SplitHero 
                 badge="DIGESTIVE ENDOSCOPY"
                 title="내시경 클리닉"
-                subtitle={<>소화기내과 전문의가 직접 시행하는 정밀하고 안전한 내시경.<br />대학병원급 최고사양 장비로 미세 병변까지 찾아냅니다.</>}
+                subtitle={<>소화기내과 전문의가 직접 시행하는 정밀하고 안전한 내시경.<br />고성능 최고사양 장비로 미세 병변까지 찾아냅니다.</>}
             />
 
             {/* Main Content */}
@@ -41,9 +41,9 @@ export default function EndoscopyPage() {
                                 </div>
                                 <div className={styles.equipmentText}>
                                     <h3 className={styles.equipmentSubtitle}>365내과연합의원 내시경 센터</h3>
-                                    <h2 className={styles.equipmentTitle}>대학병원급 최고사양 내시경 기기</h2>
+                                    <h2 className={styles.equipmentTitle}>고성능 최첨단 내시경 기기</h2>
                                     <p className={styles.equipmentDesc}>
-                                        365내과연합의원은 대학병원에서 사용하는 것과 동일한 <strong>최상위 등급의 고해상도 장비</strong>를 도입하여 운영하고 있습니다. 초고화질 영상과 특수 정밀 관찰 기술을 통해 눈에 잘 띄지 않는 아주 미세한 조기 암 병변까지도 놓치지 않고 정확하게 진단합니다.
+                                        365내과연합의원은 <strong>최상위 등급의 고성능 고해상도 장비</strong>를 도입하여 운영하고 있습니다. 초고화질 영상과 특수 정밀 관찰 기술을 통해 눈에 잘 띄지 않는 아주 미세한 조기 암 병변까지도 놓치지 않고 정확하게 진단합니다.
                                     </p>
                                 </div>
                             </div>

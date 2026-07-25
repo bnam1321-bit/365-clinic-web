@@ -17,7 +17,8 @@ export default function Footer() {
                             <h3>진료 안내</h3>
                             <ul>
                                 <li>평일: 09:00 - 19:00</li>
-                                <li>토요일/공휴일: 09:00 - 14:00 (점심시간 없음)</li>
+                                <li>토요일: 09:00 - 14:00 (점심시간 없음)</li>
+                                <li>공휴일: 09:00 - 13:00</li>
                                 <li>점심시간: 13:00 - 14:00</li>
                                 <li className={styles.highlight}>일요일: 휴진</li>
                             </ul>
@@ -26,7 +27,7 @@ export default function Footer() {
                             <h3>전화 번호</h3>
                             <ul>
                                 <li className={styles.contactItem}><Phone size={16} /> 032-542-3659</li>
-                                <li className={styles.contactItem}><Printer size={16} /> 032-542-3660 (FAX)</li>
+                                <li className={styles.contactItem}><Printer size={16} /> 032-542-3655 (FAX)</li>
                             </ul>
                         </div>
                     </div>
