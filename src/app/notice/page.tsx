@@ -24,7 +24,7 @@ const feeData: FeeItem[] = [
     { category: "검사료", subCategory: "내시경 검사", name: "대장 수면관리료", price: "80,000 원 / 100,000 원" },
 
     { category: "검사료", subCategory: "초음파 검사", name: "갑상선 초음파", price: "40,000 원" },
-    { category: "검사료", subCategory: "초음파 검사", name: "경동맥 초음파", price: "50,000 원" },
+    { category: "검사료", subCategory: "초음파 검사", name: "경동맥 초음파", price: "40,000 원" },
     { category: "검사료", subCategory: "초음파 검사", name: "복부 초음파", price: "50,000 원" },
     { category: "검사료", subCategory: "초음파 검사", name: "근골격 초음파", price: "100,000 원" },
 
