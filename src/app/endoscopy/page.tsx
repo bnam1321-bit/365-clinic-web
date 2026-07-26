@@ -154,6 +154,67 @@ export default function EndoscopyPage() {
                         </div>
                     </div>
 
+                    {/* 03. Clinical Case Photo Gallery */}
+                    <div>
+                        <FadeIn>
+                            <div className={styles.sectionHeader}>
+                                <Microscope size={48} className={styles.sectionIcon} />
+                                <h2>내시경 주요 진단 및 시술 사례</h2>
+                                <p>365내과연합의원에서 고성능 내시경으로 직접 진단하고 시술한 실제 임상 병변 증례입니다.</p>
+                            </div>
+                        </FadeIn>
+
+                        <div className={styles.caseGrid}>
+                            {/* Case 1: Gastric Ulcer */}
+                            <FadeIn delay={0.1}>
+                                <div className={styles.caseCard}>
+                                    <div className={styles.caseImageWrapper}>
+                                        <img src="/images/endoscopy-ulcer.jpg" alt="위궤양 진단 내시경 사진" className={styles.caseImage} />
+                                        <span className={`${styles.caseBadge} ${styles.badgeBlue}`}>위내시경 진단</span>
+                                    </div>
+                                    <div className={styles.caseBody}>
+                                        <h3 className={styles.caseTitle}>위궤양 (Gastric Ulcer)</h3>
+                                        <p className={styles.caseDesc}>
+                                            위 점막이 깊게 파이고 함몰된 병변을 초고화질 내시경으로 정밀 관찰하여 진단합니다. 적절한 약물 치료 및 조직검사를 시행합니다.
+                                        </p>
+                                    </div>
+                                </div>
+                            </FadeIn>
+
+                            {/* Case 2: Gastric Cancer */}
+                            <FadeIn delay={0.2}>
+                                <div className={styles.caseCard}>
+                                    <div className={styles.caseImageWrapper}>
+                                        <img src="/images/endoscopy-cancer.jpg" alt="위암 조기진단 내시경 사진" className={styles.caseImage} />
+                                        <span className={`${styles.caseBadge} ${styles.badgeRed}`}>위암 조기진단</span>
+                                    </div>
+                                    <div className={styles.caseBody}>
+                                        <h3 className={styles.caseTitle}>위암 (Gastric Cancer)</h3>
+                                        <p className={styles.caseDesc}>
+                                            궤양성 악성 병변 및 초기 위암을 고해상도 NBI 정밀 영상으로 조기에 발견합니다. 위암은 조기 진단 시 완치율이 높아 정기 검진이 필수적입니다.
+                                        </p>
+                                    </div>
+                                </div>
+                            </FadeIn>
+
+                            {/* Case 3: Polypectomy */}
+                            <FadeIn delay={0.3}>
+                                <div className={styles.caseCard}>
+                                    <div className={styles.caseImageWrapper}>
+                                        <img src="/images/endoscopy-polyp.jpg" alt="용종절제술 시술 내시경 사진" className={styles.caseImage} />
+                                        <span className={`${styles.caseBadge} ${styles.badgeGreen}`}>대장내시경 당일절제</span>
+                                    </div>
+                                    <div className={styles.caseBody}>
+                                        <h3 className={styles.caseTitle}>용종절제술 (Polypectomy)</h3>
+                                        <p className={styles.caseDesc}>
+                                            대장내시경 중 발견된 대장 용종을 올가미(Snare)를 이용해 발견 즉시 당일 절제(Polypectomy)하여 대장암으로 진행되는 원인을 사전 예방합니다.
+                                        </p>
+                                    </div>
+                                </div>
+                            </FadeIn>
+                        </div>
+                    </div>
+
                     {/* 03. Precautions */}
                     <div>
                         <FadeIn>
