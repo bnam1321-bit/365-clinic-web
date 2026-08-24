@@ -181,24 +181,40 @@ export default function EndoscopyPage() {
                                 </div>
                             </FadeIn>
 
-                            {/* Case 2: Gastric Cancer */}
+                            {/* Case 2: Early Gastric Cancer */}
                             <FadeIn delay={0.2}>
                                 <div className={styles.caseCard}>
                                     <div className={styles.caseImageWrapper}>
-                                        <img src="/images/endoscopy-cancer.jpg" alt="위암 조기진단 내시경 사진" className={styles.caseImage} />
+                                        <img src="/images/endoscopy-early-cancer.jpg" alt="조기 위암 진단 내시경 사진" className={styles.caseImage} />
                                         <span className={`${styles.caseBadge} ${styles.badgeRed}`}>위암 조기진단</span>
                                     </div>
                                     <div className={styles.caseBody}>
-                                        <h3 className={styles.caseTitle}>위암 (Gastric Cancer)</h3>
+                                        <h3 className={styles.caseTitle}>조기 위암 (Early GC)</h3>
                                         <p className={styles.caseDesc}>
-                                            궤양성 악성 병변 및 초기 위암을 고해상도 NBI 정밀 영상으로 조기에 발견합니다. 위암은 조기 진단 시 완치율이 높아 정기 검진이 필수적입니다.
+                                            고성능 내시경으로 6mm 크기의 미세한 조기 위암(Early GC) 병변을 놓치지 않고 조기 발견하여 안전하고 신속한 치료로 연결합니다.
                                         </p>
                                     </div>
                                 </div>
                             </FadeIn>
 
-                            {/* Case 3: Polypectomy */}
+                            {/* Case 3: Advanced Gastric Cancer */}
                             <FadeIn delay={0.3}>
+                                <div className={styles.caseCard}>
+                                    <div className={styles.caseImageWrapper}>
+                                        <img src="/images/endoscopy-cancer.jpg" alt="진행 위암 진단 내시경 사진" className={styles.caseImage} />
+                                        <span className={`${styles.caseBadge} ${styles.badgeDarkRed}`}>진행 위암 진단</span>
+                                    </div>
+                                    <div className={styles.caseBody}>
+                                        <h3 className={styles.caseTitle}>진행 위암 (Advanced GC)</h3>
+                                        <p className={styles.caseDesc}>
+                                            궤양성 악성 종양 및 진행성 위암 병변을 정밀 영상으로 진단합니다. 위암은 진행 전 조기 발견이 치료 성패를 좌우하므로 정기 검진이 필수입니다.
+                                        </p>
+                                    </div>
+                                </div>
+                            </FadeIn>
+
+                            {/* Case 4: Polypectomy */}
+                            <FadeIn delay={0.4}>
                                 <div className={styles.caseCard}>
                                     <div className={styles.caseImageWrapper}>
                                         <img src="/images/endoscopy-polyp.jpg" alt="용종절제술 시술 내시경 사진" className={styles.caseImage} />

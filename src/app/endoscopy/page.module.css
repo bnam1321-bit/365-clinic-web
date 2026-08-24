@@ -422,6 +422,10 @@
     background-color: rgba(220, 38, 38, 0.9);
 }
 
+.badgeDarkRed {
+    background-color: rgba(153, 27, 27, 0.92);
+}
+
 .badgeGreen {
     background-color: rgba(5, 150, 105, 0.9);
 }
@@ -434,14 +438,14 @@
 }
 
 .caseTitle {
-    font-size: 1.3rem;
+    font-size: 1.25rem;
     font-weight: 800;
     color: var(--color-primary-dark);
     margin-bottom: 0.75rem;
 }
 
 .caseDesc {
-    font-size: 0.95rem;
+    font-size: 0.92rem;
     color: var(--color-text-secondary);
     line-height: 1.65;
     word-break: keep-all;
@@ -465,6 +469,12 @@
     }
 
     .caseGrid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1200px) {
+    .caseGrid {
+        grid-template-columns: repeat(4, 1fr);
     }
 }
