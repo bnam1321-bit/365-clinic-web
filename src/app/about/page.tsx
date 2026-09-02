@@ -60,7 +60,6 @@ export default function About() {
                                     <h3 className="card-title">이현석 원장</h3>
                                     <p className="card-subtitle">내과 전문의 / 소화기 내시경 전문의</p>
                                     <ul className="editorial-list">
-                                        <li>차의과대학 외래교수</li>
                                         <li>대한 소화기학회 평생회원</li>
                                         <li>대한 소화기 내시경학회 평생회원</li>
                                         <li>대한 소화관 운동학회 정회원</li>
@@ -70,6 +69,7 @@ export default function About() {
                                         <li>대한 내분비학회 정회원</li>
                                         <li>대한 순환기학회 정회원</li>
                                         <li>한국 심초음파학회 정회원</li>
+                                        <li>차의과대학 외래교수</li>
                                     </ul>
                                 </div>
                             </div>
