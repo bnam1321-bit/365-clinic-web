@@ -55,6 +55,11 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+  verification: {
+    other: {
+      "naver-site-verification": "7bad7d45390bcf329427f789e6cbbc912cf105ec",
+    },
+  },
 };
 
 export default function RootLayout({
@@ -104,6 +109,7 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <head>
+        <meta name="naver-site-verification" content="7bad7d45390bcf329427f789e6cbbc912cf105ec" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
